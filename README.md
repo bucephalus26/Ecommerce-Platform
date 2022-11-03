@@ -1,3 +1,3 @@
-# Sports4Us
+# Ecommerce platform
 
-Sports equipment and wear 
+An e-commerce platform created using PHP and the Laravel framework.
