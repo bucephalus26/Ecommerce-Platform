@@ -30,7 +30,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role ="form" action="{{route('admin.category.store')}}" method="post">
+              <form role ="form" action="{{route('admin.category.store')}}" method="post" enctype="multipart/form-data">
                 @csrf 
                 <div class="card-body">
                   <div class="form-group">
@@ -55,9 +55,7 @@
                         <input type="file" class="custom-file-input" name="image">
                         <label class="custom-file-label" for="exampleInputFile">Choose Image</label>
                       </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
-                      </div>
+
                     </div>
                   </div>
                   <div class="form-group">
