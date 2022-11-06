@@ -80,6 +80,7 @@
                 <!-- Left -->
 
                 <!-- Right -->
+                <div></div>
                 <div>
                     <a href="https://en-gb.facebook.com/astonuniversity/" class="me-4 text-reset">
                         <i class="fab fa-facebook-f"></i>
