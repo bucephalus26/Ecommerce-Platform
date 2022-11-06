@@ -9,6 +9,28 @@ use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
+
+    protected $appends = [
+        'getParentsTree'
+    ];
+
+    // returns parentTree for subcategories
+    public static function getParentsTree($category, $title)
+    {
+        // if category is parent category, return title of parent.
+        if ($category->parent_id == 0)
+        {
+            return $title;
+        }
+
+        // find category with parent_id
+        $parent = Category::find($category->parent_id);
+        // add title
+        $title = $parent->title . ' > ' . $title;
+        // call function - recursive structure
+        return CategoryController::getParentsTree($parent, $title);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -48,7 +70,7 @@ class CategoryController extends Controller
     {
         //
         $data = new Category();
-        $data->parent_id = 0;
+        $data->parent_id = $request->parent_id;
         $data->title = $request->title;
         $data->keywords = $request->keywords;
         $data->description = $request->description;
@@ -88,8 +110,10 @@ class CategoryController extends Controller
     {
         //
         $data = Category::find($id);
+        $datalist = Category::all();
         return view('admin.category.edit', [
-            'data'=> $data
+            'data'=> $data,
+            'datalist'=> $datalist
         ]);
     }
 
@@ -104,7 +128,7 @@ class CategoryController extends Controller
     {
         //
         $data = Category::find($id);
-        $data->parent_id = 0;
+        $data->parent_id = $request->parent_id;
         $data->title = $request->title;
         $data->keywords = $request->keywords;
         $data->description = $request->description;
