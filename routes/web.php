@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
+use App\Http\Controllers\AdminPanel\AdminProductController as AdminProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,6 +42,17 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/destroy/{id}', 'destroy')->name('destroy');
     Route::get('/show/{id}', 'show')->name('show');
     });
+
+     // ******* Admin Product Routes *******
+     Route::prefix('/product')->name('product.')->controller(AdminProductController::class)->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::post('/store', 'store')->name('store');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/destroy/{id}', 'destroy')->name('destroy');
+        Route::get('/show/{id}', 'show')->name('show');
+     });
 });
 
 
