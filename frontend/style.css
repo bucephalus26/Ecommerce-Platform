@@ -26,26 +26,27 @@ div.img {
 
 
 .nav-bar {
-    background-color: rgb(205, 203, 203);
+    background-color: rgb(247, 245, 245);
     overflow: hidden;
   }
   
   /* Style the links inside the navigation bar */
   .nav-bar a {
     float: left;
-    color: #f2f2f2;
+    color: #111111;
     text-align: center;
     padding: 14px 16px;
     padding-left: 50px;
     padding-right: 50px;
     text-decoration: none;
     font-size: 17px;
+    height: 50px;
   }
   
   /* Change the color of links on hover */
   .nav-bar a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: rgb(207, 207, 207);
+    color: rgb(255, 255, 255);
   }
   
   /* Add a color to the active/current link */
@@ -79,7 +80,7 @@ div.img {
   }
   /* Dropdown Button */
 .dropbtn {
-    background-color: #8a9d96;
+    background-color: #cecbd4;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -98,7 +99,7 @@ div.img {
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
     z-index: 1;
   }
   
@@ -119,4 +120,112 @@ div.img {
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #5c606d;}
   
+  .Contact
+{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(background.jpg);
+    background-size: cover;
+
+}
+.Contact .content
+{
+    max-width: 800px;
+    text-align: center;
+}
+.Contact .content h2
+{
+    font-size: 36px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+.Contact .content p
+{
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+}
+
+.ContactForm
+{
+    width: 40%;
+    padding: 40px;
+    background: rgb(255, 255, 255);
+}
+.ContactForm h2
+{
+    font-size: 30px;
+    color: black;
+    font-weight: 500;
+}
+
+.ContactForm .InputBox
+{
+    position: relative;
+    width:  100%;
+    margin-top: 10px;
+}
+
+.ContactForm .InputBox input,
+.ContactForm .InputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.ContactForm .InputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.ContactForm .InputBox input:focus ~ span,
+.ContactForm .InputBox input:valid ~ span,
+.ContactForm .InputBox textarea:focus ~ span,
+.ContactForm .InputBox textarea:valid ~ span
+
+{
+    color: black;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.ContactForm .InputBox input[type ="submit"]
+{
+    width: 50%;
+    background: black;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+@media (max-width: 991px)
+{
+    .Contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+
+    .container .contactInfo, .ContactForm{
+        width: 50px;
+    }
+
+}
+
   
