@@ -42,6 +42,8 @@
               <th>Price</th>
               <th>Quantity</th>
               <th>Image</th>
+              <th>Images</th>
+              <th>Attributes</th>
               <th>Status</th>
               <th style="width: 40px">Edit</th>
               <th style="width: 40px">Delete</th>
@@ -64,7 +66,17 @@
                 @endif
               </td>
 
+              <!-- Link to images page-->
+              <!-- pid key used to get product image page-->
+              <td><a href="{{route('admin.image.index', ['pid'=>$rs->id])}}"
+                  onclick="return !window.open(this.href, '','top=50 left=100 width=1100,height=700')">
+                <img src="{{asset('assets')}}/admin/img/images.jpg" style="height: 40px"></a>
+              </td>
+
+              <td>{{$rs->product_attributes}}</td>
+
               <td>{{$rs->status}}</td>
+              <!-- Buttons -->
               <td><a href="{{route('admin.product.edit', ['id'=>$rs->id])}}" class="btn btn-block btn-info btn-sm">Edit</a></td>
               <td><a href="{{route('admin.product.destroy', ['id'=>$rs->id])}}" class="btn btn-block btn-danger btn-sm"
                     onclick="return confirm('Are you sure you want to delete?')">Delete</a></td>

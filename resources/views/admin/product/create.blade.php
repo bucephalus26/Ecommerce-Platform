@@ -61,6 +61,26 @@
                     <input type="text" class="form-control" name="description" placeholder="Description">
                   </div>
 
+                   <!-- Attribute selection -->
+                  @php
+                    $attributeOptions = \App\Models\Attribute::with('values')->get();
+                  @endphp
+
+                  @foreach($attributeOptions as $attr)
+
+               
+                  <div class="form-group">
+                    <label for="">{{$attr->name}} :</label>
+                    <select class="form-control" name = "product_attributes[{{$attr->name}}]">
+                    <option value=""></option>
+                      @foreach ($attr->values as $val)
+                      <option>{{$val->value}}</option>
+                      @endforeach
+                    </select>
+                  </div>
+
+                  @endforeach
+
                   <div class="form-group">
                     <label for="exampleInputEmail1">Price</label>
                     <input type="number" class="form-control" name="price" value="0">
