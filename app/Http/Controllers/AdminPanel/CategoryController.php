@@ -153,9 +153,9 @@ class CategoryController extends Controller
         //
         $data = Category::find($id);
         // Delete image if entry deleted
-        if ($data->image && Storage::disk('public')->exists('$data->image')) {
+        if ($data->image && Storage::disk('public')->exists($data->image)) {
             // delete image
-            Storage::delete('$data->image');
+            Storage::delete($data->image);
         }
         $data->delete();
         return redirect('admin/category');
