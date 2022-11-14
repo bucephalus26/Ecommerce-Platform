@@ -1,6 +1,6 @@
 @extends('layouts.frontbase')
 
-@section('title', 'Sports4Us')
+@section('title', $data->title)
 
 @section('content')
      <!-- Categories Start -->
