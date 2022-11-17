@@ -60,7 +60,7 @@
 
         <div class="float-child">
             <div class="section-m1">
-                <h3>Menswear</h3>
+                <h3>Equipment</h3>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Click for more</button>
