@@ -33,11 +33,12 @@
                     <a href="men.php" class="nav-link active"> Men </a>
                 </li>
                 <li class="nav-item active">
-                    <a href="women.php" class="nav-link"> Women </a>
+                    <a href="women.php" class="nav-link" > Women </a>
                 </li>
                 <li class="nav-item active">
-                    <a href="index.php" class="nav-link"> Equipment </a>
+                    <a href="equipment.php" class="nav-link"> Equipment </a>
                 </li>
+                
                 <li class="nav-item active">
                     <a href="login.php" class="nav-link "> Login </a>
                 </li>
@@ -63,11 +64,18 @@
                 <h3>Menswear</h3>
             </div>
             <div class="dropdown">
+                
                 <button class="dropbtn">Click for more</button>
                 <div class="dropdown-content">
-                    <a href="#">T-shirts</a>
-                    <a href="#">Trousers</a>
-                    <a href="#">Footwear</a>
+                    <nav>
+                <a href="menss.php">T-Shirts</a>
+                </nav>
+                <nav>
+                <a href="menstrousers.php">Trousers</a>
+                </nav>
+                <nav>
+                 <a href="mensshoes.php">Footwear</a>
+                 </nav>
                 </div>
             </div>
         </div>
