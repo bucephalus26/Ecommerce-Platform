@@ -26,6 +26,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// ******* Home Page Routes *******
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/product/{id}', [HomeController::class, 'product'])->name( name:'product');
 
@@ -61,7 +62,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/{pid}','index')->name('index');
         Route::post('/store/{pid}','store')->name('store');
         Route::get('/destroy/{pid}/{id}','destroy')->name('destroy');
-
     });
 
 
