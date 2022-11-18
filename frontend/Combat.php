@@ -89,31 +89,31 @@
 ">
     <div class="product">
         <div>
-            <img src="images/accessory2.jpeg"style="width:150px; height:150px;"  alt="a1" class="thumbnail">
+            <img src="images/mma.jpg"style="width:150px; height:150px;"  alt="a1" class="thumbnail">
             <h4>Description</h4>
             <br>
             <p>
-                - odour-free
-                - soft
-                
+               - leather 
+               - odour-free 
+               - gripable
             </p>
            
-                Price : £7.99.99
+                Price : 19.99
           
         </div>
         <div>
-            <img src="images\accessory3.jpg"style="width:150px; height:150px;"  alt="a2" class="thumbnail">
+            <img src="images\gumshield.jpg"style="width:150px; height:150px;"  alt="a2" class="thumbnail">
         </div>
         <div>
             <h4>Description</h4>
             <br>
             <p>
-            - soft
-            - breathable
-            - allergy-friendly 
+          - easy-moulding
+          - rubber
+          - tight-fitting 
             </p>
             <div>
-                Price : £5.99
+                Price : $5.99
             </div>
         </div>
     </div>

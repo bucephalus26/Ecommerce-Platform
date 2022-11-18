@@ -33,10 +33,10 @@
                     <a href="men.php" class="nav-link "> Men </a>
                 </li>
                 <li class="nav-item active">
-                    <a href="women.php" class="nav-link "> Women </a>
+                    <a href="women.php" class="nav-link active"> Women </a>
                 </li>
                 <li class="nav-item active">
-                    <a href="equipment.php" class="nav-link active"> Equipment </a>
+                    <a href="equipment.php" class="nav-link"> Equipment </a>
                 </li>
                 <li class="nav-item active">
                     <a href="login.php" class="nav-link "> Login </a>
@@ -60,16 +60,19 @@
 
         <div class="float-child">
             <div class="section-m1">
-                <h3>Equipment</h3>
+                <h3>Womenswear</h3>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Click for more</button>
                 <div class="dropdown-content">
                     <nav>
-                    <a href="Combat.php">Commbat Accessories</a>
+                    <a href="womenss.php">Tops</a>
                     </nav>
                     <nav>
-                    <a href="equipment.php">General</a>
+                    <a href="womenstrousers.php">Trousers</a>
+                    </nav>
+                    <nav>
+                    <a href="womensshoes.php">Footwear</a>
                     </nav>
                 </div>
             </div>
@@ -85,35 +88,49 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-">
+    justify-content: center;"
+    
+
+>
+
+
+
     <div class="product">
         <div>
-            <img src="images/accessory2.jpeg"style="width:150px; height:150px;"  alt="a1" class="thumbnail">
+            <img src="images\w1shirt.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail">
+            
             <h4>Description</h4>
             <br>
             <p>
-                - odour-free
-                - soft
-                
+                This is one of the most sold books on the planet.
+                Pick up your copy now
+            </p>
+                Price : $5.99
+        </div>
+        <div>
+            <img src="images\w2shirt.jpg"style="width:150px; height: 200px;"  alt="shirt 2" class="thumbnail">
+            <h4>Description</h4>
+            <br>
+            <p>
+                This is one of the most sold books on the planet.
+                Pick up your copy now
             </p>
            
-                Price : £7.99.99
+                Price : $5.99
           
         </div>
         <div>
-            <img src="images\accessory3.jpg"style="width:150px; height:150px;"  alt="a2" class="thumbnail">
+            <img src="images\w3shirt.jpg"style="width: 200px; height: 200px;"  alt="shirt 2" class="thumbnail">
         </div>
         <div>
             <h4>Description</h4>
             <br>
             <p>
-            - soft
-            - breathable
-            - allergy-friendly 
+                This is one of the most sold books on the planet.
+                Pick up your copy now
             </p>
             <div>
-                Price : £5.99
+                Price : $5.99
             </div>
         </div>
     </div>

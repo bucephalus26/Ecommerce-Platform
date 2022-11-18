@@ -33,10 +33,10 @@
                     <a href="men.php" class="nav-link "> Men </a>
                 </li>
                 <li class="nav-item active">
-                    <a href="women.php" class="nav-link "> Women </a>
+                    <a href="women.php" class="nav-link active "> Women </a>
                 </li>
                 <li class="nav-item active">
-                    <a href="equipment.php" class="nav-link active"> Equipment </a>
+                    <a href="index.php" class="nav-link"> Equipment </a>
                 </li>
                 <li class="nav-item active">
                     <a href="login.php" class="nav-link "> Login </a>
@@ -60,16 +60,19 @@
 
         <div class="float-child">
             <div class="section-m1">
-                <h3>Equipment</h3>
+                <h3>Womens Footwear</h3>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Click for more</button>
                 <div class="dropdown-content">
                     <nav>
-                    <a href="Combat.php">Commbat Accessories</a>
+                    <a href="womenss.php">T-shirts</a>
                     </nav>
                     <nav>
-                    <a href="equipment.php">General</a>
+                    <a href="womenstrousers.php">Trousers</a>
+                    </nav>
+                    <nav>
+                    <a href="womensshoes.php">Footwear</a>
                     </nav>
                 </div>
             </div>
@@ -89,31 +92,43 @@
 ">
     <div class="product">
         <div>
-            <img src="images/accessory2.jpeg"style="width:150px; height:150px;"  alt="a1" class="thumbnail">
+            <img src="images\pinkwomenshoes.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail">
+  
             <h4>Description</h4>
             <br>
             <p>
-                - odour-free
-                - soft
-                
+            - athletic
+            - heavy-soled
+            - well-fitting
+            </p>
+                Price : £28.99
+        </div>
+        <div>
+            <img src="images\greenasics.jpg"style="width: 150px; height: 150px;"  alt="shirt 2" class="thumbnail">
+            <h4>Description</h4>
+            <br>
+            <p>
+            - lightweight
+            - odour-free
+            - soft insole
             </p>
            
-                Price : £7.99.99
+                Price : £39.99
           
         </div>
         <div>
-            <img src="images\accessory3.jpg"style="width:150px; height:150px;"  alt="a2" class="thumbnail">
+            <img src="images\newbalance.jpg"style="width:150px; height: 150px;"  alt="shirt 2" class="thumbnail">
         </div>
         <div>
             <h4>Description</h4>
             <br>
             <p>
-            - soft
+            - lightweight
             - breathable
-            - allergy-friendly 
+            - soft-cushioned
             </p>
             <div>
-                Price : £5.99
+                Price : £25.99
             </div>
         </div>
     </div>
