@@ -28,21 +28,27 @@
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a href="index.php" class="nav-link"> Home </a>
+                      <!-- connecting nav bar to pages -->
                 </li>
                 <li class="nav-item active">
                     <a href="men.php" class="nav-link "> Men </a>
+                      <!-- connecting nav bar to pages -->
                 </li>
                 <li class="nav-item active">
                     <a href="women.php" class="nav-link "> Women </a>
+                      <!-- connecting nav bar to pages -->
                 </li>
                 <li class="nav-item active">
                     <a href="equipment.php" class="nav-link active"> Equipment </a>
+                      <!-- connecting nav bar to pages -->
                 </li>
                 <li class="nav-item active">
                     <a href="login.php" class="nav-link "> Login </a>
+                      <!-- connecting nav bar to pages -->
                 </li>
                 <li class="nav-item active">
                     <a href="signup.php" class="nav-link "> Signup </a>
+                       <!-- connecting nav bar to pages -->
                 </li>
             </ul>
         </div>
@@ -61,6 +67,8 @@
         <div class="float-child">
             <div class="section-m1">
                 <h3>Equipment</h3>
+
+                  <!-- adding equipment header -->
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Click for more</button>
@@ -74,7 +82,7 @@
                 </div>
             </div>
         </div>
-
+  <!-- adding dropdown menu and linking them to sub pages to display more products -->
 
         <div class="image container">
         <div class="catalogue" style="
@@ -99,7 +107,7 @@
             </p>
            
                 Price : £7.99.99
-          
+            <!-- adding prices, descriptions and css for images -->
         </div>
         <div>
             <img src="images\accessory3.jpg"style="width:150px; height:150px;"  alt="a2" class="thumbnail">
@@ -114,6 +122,7 @@
             </p>
             <div>
                 Price : £5.99
+                 <!-- adding prices, descriptions and css for images -->
             </div>
         </div>
     </div>
@@ -179,14 +188,14 @@
 
                         <a href="https://www.instagram.com/ehsanhussain_">
                             <img src="frontend/images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
-
+                          <!-- adding social media links-->
                             <a href="https://en-gb.facebook.com/astonuniversity/">
                                 <img src="frontend/images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
-
+                                    <!-- adding social media links-->
                                 <a href="https://www.twitter.com/sports4_us">
                                     <img src="frontend/images/twitter.png" style="width: 30px;; height: 30px;;"
                                         alt="twitter">
-
+                                       <!-- adding social media links-->
                     </div>
                     <!-- Left -->
 
