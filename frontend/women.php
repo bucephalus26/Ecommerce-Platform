@@ -31,18 +31,23 @@
                 </li>
                 <li class="nav-item active">
                     <a href="men.php" class="nav-link "> Men </a>
+                       <!-- linking to men page in nav bar -->
                 </li>
                 <li class="nav-item active">
                     <a href="women.php" class="nav-link active"> Women </a>
+                       <!-- linking to women page in nav bar -->
                 </li>
                 <li class="nav-item active">
                     <a href="equipment.php" class="nav-link"> Equipment </a>
+                       <!-- linking to equipment page in nav bar -->
                 </li>
                 <li class="nav-item active">
                     <a href="login.php" class="nav-link "> Login </a>
+                       <!-- linking to login page in nav bar -->
                 </li>
                 <li class="nav-item active">
                     <a href="signup.php" class="nav-link "> Signup </a>
+                       <!-- linking to signup page in nav bar -->
                 </li>
             </ul>
         </div>
@@ -54,24 +59,32 @@
             <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
                     src="images/user.png" alt="Logo" width="35" height="35"
                     style="padding-left: 5px; padding: right 20px;" /></a>
+                       <!-- adding css to logo and nav bar -->
         </li>
     </nav>
     <div class="float-container">
 
         <div class="float-child">
             <div class="section-m1">
-                <h3>Menswear</h3>
+                <h3>Womenswear</h3>
+                   <!-- adding women header -->
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Click for more</button>
                 <div class="dropdown-content">
-                    <a href="#">Tops</a>
-                    <a href="#">Trousers</a>
-                    <a href="#">Footwear</a>
+                    <nav>
+                    <a href="women.php">Tops</a>
+                    </nav>
+                    <nav>
+                    <a href="womenstrousers.php">Trousers</a>
+                    </nav>
+                    <nav>
+                    <a href="womensshoes.php">Footwear</a>
+                    </nav>
                 </div>
             </div>
         </div>
-
+   <!-- linking to subpages within women page -->
 
         <div class="image container">
         <div class="catalogue" style="
@@ -82,44 +95,54 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-">
+    justify-content: center;"
+    
+
+>
+
+
+
     <div class="product">
         <div>
-            <img src="frontend/images/w1shirt.png"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail">
-  
+            <img src="images\w1shirt.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail">
+            
             <h4>Description</h4>
             <br>
             <p>
-                This is one of the most sold books on the planet.
-                Pick up your copy now
+            - exclusive
+            - only available short-term
+            - matchable options
             </p>
                 Price : $5.99
+                   <!-- addimg images,descriptions and css for images -->
         </div>
         <div>
-            <img src="frontend/images/tshirtadidas.jpg"style="width:150px; height:150px;"  alt="shirt 2" class="thumbnail">
+            <img src="images\w2shirt.jpg"style="width:150px; height: 200px;"  alt="shirt 2" class="thumbnail">
             <h4>Description</h4>
             <br>
             <p>
-                This is one of the most sold books on the planet.
-                Pick up your copy now
+              - breathable
+              - lightweight
+              - sweat-absorbant
             </p>
            
-                Price : $5.99
-          
+                Price : £18.99
+           <!-- addimg images,descriptions and css for images -->
         </div>
         <div>
-            <img src="frontend/images/underarmourtshirt.jpg"style="width:150px; height:150px;"  alt="shirt 2" class="thumbnail">
+            <img src="images\w3shirt.jpg"style="width: 200px; height: 200px;"  alt="shirt 2" class="thumbnail">
         </div>
         <div>
             <h4>Description</h4>
             <br>
             <p>
-                This is one of the most sold books on the planet.
-                Pick up your copy now
+             - comfortable
+             - lightweight
+             - matchable options
             </p>
             <div>
-                Price : $5.99
+                Price : £11.99
+                 <!-- addimg images,descriptions and css for images -->
             </div>
         </div>
     </div>
@@ -185,13 +208,15 @@
 
                         <a href="https://www.instagram.com/ehsanhussain_">
                             <img src="frontend/images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
-
+                                  <!-- linking to social media icons -->
                             <a href="https://en-gb.facebook.com/astonuniversity/">
                                 <img src="frontend/images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
-
+                                 <!-- linking to social media icons -->
                                 <a href="https://www.twitter.com/sports4_us">
                                     <img src="frontend/images/twitter.png" style="width: 30px;; height: 30px;;"
                                         alt="twitter">
+
+                                         <!-- linking to social media icons -->
 
                     </div>
                     <!-- Left -->
