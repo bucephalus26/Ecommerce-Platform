@@ -92,41 +92,34 @@
 ">
     <div class="product">
         <div>
-            <img src="frontend/images/top3.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail">
+            <img src="images\menstrousers1.jpg"style="width:100px; height: 200px;"  alt="shirt 1" class="thumbnail">
   
             <h4>Description</h4>
             <br>
             <p>
-            - Soft knit fabric with engineered mesh ventilation, mapped to the places you need it most
-            - Nearly sew-free design to eliminate chafing
-            - 4-way stretch material moves better in every direction
-            - Material wicks sweat & dries really fast
+            Bottoms feature an elasticated waist with a drawstring fastening for a secure and comfortable fit that is ideal for training
             </p>
-                Price : £28.99
+                Price : £19.99
         </div>
         <div>
-            <img src="frontend/images/tshirtadidas.jpg"style="width:150px; height:150px;"  alt="shirt 2" class="thumbnail">
+            <img src="images\menstrousers2.jpg"style="width:150px; height:200px;"  alt="shirt 2" class="thumbnail">
             <h4>Description</h4>
             <br>
             <p>
-            - Super-soft
-            - cotton-blend fabric provides all-day comfort
-            - Ribbed collar
+            Decorated with solid colouring throughout, the Woven Pants feature an elasticated waist and trims for maximum comfort plus an internal draw-cord for an added personalised fit.
             </p>
            
-                Price : £19.99
+                Price : £15.99
           
         </div>
         <div>
-            <img src="frontend/images/underarmourtshirt.jpg"style="width:150px; height:150px;"  alt="shirt 2" class="thumbnail">
+            <img src="images\menstrousers3.jpg"style="width: 300px; height:200px;"  alt="shirt 2" class="thumbnail">
         </div>
         <div>
             <h4>Description</h4>
             <br>
             <p>
-            - Soft, ultra-lightweight fabric delivers superior breathability & incredible comfort
-            - Material wicks sweat & dries really fast
-            - Dropped, shaped hem for enhanced coverage
+            Made from soft, stretchy fabric, the  Flex Trousers help you move freely before, during and after your routine. A tapered design reduces distractions and lets you focus on your workout.
             </p>
             <div>
                 Price : £25.99

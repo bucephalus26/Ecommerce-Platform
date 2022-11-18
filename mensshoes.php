@@ -92,44 +92,37 @@
 ">
     <div class="product">
         <div>
-            <img src="frontend/images/top3.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail">
+            <img src="images\shoe2.png"style="width: 150px; height:100px;"  alt="shirt 1" class="thumbnail">
   
             <h4>Description</h4>
             <br>
             <p>
-            - Soft knit fabric with engineered mesh ventilation, mapped to the places you need it most
-            - Nearly sew-free design to eliminate chafing
-            - 4-way stretch material moves better in every direction
-            - Material wicks sweat & dries really fast
+            The wide, flat heel gets even more stable with an inner plate that distributes weight from edge to edge, while also flexing to make it comfortable for cardio intervals. The shoes offer incredible traction thanks to the rubber outsole which also wraps up the arch of the shoe for intense grip 
             </p>
-                Price : £28.99
+                Price : £49.99
         </div>
         <div>
-            <img src="frontend/images/tshirtadidas.jpg"style="width:150px; height:150px;"  alt="shirt 2" class="thumbnail">
+            <img src="images\shoesnew.jpg"style="width:150px; height:150px;"  alt="shirt 2" class="thumbnail">
             <h4>Description</h4>
             <br>
             <p>
-            - Super-soft
-            - cotton-blend fabric provides all-day comfort
-            - Ribbed collar
+            delivers unrivalled all-day comfort thanks to the foam midsole which is assisted by the large air unit below the heel for incredible response and cushioning. The shoes feature a woven and synthetic fibre fabric on the upper which feels light and breathable, while the stretchy inner sleeve and booty-like construction creates a snug fit and the rubber on the outsole offers durable traction.
             </p>
            
-                Price : £19.99
+                Price : £39.99
           
         </div>
         <div>
-            <img src="frontend/images/underarmourtshirt.jpg"style="width:150px; height:150px;"  alt="shirt 2" class="thumbnail">
+            <img src="images\shoesorrange.jpg"style="width:150px; height:150px;"  alt="shirt 2" class="thumbnail">
         </div>
         <div>
             <h4>Description</h4>
             <br>
             <p>
-            - Soft, ultra-lightweight fabric delivers superior breathability & incredible comfort
-            - Material wicks sweat & dries really fast
-            - Dropped, shaped hem for enhanced coverage
+            Renown for their sporting aesthetics, this low profile silhouette has been crafted with a seamless mesh and synthetic upper for a breathable feel while the tonal lace fastening offers a secure fit.
             </p>
             <div>
-                Price : £25.99
+                Price : £28.99
             </div>
         </div>
     </div>
