@@ -49,7 +49,6 @@
                     </select>
                   </div>
 
-
                   <div class="form-group">
                     <label for="exampleInputEmail1">Title</label>
                     <input type="text" class="form-control" name="title" value= "{{$data->title}}">
@@ -64,6 +63,23 @@
                     <label for="exampleInputEmail1">Description</label>
                     <input type="text" class="form-control" name="description" value= "{{$data->description}}">
                   </div>
+                
+                  @php
+                    $attributeOptions = \App\Models\Attribute::with('values')->get();
+                  @endphp
+                  @foreach($attributeOptions as $attr)
+
+                  <div class="form-group">
+                    <label for="">{{$attr->name}} :</label>
+                    <select class="form-control" name = "product_attributes[{{$attr->name}}]">
+                    <option value=""></option>
+                      @foreach ($attr->values as $val)
+                      <!-- if statement that gets the correct attributes for each product -->
+                      <option {{ (!empty(json_decode($data->product_attributes, true)[$attr->name]) && json_decode($data->product_attributes, true)[$attr->name] == $val->value) ? 'selected' : ''}} >{{$val->value}}</option>
+                      @endforeach
+                    </select>
+                  </div>
+                  @endforeach
 
                   <div class="form-group">
                     <label for="exampleInputEmail1">Price</label>
