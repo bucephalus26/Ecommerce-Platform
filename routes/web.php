@@ -27,6 +27,7 @@ Route::get('/', function () {
 });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/product/{id}', [HomeController::class, 'product'])->name( name:'product');
 
 // Route Group - route prefix, name prefix, controller prefix
 // ******* Admin Panel Routes *******
