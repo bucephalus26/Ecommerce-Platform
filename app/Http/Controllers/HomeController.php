@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -30,6 +31,27 @@ class HomeController extends Controller
             'data'=>$data,
             'images'=>$images
         ]);
+    }
+
+    public function categoryproducts($id)
+    {
+        echo "categroy products";
+        exit();
+
+        // get product data by id
+        $data=Product::find($id);
+        // get images from image gallery where (where clause) id matches
+        $images = DB::table('images')->where('product_id', $id)->get();
+        return view('home.product',[
+            'data'=>$data,
+            'images'=>$images
+        ]);
+    }
+
+    public static function maincategories()
+    {
+        // main categories have parent_id of 0
+        return Category::where('parent_id', '=', 0)->with('children')->get();
     }
 
 }

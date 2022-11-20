@@ -6,29 +6,33 @@
                     <h6 class="m-0">Categories</h6>
                     <i class="fa fa-angle-down text-dark"></i>
                 </a>
+
+                <!-- get main categories -->
+                <!-- this avoids having to get data from all fuctions -->
+                @php
+                    $mainCategories = \App\Http\Controllers\HomeController::maincategories()
+                @endphp
+                
+                <!-- Categories -->
                 
                 <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
                     <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
+                    @foreach($mainCategories as $rs)
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-toggle="dropdown">Dresses <i class="fa fa-angle-down float-right mt-1"></i></a>
-                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="" class="dropdown-item">Men's Dresses</a>
-                                <a href="" class="dropdown-item">Women's Dresses</a>
-                                <a href="" class="dropdown-item">Baby's Dresses</a>
-                            </div>
+                            <a href="#" class="nav-link" data-toggle="dropdown">{{$rs->title}}<i class="fa fa-angle-down float-right mt-1"></i></a>
+                            
+                            <!-- if parent category has children (sub) categories, call categorytree.blade -->
+                            @if(count($rs->children))
+                                @include('home.categorytree', ['children' => $rs->children])
+                            @endif
+                           
                         </div>
-                        <a href="" class="nav-item nav-link">Shirts</a>
-                        <a href="" class="nav-item nav-link">Jeans</a>
-                        <a href="" class="nav-item nav-link">Swimwear</a>
-                        <a href="" class="nav-item nav-link">Sleepwear</a>
-                        <a href="" class="nav-item nav-link">Sportswear</a>
-                        <a href="" class="nav-item nav-link">Jumpsuits</a>
-                        <a href="" class="nav-item nav-link">Blazers</a>
-                        <a href="" class="nav-item nav-link">Jackets</a>
-                        <a href="" class="nav-item nav-link">Shoes</a>
+                    @endforeach
                     </div>
+                    
                 </nav>
-
+                <!-- Categories end-->
+                
             </div>
             <div class="col-lg-9">
                 <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
