@@ -35,16 +35,13 @@ class HomeController extends Controller
 
     public function categoryproducts($id)
     {
-        echo "categroy products";
-        exit();
-
-        // get product data by id
-        $data=Product::find($id);
-        // get images from image gallery where (where clause) id matches
-        $images = DB::table('images')->where('product_id', $id)->get();
-        return view('home.product',[
-            'data'=>$data,
-            'images'=>$images
+        // get category product data by id
+        $category=Category::find($id);
+        // get products from table where (where clause) category id matches
+        $products = DB::table('products')->where('category_id', $id)->get();
+        return view('home.categoryproducts',[
+            'category'=>$category,
+            'products'=>$products
         ]);
     }
 
