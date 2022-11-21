@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.About{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    color: whitesmoke;
+    }
+    
+    
+    h1{
+    font-size: 36px;
+    font-weight: 600;
+    color: black;
+    }
+    
+    
+    .row{
+      margin-top: 5%;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .about-col{
+      flex-basis: 31%;
+      background: grey;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      padding: 20px 12px;
+      box-sizing: border-box;
+      transition: 0.5s;
+    }
+    
+    h3{
+      text-align: center;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+    
+    .about-col :hover{
+    box-shadow: 0 0 20px 0px black ;
+    }
+    
+    @media (max-width:700px) {
+      .row{
+        flex-direction: column;
+      }
+    }
+
+    .location{
+        width: 100%;
+        margin: auto;
+        padding-top: 20px 0;
+        }
+        
+        .location iframe{
+        
+          width: 100%;
+        }

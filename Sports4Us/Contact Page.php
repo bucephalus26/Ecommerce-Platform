@@ -35,6 +35,9 @@
                     <li class="nav-item active">
                         <a href="Contact Page.php" class="nav-link active"> Contact Us </a>
                     </li>
+                    <li class="nav-item active">
+                    <a href="About Us.php" class="nav-link"> About Us </a>
+                </li>
                 </ul>
             </div>
             <form class="d-flex">
