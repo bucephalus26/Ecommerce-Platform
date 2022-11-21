@@ -1,3 +1,4 @@
+.
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,11 +9,12 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
             crossorigin="anonymous" />
-        <link rel="stylesheet" href="style.css">
-        <title>Signup</title>
+        <link rel="stylesheet" href="styles.css">
+        <title>Login</title>
     </head>
 
     <body style="text-align: center; padding-top: 200px">
+        <!--text colour background colour-->
         <nav class="navbar fixed-top px-sm-5 navbar-expand-sm navbar-dark" style="background-color: black">
             <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top"
                     src="images/navbar-logo.png" alt="Logo" width="50" height="50" /></a>
@@ -27,7 +29,7 @@
                     </li>
                     <!-- linking to home page section on nav bar -->
                     <li class="nav-item active">
-                        <a href="men.php" class="nav-link"> Men </a>
+                        <a href="men.php" class="nav-link "> Men </a>
                     </li>
                     <!-- linking to men page section on nav bar -->
                     <li class="nav-item active">
@@ -39,11 +41,11 @@
                     </li>
                     <!-- linking to equipment page section on nav bar -->
                     <li class="nav-item active">
-                        <a href="login.php" class="nav-link "> Login </a>
+                        <a href="login.php" class="nav-link  active"> Login </a>
                     </li>
                     <!-- linking to login page section on nav bar -->
                     <li class="nav-item active">
-                        <a href="signup.php" class="nav-link active"> Signup </a>
+                        <a href="signup.php" class="nav-link "> Signup </a>
                     </li>
                     <!-- linking to signup page section on nav bar -->
                 </ul>
@@ -64,38 +66,55 @@
             </li>
         </nav>
 
+        <!-- From here the code for the sign-up form starts -->
         <div class="mt-5 text-center">
             <form style="max-width: 250px; margin: auto">
-                <h1 class="h3 mb=3">JOIN NOW</h1>
-                <label for="fname"></label>
-                <input type="text" class="form-control" id="fname" placeholder="First name" required autofocus>
-                <label for="lname"></label>
-                <input type="text" id="lname" class="form-control" placeholder="Last name" required>
-                <label for="email" class="sr-only"></label>
-                <input type="email" class="form-control" id="email" placeholder="Email" required />
-                <label for="password"></label>
-                <input type="password" placeholder="Password" id="password" class="form-control" required />
+                <h1 class="h3 mb=3">LOGIN</h1>
+                <label for="email" class="sr-only pb-3 pt-3"></label>
+                <input type="email" class="form-control" id="email" placeholder="Email" required autofocus />
+                <label for="password" class="pb-3 pt-3"></label>
+                <input type="password" placeholder="Password" id="password" class="form-control" />
+                <!-- remember me checkbox -->
+                <div class="checkbox pb-3 pt-3">
+                    <label>
+                        <input type="checkbox" value="remember-me" /> Remember me
+                    </label>
+                </div>
                 <div class="mt-3">
+
                     <button>
-                        Signup
+                        Login
                     </button>
-                    <p class="pt-3 me-2">Already have an account?</p>
-                    <a href="login.php">Login now!</a>
+                    <p class="pt-3 me-2">Don't have an account?</p>
+                    <a href="signup.php">Create one!</a>
                 </div>
                 <input type="hidden" name="submitted" value="TRUE" />
             </form>
         </div>
-        <!-- Footer -->
         <footer class="text-center text-lg-start text-muted " style="margin-top: 150px; background-color: black;">
             <!-- Section: Social media -->
             <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
                 <!-- Left -->
                 <div class="me-5 d-none d-lg-block">
                     <span>Get connected with us on social networks:</span>
+                    <br>
+                    <br>
+
+                    <a href="https://www.instagram.com/ehsanhussain_">
+                        <img src="frontend/images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
+
+                        <a href="https://en-gb.facebook.com/astonuniversity/">
+                            <img src="frontend/images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
+
+                            <a href="https://www.twitter.com/sports4_us">
+                                <img src="frontend/images/twitter.png" style="width: 30px;; height: 30px;;"
+                                    alt="twitter">
+
                 </div>
                 <!-- Left -->
 
                 <!-- Right -->
+                <div></div>
                 <div>
                     <a href="https://en-gb.facebook.com/astonuniversity/" class="me-4 text-reset">
                         <i class="fab fa-facebook-f"></i>
@@ -104,17 +123,12 @@
                         <i class="fab fa-twitter"></i>
                     </a>
                     <a href="" class="me-4 text-reset">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
                         <i class="fab fa-instagram"></i>
                     </a>
                     <a href="" class="me-4 text-reset">
-                        <i class="fab fa-linkedin"></i>
+                        <i class="fab fa-facebook"></i>
                     </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-github"></i>
-                    </a>
+
                 </div>
                 <!-- Right -->
             </section>
@@ -169,8 +183,8 @@
             </div>
             <!-- Copyright -->
         </footer>
-        <!-- Footer -->
     </body>
+
 
 </html>
 <style>
@@ -191,7 +205,7 @@ form button {
     background-color: black;
     border: black;
     color: white;
-    padding: 10px 88px;
+    padding: 10px 95px;
     font-size: 20px;
 }
 
