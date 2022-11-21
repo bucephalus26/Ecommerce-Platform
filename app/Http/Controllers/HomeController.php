@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Setting;
 use App\Models\Category;
 use Illuminate\Support\Facades\DB;
 
@@ -14,9 +15,12 @@ class HomeController extends Controller
     {
         $page='home';
         $productlist1 = Product::limit(6)->get();
+        $setting= Setting::first();
         return view('home.index',[
             'page'=>$page,
-            'productlist1'=>$productlist1
+            'productlist1'=>$productlist1,
+            'setting'=>$setting
+            
         ]);
     }
 
@@ -50,5 +54,7 @@ class HomeController extends Controller
         // main categories have parent_id of 0
         return Category::where('parent_id', '=', 0)->with('children')->get();
     }
+
+   
 
 }
