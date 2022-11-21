@@ -25,12 +25,27 @@
                     <li class="nav-item active">
                         <a href="index.php" class="nav-link"> Home </a>
                     </li>
+                    <!-- linking to home page section on nav bar -->
                     <li class="nav-item active">
-                        <a href="login.php" class="nav-link"> Login </a>
+                        <a href="men.php" class="nav-link"> Men </a>
                     </li>
+                    <!-- linking to men page section on nav bar -->
+                    <li class="nav-item active">
+                        <a href="women.php" class="nav-link"> Women </a>
+                    </li>
+                    <!-- linking to women page section on nav bar -->
+                    <li class="nav-item active">
+                        <a href="equipment.php" class="nav-link"> Equipment </a>
+                    </li>
+                    <!-- linking to equipment page section on nav bar -->
+                    <li class="nav-item active">
+                        <a href="login.php" class="nav-link "> Login </a>
+                    </li>
+                    <!-- linking to login page section on nav bar -->
                     <li class="nav-item active">
                         <a href="signup.php" class="nav-link active"> Signup </a>
                     </li>
+                    <!-- linking to signup page section on nav bar -->
                 </ul>
             </div>
             <form class="d-flex">
@@ -42,11 +57,16 @@
                         src="images/user.png" alt="Logo" width="35" height="35"
                         style="padding-left: 5px; padding: right 20px;" /></a>
             </li>
+            <li class="nav-item active">
+                <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
+                        src="images/cart.png" alt="Cart" width="35" height="35"
+                        style="padding-left: 5px; padding: right 20px;" /></a>
+            </li>
         </nav>
 
         <div class="mt-5 text-center">
             <form style="max-width: 250px; margin: auto">
-                <h1 class="h3 mb=3">Signup</h1>
+                <h1 class="h3 mb=3">JOIN NOW</h1>
                 <label for="fname"></label>
                 <input type="text" class="form-control" id="fname" placeholder="First name" required autofocus>
                 <label for="lname"></label>
@@ -56,11 +76,11 @@
                 <label for="password"></label>
                 <input type="password" placeholder="Password" id="password" class="form-control" required />
                 <div class="mt-3">
-                    <button class="btn btn-lg btn-dark btn-outline-light btn-block mt-3">
+                    <button>
                         Signup
                     </button>
                     <p class="pt-3 me-2">Already have an account?</p>
-                    <a href="Login.php">Login now!</a>
+                    <a href="login.php">Login now!</a>
                 </div>
                 <input type="hidden" name="submitted" value="TRUE" />
             </form>
@@ -153,3 +173,43 @@
     </body>
 
 </html>
+<style>
+form,
+input {
+    font-family: Basic Commercial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    transition: color .2s ease-in-out;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+
+
+}
+
+form button {
+    background-color: black;
+    border: black;
+    color: white;
+    padding: 10px 88px;
+    font-size: 20px;
+}
+
+nav,
+button {
+    font-family: Basic Commercial, sans-serif;
+    text-transform: uppercase;
+}
+
+footer input {
+    margin-top: 25px;
+    padding: 5px 53px;
+    text-align: left;
+}
+
+footer button {
+    background-color: grey;
+    margin-top: 25px;
+}
+
+</style>
