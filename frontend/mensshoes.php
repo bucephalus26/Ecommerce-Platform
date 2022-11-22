@@ -71,13 +71,13 @@ body {
                 <button class="dropbtn">Click for more</button>
                 <div class="dropdown-content">
                     <nav>
-                        <a href="men.php">T-shirts</a>
+                    <a href="men.php">T-shirts</a>
                     </nav>
                     <nav>
-                        <a href="menstrousers.php">Trousers</a>
+                    <a href="menstrousers.php">Trousers</a>
                     </nav>
                     <nav>
-                        <a href="mensshoes.php">Footwear</a>
+                    <a href="mensshoes.php">Footwear</a>
                     </nav>
                 </div>
             </div>
@@ -85,7 +85,7 @@ body {
 
 
         <div class="image container">
-            <div class="catalogue" style="
+        <div class="catalogue" style="
     background-color: rgb(252, 250, 250);
     display: flex;
     flex-flow: row wrap;     
@@ -95,123 +95,105 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 ">
-                <div class="product">
-                    <div>
-                        <button onclick="shoe2On()" id="shoe2On" class="arrow"><img src="images/arrowl.png" alt=""
-                                style="width: 25px;height: 25px"></button>
-                        <img src="images/shoe2.png" style="width: 150px; height:100px;" alt="shirt 1" class="thumbnail"
-                            id="shoe2img">
-                        <button class="arrow" onclick="shoe2Off()" id="shoe2Off"><img src="images/arrowr.png" alt=""
-                                style="width: 25px;height: 25px"></button><br>
-                        <label>Size :</label>
-                        <input type="radio" name="size" value="size"><strong>39</strong>
-                        <input type="radio" name="size" value="size"><strong>40 </strong>
-                        <input type="radio" name="size" value="size"><strong>41 </strong>
+    <div class="product">
+        <div>
+        <button onclick="shoe2On()" id="shoe2On" class="arrow"><img src="images/arrowl.png" alt="" style="width:25px;height:25px"></button>
+            <img src="images/shoe2.png"style="width: 150px; height:100px;"  alt="shirt 1" class="thumbnail" id="shoe2img">
+            <button class="arrow" onclick="shoe2Off()" id="shoe2Off"><img src="images/arrowr.png" alt="" style="width:25px;height:25px"></button><br>
+            <label>Size :</label>
+        <input type="radio" name="size" value="size"><strong>39</strong>
+        <input type="radio" name="size" value="size"><strong>40 </strong>       
+        <input type="radio" name="size" value="size"><strong>41 </strong>       
+        
+        <br><label>Colours :</label>
+        <input type="radio" name="color" value="color"><strong>Black</strong>
+        <input type="radio" name="color" value="color"><strong>White </strong>       
+        <input type="radio" name="color" value="color"><strong>Blue </strong>       
+        <input type="radio" name="color" value="color"><strong>Red</strong>
 
-                        <br><label>Colours :</label>
-                        <input type="radio" name="color" value="color"><strong>Black</strong>
-                        <input type="radio" name="color" value="color"><strong>White </strong>
-                        <input type="radio" name="color" value="color"><strong>Blue </strong>
-                        <input type="radio" name="color" value="color"><strong>Red</strong>
+           <div class="counter">
+    <button class="cart_btn" onclick="counterDec()">-</button>
+    <h5 id="counter">0</h5>
+    <button class="cart_btn" onclick="counterInc()">+</button >
+    <button class="cart">Add to cart</button>
+</div>
 
-                        <div class="counter">
-                            <button class="cart_btn" onclick="counterDec()">-</button>
-                            <h5 id="counter">0</h5>
-                            <button class="cart_btn" onclick="counterInc()">+</button>
-                            <button class="cart">Add to cart</button>
-                        </div>
+            <h4>Description</h4>
+            <br>
+            <p>
+            The wide, flat heel gets even more stable with an inner plate that distributes weight from edge to edge, while also flexing to make it comfortable for cardio intervals. The shoes offer incredible traction thanks to the rubber outsole which also wraps up the arch of the shoe for intense grip 
+            </p>
+                Price : £49.99
+        </div>
+        <div>
+        <button onclick="shoesnewOn()" id="shoesnewOn" class="arrow"><img src="images/arrowl.png" alt="" style="width:25px;height:25px"></button>
+            <img src="images/shoesnew.jpg"style="width:150px; height:150px;"  alt="shirt 2" class="thumbnail" id="shoesnewimg">
+        <button class="arrow" onclick="shoesnewOff()" id="shoesnewOff"><img src="images/arrowr.png" alt="" style="width:25px;height:25px"></button>
+       <br> <label>Size :</label>
+        <input type="radio" name="size" value="size"><strong>39</strong>
+        <input type="radio" name="size" value="size"><strong>40 </strong>       
+        <input type="radio" name="size" value="size"><strong>41 </strong>       
+        
+        <br><label>Colours :</label>
+        <input type="radio" name="color" value="color"><strong>Black</strong>
+        <input type="radio" name="color" value="color"><strong>White </strong>       
+        <input type="radio" name="color" value="color"><strong>Blue </strong>       
+        <input type="radio" name="color" value="color"><strong>Red</strong>
 
-                        <h4>Description</h4>
-                        <br>
-                        <p>
-                            The wide, flat heel gets even more stable with an inner plate that distributes weight from
-                            edge to edge, while also flexing to make it comfortable for cardio intervals. The shoes
-                            offer incredible traction thanks to the rubber outsole which also wraps up the arch of the
-                            shoe for intense grip
-                        </p>
-                        Price : £49.99
-                    </div>
-                    <div>
-                        <button onclick="shoesnewOn()" id="shoesnewOn" class="arrow"><img src="images/arrowl.png" alt=""
-                                style="width: 25px;height: 25px"></button>
-                        <img src="images/shoesnew.jpg" style="width:150px; height:150px;" alt="shirt 2"
-                            class="thumbnail" id="shoesnewimg">
-                        <button class="arrow" onclick="shoesnewOff()" id="shoesnewOff"><img src="images/arrowr.png"
-                                alt="" style="width: 25px;height: 25px"></button>
-                        <br> <label>Size :</label>
-                        <input type="radio" name="size" value="size"><strong>39</strong>
-                        <input type="radio" name="size" value="size"><strong>40 </strong>
-                        <input type="radio" name="size" value="size"><strong>41 </strong>
+           <div class="counter">
+    <button class="cart_btn" onclick="counterDec1()">-</button>
+    <h5 id="counter1">0</h5>
+    <button class="cart_btn" onclick="counterInc1()">+</button >
+    <button class="cart">Add to cart</button>
+</div>
+            <h4>Description</h4>
+            <br>
+            <p>
+            delivers unrivalled all-day comfort thanks to the foam midsole which is assisted by the large air unit below the heel for incredible response and cushioning. The shoes feature a woven and synthetic fibre fabric on the upper which feels light and breathable, while the stretchy inner sleeve and booty-like construction creates a snug fit and the rubber on the outsole offers durable traction.
+            </p>
+           
+                Price : £39.99
+          
+        </div>
+        <div>
+        <button onclick="shoesorrangeOn()" id="shoesorrangeOn" class="arrow"><img src="images/arrowl.png" alt="" style="width:25px;height:25px"></button>
+            <img src="images/shoesorrange.jpg"style="width:150px; height:150px;"  alt="shirt 2" class="thumbnail" id="shoesorrangeimg">
+        <button class="arrow" onclick="shoesorrangeOff()" id="shoesorrangeOff"><img src="images/arrowr.png" alt="" style="width:25px;height:25px"></button>
+       <br> <label>Size :</label>
+        <input type="radio" name="size" value="size"><strong>39</strong>
+        <input type="radio" name="size" value="size"><strong>40 </strong>       
+        <input type="radio" name="size" value="size"><strong>41 </strong>       
+        
+        <br><label>Colours :</label>
+        <input type="radio" name="color" value="color"><strong>Black</strong>
+        <input type="radio" name="color" value="color"><strong>White </strong>       
+        <input type="radio" name="color" value="color"><strong>Blue </strong>       
+        <input type="radio" name="color" value="color"><strong>Red</strong>
 
-                        <br><label>Colours :</label>
-                        <input type="radio" name="color" value="color"><strong>Black</strong>
-                        <input type="radio" name="color" value="color"><strong>White </strong>
-                        <input type="radio" name="color" value="color"><strong>Blue </strong>
-                        <input type="radio" name="color" value="color"><strong>Red</strong>
-
-                        <div class="counter">
-                            <button class="cart_btn" onclick="counterDec1()">-</button>
-                            <h5 id="counter1">0</h5>
-                            <button class="cart_btn" onclick="counterInc1()">+</button>
-                            <button class="cart">Add to cart</button>
-                        </div>
-                        <h4>Description</h4>
-                        <br>
-                        <p>
-                            delivers unrivalled all-day comfort thanks to the foam midsole which is assisted by the
-                            large air unit below the heel for incredible response and cushioning. The shoes feature a
-                            woven and synthetic fibre fabric on the upper which feels light and breathable, while the
-                            stretchy inner sleeve and booty-like construction creates a snug fit and the rubber on the
-                            outsole offers durable traction.
-                        </p>
-
-                        Price : £39.99
-
-                    </div>
-                    <div>
-                        <button onclick="shoesorrangeOn()" id="shoesorrangeOn" class="arrow"><img
-                                src="images/arrowl.png" alt="" style="width: 25px;height: 25px"></button>
-                        <img src="images/shoesorrange.jpg" style="width:150px; height:150px;" alt="shirt 2"
-                            class="thumbnail" id="shoesorrangeimg">
-                        <button class="arrow" onclick="shoesorrangeOff()" id="shoesorrangeOff"><img
-                                src="images/arrowr.png" alt="" style="width: 25px;height: 25px"></button>
-                        <br> <label>Size :</label>
-                        <input type="radio" name="size" value="size"><strong>39</strong>
-                        <input type="radio" name="size" value="size"><strong>40 </strong>
-                        <input type="radio" name="size" value="size"><strong>41 </strong>
-
-                        <br><label>Colours :</label>
-                        <input type="radio" name="color" value="color"><strong>Black</strong>
-                        <input type="radio" name="color" value="color"><strong>White </strong>
-                        <input type="radio" name="color" value="color"><strong>Blue </strong>
-                        <input type="radio" name="color" value="color"><strong>Red</strong>
-
-                        <div class="counter">
-                            <button class="cart_btn" onclick="counterDec2()">-</button>
-                            <h5 id="counter2">0</h5>
-                            <button class="cart_btn" onclick="counterInc2()">+</button>
-                            <button class="cart">Add to cart</button>
-                        </div>
-                        <div>
-                            <h4>Description</h4>
-                            <br>
-                            <p>
-                                Renown for their sporting aesthetics, this low profile silhouette has been crafted with
-                                a seamless mesh and synthetic upper for a breathable feel while the tonal lace fastening
-                                offers a secure fit.
-                            </p>
-                            <div>
-                                Price : £28.99
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
+           <div class="counter">
+    <button class="cart_btn" onclick="counterDec2()">-</button>
+    <h5 id="counter2">0</h5>
+    <button class="cart_btn" onclick="counterInc2()">+</button >
+    <button class="cart">Add to cart</button>
+        </div>
+        <div>
+            <h4>Description</h4>
+            <br>
+            <p>
+            Renown for their sporting aesthetics, this low profile silhouette has been crafted with a seamless mesh and synthetic upper for a breathable feel while the tonal lace fastening offers a secure fit.
+            </p>
+            <div>
+                Price : £28.99
             </div>
+        </div>
+    </div>
+
+    </div>
+           
+        </div>
 
 
-            <!-- <div class="float-container">
+        <!-- <div class="float-container">
   <div class="float-child">
   <div class = "section-m1"><h3>Mens sports shoes</h3></div>
     <div class="dropdown">
@@ -224,14 +206,14 @@ body {
     </div>  
   </div> -->
 
-            <!-- <div class="image container">
+        <!-- <div class="image container">
     <img src="frontend/images/shoesnew.jpg" style="width:150px; height:150px;" alt="shoes1">
     <img src="images/shoe2.png" style="width:150px; height:100px;" alt="shoes2">
     <img src="frontend/images/shoesorrange.jpg" style="width:150px; height:150px;" alt="shoes3">
     </div> -->
 
 
-            <!-- <div class="float-container">
+        <!-- <div class="float-container">
             <div class="float-child">
                 <div class="section-m1">
                     <h3>Mens other</h3>
@@ -267,14 +249,13 @@ body {
 
                         <a href="https://www.instagram.com/ehsanhussain_">
                             <img src="images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
-                            <!-- linking to instagram -->
 
                             <a href="https://en-gb.facebook.com/astonuniversity/">
                                 <img src="images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
-                                <!-- linking to facebook -->
+
                                 <a href="https://www.twitter.com/sports4_us">
-                                    <img src="images/twitter.png" style="width: 30px;; height: 30px;;" alt="twitter">
-                                    <!-- linking to twitter -->
+                                    <img src="images/twitter.png" style="width: 30px;; height: 30px;;"
+                                        alt="twitter">
 
                     </div>
                     <!-- Left -->
@@ -355,84 +336,79 @@ body {
                 <!-- Copyright -->
             </footer>
             <script>
-            var value = document.getElementById('counter').innerText;
-            var value = document.getElementById('counter1').innerText;
-
-            function shoe2Off() {
-                document.getElementById('shoe2img').src = "images/shoe2back.webp";
-                document.getElementById('shoe2Off').style.display = "none";
-                document.getElementById('shoe2On').style.display = "inline";
-            }
-
-            function shoe2On() {
-                document.getElementById('shoe2img').src = "images/shoe2.jpg";
-                document.getElementById('shoe2On').style.display = "none";
-                document.getElementById('shoe2Off').style.display = "inline";
-            }
-
+                var value= document.getElementById('counter').innerText;
+                  var value= document.getElementById('counter1').innerText;
+                function shoe2Off(){
+                  document.getElementById('shoe2img').src="images/shoe2back.webp";
+                  document.getElementById('shoe2Off').style.display="none";
+                  document.getElementById('shoe2On').style.display="inline";
+                 }
+                function shoe2On(){
+                  document.getElementById('shoe2img').src="images/shoe2.png";
+                  document.getElementById('shoe2On').style.display="none";
+                  document.getElementById('shoe2Off').style.display="inline";
+                 }
+                
 
 
-            function shoesnewOff() {
-                document.getElementById('shoesnewimg').src = "images/shoesnewback.jpg";
-                document.getElementById('shoesnewOff').style.display = "none";
-                document.getElementById('shoesnewOn').style.display = "inline";
-            }
-
-            function shoesnewOn() {
-                document.getElementById('shoesnewimg').src = "shoesnew.jpg";
-                document.getElementById('shoesnewOn').style.display = "none";
-                document.getElementById('shoesnewOff').style.display = "inline";
-            }
-
-
-            function shoesorrangeOff() {
-                document.getElementById('shoesorrangeimg').src = "images/shoesorrangeback.webp";
-                document.getElementById('shoesorrangetOff').style.display = "none";
-                document.getElementById('shoesorrangeOn').style.display = "inline";
-            }
-
-            function shoesorrangeOn() {
-                document.getElementById('shoesorrangeimg').src = "images/shoesorrange.jpg";
-                document.getElementById('shoesorrangeOn').style.display = "none";
-                document.getElementById('shoesorrangeOff').style.display = "inline";
-            }
-
-            function counterInc() {
-                document.getElementById('counter').innerText = ++value;
-            }
-
-            function counterDec() {
-                if (value > 0) {
-                    document.getElementById('counter').innerText = --value;
-                } else {
-                    document.getElementById('counter').innerText = value;
+                 function shoesnewOff(){
+                  document.getElementById('shoesnewimg').src="images/shoesnewback.webp";
+                  document.getElementById('shoesnewOff').style.display="none";
+                  document.getElementById('shoesnewOn').style.display="inline";
+                 }
+                 function shoesnewOn(){
+                  document.getElementById('shoesnewimg').src="images/shoesnew.jpg";
+                  document.getElementById('shoesnewOn').style.display="none";
+                  document.getElementById('shoesnewOff').style.display="inline";
+                 }
+               
+                 
+                 function shoesorrangeOff(){
+                  document.getElementById('shoesorrangeimg').src="images/shoesorrangeback.webp";
+                  document.getElementById('shoesorrangetOff').style.display="none";
+                  document.getElementById('shoesorrangeOn').style.display="inline";
+                 }
+                 function shoesorrangeOn(){
+                  document.getElementById('shoesorrangeimg').src="images/shoesorrange.jpg";
+                  document.getElementById('shoesorrangeOn').style.display="none";
+                  document.getElementById('shoesorrangeOff').style.display="inline";
+                 }
+                 function counterInc(){
+                  document.getElementById('counter').innerText=++value;
+                 }
+                 function counterDec(){
+                    if(value>0){
+                  document.getElementById('counter').innerText=--value;
+                    }
+                    else{
+                  document.getElementById('counter').innerText=value;
+                    }
                 }
-            }
-            // second counter
-            function counterInc1() {
-                document.getElementById('counter1').innerText = ++value;
-            }
-
-            function counterDec1() {
-                if (value > 0) {
-                    document.getElementById('counter1').innerText = --value;
-                } else {
-                    document.getElementById('counter1').innerText = value;
+                // second counter
+                function counterInc1(){
+                  document.getElementById('counter1').innerText=++value;
+                 }
+                 function counterDec1(){
+                    if(value>0){
+                  document.getElementById('counter1').innerText=--value;
+                    }
+                    else{
+                  document.getElementById('counter1').innerText=value;
+                    }
                 }
-            }
-            // third counter
-            function counterInc2() {
-                document.getElementById('counter2').innerText = ++value;
-            }
-
-            function counterDec2() {
-                if (value > 0) {
-                    document.getElementById('counter2').innerText = --value;
-                } else {
-                    document.getElementById('counter2').innerText = value;
+                // third counter
+                function counterInc2(){
+                  document.getElementById('counter2').innerText=++value;
+                 }
+                 function counterDec2(){
+                    if(value>0){
+                  document.getElementById('counter2').innerText=--value;
+                    }
+                    else{
+                  document.getElementById('counter2').innerText=value;
+                    }
                 }
-            }
-            </script>
+                </script>
 </body>
 
 </html>

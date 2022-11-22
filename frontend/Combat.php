@@ -94,11 +94,13 @@ body {
 ">
     <div class="product">
         <div>
-            <img src="images/gumshield.jpg"style="width:150px; height:150px;"  alt="a1" class="thumbnail">
+        <button onclick="gumshieldOn()" id="gumshieldOn" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
+            <img src="images/gumshield.jpg"style="width:150px; height:150px;"  alt="a1" class="thumbnail" id="gumshieldimg">
+            <button class="arrow" onclick="gumshieldOff()" id="w3shirtOff"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button>
             <div class="counter">
-    <button class="cart_btn" onclick="counterDec1()">-</button>
-    <h5 id="counter1">0</h5>
-    <button class="cart_btn" onclick="counterInc1()">+</button >
+    <button class="cart_btn" onclick="counterDec()">-</button>
+    <h5 id="counter">0</h5>
+    <button class="cart_btn" onclick="counterInc()">+</button >
     <button class="cart">Add to cart</button>
     </div>
             <h4>Description</h4>
@@ -113,7 +115,9 @@ body {
           
         </div>
         <div>
-            <img src="images/mma.jpg"style="width:150px; height:150px;"  alt="a2" class="thumbnail">
+        <button onclick="mmaOn()" id="mmaOn" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
+            <img src="images/mma.jpg"style="width:150px; height:150px;"  alt="a2" class="thumbnail" id="mmaimg">
+            <button class="arrow" onclick="mmaOff()" id="w3shirtOff"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button>
         </div>
         <div>
         <div class="counter">
@@ -130,7 +134,7 @@ body {
           - tight-fitting 
             </p>
             <div>
-                Price : £5.79
+                Price : £5.99
             </div>
         </div>
     </div>
@@ -285,34 +289,34 @@ body {
             <script>
                 // variableForCounter
                   var value= document.getElementById('counter').innerText;
-                  var value= document.getElementById('counter1').innerText;
-                  var value= document.getElementById('counter2').innerText;
+                  var value1= document.getElementById('counter1').innerText;
+                  var value2= document.getElementById('counter2').innerText;
 
 
 
                 
-                function top3Off(){
-                  document.getElementById('top3Img').src="images/top3back.webp";
-                  document.getElementById('top3Off').style.display="none";
-                  document.getElementById('top3On').style.display="inline";
+                function gumshieldOff(){
+                  document.getElementById('gumshieldimg').src="images/gumshieldback.webp";
+                  document.getElementById('gumshieldOff').style.display="none";
+                  document.getElementById('gumshieldOn').style.display="inline";
                  }
-                function top3On(){
-                  document.getElementById('top3Img').src="images/top3.jpg";
-                  document.getElementById('top3On').style.display="none";
-                  document.getElementById('top3Off').style.display="inline";
+                function gumshieldOn(){
+                  document.getElementById('gumshieldimg').src="images/gumshield.jpg";
+                  document.getElementById('gumshieldOn').style.display="none";
+                  document.getElementById('gumshieldOff').style.display="inline";
                  }
                 
 
 
-                 function adidasOff(){
-                  document.getElementById('adidasShirt').src="images/tshirtadidasback.jpg";
-                  document.getElementById('adidasOff').style.display="none";
-                  document.getElementById('adidasOn').style.display="inline";
+                 function mmaOff(){
+                  document.getElementById('mmaimg').src="images/mmaback.jpg";
+                  document.getElementById('mmaOff').style.display="none";
+                  document.getElementById('mmaOn').style.display="inline";
                  }
-                 function adidasOn(){
-                  document.getElementById('adidasShirt').src="images/tshirtadidas.jpg";
-                  document.getElementById('adidasOn').style.display="none";
-                  document.getElementById('adidasOff').style.display="inline";
+                 function mmaOn(){
+                  document.getElementById('mmaimg').src="images/mma.jpg";
+                  document.getElementById('mmaOn').style.display="none";
+                  document.getElementById('mmaOff').style.display="inline";
                  }
                
                  
@@ -343,26 +347,14 @@ body {
                 }
                 // second counter
                 function counterInc1(){
-                  document.getElementById('counter1').innerText=++value;
+                  document.getElementById('counter1').innerText=++value1;
                  }
                  function counterDec1(){
                     if(value>0){
-                  document.getElementById('counter1').innerText=--value;
+                  document.getElementById('counter1').innerText=--value1;
                     }
                     else{
-                  document.getElementById('counter1').innerText=value;
-                    }
-                }
-                // third counter
-                function counterInc2(){
-                  document.getElementById('counter2').innerText=++value;
-                 }
-                 function counterDec2(){
-                    if(value>0){
-                  document.getElementById('counter2').innerText=--value;
-                    }
-                    else{
-                  document.getElementById('counter2').innerText=value;
+                  document.getElementById('counter1').innerText=value1;
                     }
                 }
                  

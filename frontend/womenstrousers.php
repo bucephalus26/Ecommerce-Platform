@@ -97,13 +97,9 @@ body {
 ">
     <div class="product">
         <div>
-            <br>
-            <br>
-            <br>
-            
-        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"style="width:25px;height:25px"></button>
-            <img src="images/w1trousers.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail">
-            <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
+        <button onclick="w1trousersOn()" id="w1trousersOn" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
+            <img src="images/w1trousers.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail" id="w1trousersimg">
+            <button class="arrow" onclick="w1trousersOff()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
   
 
             <label>Size :</label>
@@ -135,9 +131,9 @@ body {
                 Price : £28.99
         </div>
         <div>
-        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-            <img src="images/w2trousers.jpg"style="width:100px; height: 175px;"  alt="shirt 2" class="thumbnail">
-        <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
+        <button onclick="w2trousersOn()" id="w2trousersOn" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
+            <img src="images/w2trousers.jpg"style="width:100px; height: 175px;"  alt="shirt 2" class="thumbnail" id="w2trousersimg">
+        <button class="arrow" onclick="w2trousersOff()" id="w2trousersOff"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
            
             <label>Size :</label>
         <input type="radio" name="size" value="size"><strong>XS</strong>
@@ -151,10 +147,11 @@ body {
         <input type="radio" name="color" value="color"><strong>Blue </strong>       
         <input type="radio" name="color" value="color"><strong>Red</strong>
 
-           <div class="counter">
-    <button class="cart_btn" onclick="counterDec()">-</button>
-    <h5 id="counter">0</h5>
-    <button class="cart_btn" onclick="counterInc()">+</button >
+           
+        <div class="counter">
+    <button class="cart_btn" onclick="counterDec1()">-</button>
+    <h5 id="counter1">0</h5>
+    <button class="cart_btn" onclick="counterInc1()">+</button >
     <button class="cart">Add to cart</button>
     </div>
            
@@ -169,9 +166,9 @@ body {
           
         </div>
         <div>
-        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-            <img src="images/khaki.jpg"style="width:100px; height:200px;"  alt="shirt 2" class="thumbnail">
-        <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
+        <button onclick="khakiOn()" id="khakiOn" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
+            <img src="images/khaki.jpg"style="width:100px; height:200px;"  alt="shirt 2" class="thumbnail"id="khakiimg">
+        <button class="arrow" onclick="khakiOff()" id="khakiOff"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
 
         </div>
         <div>
@@ -189,10 +186,10 @@ body {
         <input type="radio" name="color" value="color"><strong>Blue </strong>       
         <input type="radio" name="color" value="color"><strong>Red</strong>
 
-           <div class="counter">
-    <button class="cart_btn" onclick="counterDec()">-</button>
-    <h5 id="counter">0</h5>
-    <button class="cart_btn" onclick="counterInc()">+</button >
+        <div class="counter">
+    <button class="cart_btn" onclick="counterDec2()">-</button>
+    <h5 id="counter2">0</h5>
+    <button class="cart_btn" onclick="counterInc2()">+</button >
     <button class="cart">Add to cart</button>
     </div>
             <h4>Description</h4>
@@ -355,6 +352,91 @@ body {
                 </div>
                 <!-- Copyright -->
             </footer>
+            <script>
+                // variableForCounter
+                  var value= document.getElementById('counter').innerText;
+                  var value1= document.getElementById('counter1').innerText;
+                  var value2= document.getElementById('counter2').innerText;
+
+
+
+                
+                function w1trousersOff(){
+                  document.getElementById('w1trousersimg').src="images/w1trousersback.jpg";
+                  document.getElementById('w1trousersOff').style.display="none";
+                  document.getElementById('w1trousersOn').style.display="inline";
+                 }
+                function w1trousersOn(){
+                  document.getElementById('w1trousersimg').src="images/w1trousers.jpg";
+                  document.getElementById('w1trousersOn').style.display="none";
+                  document.getElementById('w1trousersOff').style.display="inline";
+                 }
+                
+
+
+                 function w2trousersOff(){
+                  document.getElementById('w2trousersimg').src="images/w2trousersback.webp";
+                  document.getElementById('w2trousersOff').style.display="none";
+                  document.getElementById('w2trousersOn').style.display="inline";
+                 }
+                 function w2trousersOn(){
+                  document.getElementById('w2trousersimg').src="images/w2trousers.jpg";
+                  document.getElementById('w2trousersOn').style.display="none";
+                  document.getElementById('w2trousersOff').style.display="inline";
+                 }
+               
+                 
+                 function khakiOff(){
+                  document.getElementById('khakiimg').src="images/khakiback.jpg";
+                  document.getElementById('khakiOff').style.display="none";
+                  document.getElementById('khakiOn').style.display="inline";
+                 }
+                 function khakiOn(){
+                  document.getElementById('khakiimg').src="images/khaki.jpg";
+                  document.getElementById('khakiOn').style.display="none";
+                  document.getElementById('khakiOff').style.display="inline";
+                 }
+       
+
+
+
+                 function counterInc(){
+                  document.getElementById('counter').innerText=++value;
+                 }
+                 function counterDec(){
+                    if(value>0){
+                  document.getElementById('counter').innerText=--value;
+                    }
+                    else{
+                  document.getElementById('counter').innerText=value;
+                    }
+                }
+                // second counter
+                function counterInc1(){
+                  document.getElementById('counter1').innerText=++value1;
+                 }
+                 function counterDec1(){
+                    if(value>0){
+                  document.getElementById('counter1').innerText=--value1;
+                    }
+                    else{
+                  document.getElementById('counter1').innerText=value1;
+                    }
+                }
+                // third counter
+                function counterInc2(){
+                  document.getElementById('counter2').innerText=++value2;
+                 }
+                 function counterDec2(){
+                    if(value>0){
+                  document.getElementById('counter2').innerText=--value2;
+                    }
+                    else{
+                  document.getElementById('counter2').innerText=value2;
+                    }
+                }
+                 
+            </script>
 </body>
 
 </html>
