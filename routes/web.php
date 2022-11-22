@@ -42,8 +42,14 @@ Route::get('/product/{id}', [HomeController::class, 'product'])->name( name:'pro
 
 // Route Group - route prefix, name prefix, controller prefix
 // ******* Admin Panel Routes *******
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::prefix('/user')->name('user.')->controller(AdminUserController::class)->group(function() {
     Route::get('/', [AdminHomeController::class, 'index'])->name('index');
+    Route::get('/edit/{id}', 'show')->name('edit');
+    Route::get('/show/{id}', 'show')->name('show');
+    Route::post('/update/{id}', 'update')->name('update');
+    Route::get('/destroy/{id}', 'destroy')->name('destroy');
+    Route::post('/addrole/{id}', 'addrole')->name('addrole');
+    Route::get('/destroyrole/{uid}/{rid}', 'destroyrole')->name('destroyrole');
 
     // ******* Admin Category Routes *******
     Route::prefix('/category')->name('category.')->controller(AdminCategoryController::class)->group(function () {

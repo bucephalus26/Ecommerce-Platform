@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public static function maincatergorylist()
     {
-        return Category::where('parent_id, '=', 0)->with('children')->get();
+        return Category::where('parent_id', '=', 0)->with('children')->get();
     }
     // Define index page
     public function index()
@@ -21,7 +21,7 @@ class HomeController extends Controller
         return view( view:'admin.index',[
             'page'=>$page,
             'setting'=>$setting,
-            'sliderdata'=>$sliderdata_
+            'sliderdata'=>$sliderdata_,
             'productlist1'=>$productlist1
         ]);
     }
