@@ -8,21 +8,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-    <title>Login</title>
-    <script type="text/javascript">
-    writeRandomQuote = function() {
-        var quotes = new Array();
-        quotes[0] = "NHS discount available";
-        quotes[1] = "Black Friday Sale available";
-        quotes[2] = "Refunds and exchanges available within 28 days of purchase"
-        quotes[3] = "Student discount available";
-        var rand = Math.floor(Math.random() * quotes.length);
-        document.write(quotes[rand]);
-    }
-    writeRandomQuote();
-    </script>
-    <!-- Java script written to display random quotations displaying sale info on page -->
+    <style>
+body {
+  background-image: url('images/backgroundmaybe.jpg');
+}
+</style>
 
+    <title>Login</title>
+    <body>
+        
+    </body>
+
+    
+</body>
 </head>
 
 
@@ -116,27 +114,50 @@
     flex-wrap: wrap;
     justify-content: center;
 ">
+
+             <!-- adding arrows to navigate through products -->
                 <div class="product">
+
+                
                     <div>
+                        
+    <!-- Java script written to display random quotations displaying sale info on page -->
+
+                    <script type="text/javascript">
+    RandomSales = function() {
+        var quotes = new Array();
+        quotes[0] = "NHS discount available";
+        quotes[1] = "Black Friday Sale available";
+        quotes[2] = "Refunds and exchanges available within 28 days of purchase"
+        quotes[3] = "Student discount available";
+        var rand = Math.floor(Math.random() * quotes.length);
+        document.write(quotes[rand]);
+    }
+    RandomSales();
+    </script>
+                        <br>
+                        <br>
+                        <br>
+
                         <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""
                                 style="width:25px;height:25px"></button>
                         <img src="images/top3.jpg" style="width:150px; height:150px;" alt="shirt 1" class="thumbnail"
                             id="top3Img">
                         <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png"
                                 alt=""style="width:25px;height:25px"></button><br>
-
+                                       <!-- adding radio buttons for sizes -->
                         <label>Size :</label>
                         <input type="radio" name="size" value="size"><strong>XS</strong>
                         <input type="radio" name="size" value="size"><strong>S </strong>
                         <input type="radio" name="size" value="size"><strong>L </strong>
                         <input type="radio" name="size" value="size"><strong>XL </strong>
-
+             <!-- adding radio bttons to add colors-->
                         <br><label>Colours :</label>
                         <input type="radio" name="color" value="color"><strong>Black</strong>
                         <input type="radio" name="color" value="color"><strong>White </strong>
                         <input type="radio" name="color" value="color"><strong>Blue </strong>
                         <input type="radio" name="color" value="color"><strong>Red</strong>
-
+                                        <!-- incrementing and decrementing counter-->
                         <div class="counter">
                             <button class="cart_btn" onclick="counterDec()">-</button>
                             <h5 id="counter">0</h5>
@@ -156,7 +177,7 @@
                         <br><br><br><br>
 
                     </div>
-                    <!-- adding products , importing images, adding description and styling the images -->
+                    <!-- allowing other image  -->
                     <div>
                         <button onclick="adidasOn()" id="adidasOn" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
                         <img src="images/tshirtadidas.jpg" id="adidasShirt" style="width:150px; height:150px;" alt="shirt 2"
@@ -395,7 +416,7 @@
 
 
         function top3Off() {
-            document.getElementById('top3Img').src = "images/top3back.webp";
+            document.getElementById('top3Img').src = "images/top3back.jpg";
             document.getElementById('top3Off').style.display = "none";
             document.getElementById('top3On').style.display = "inline";
         }
@@ -422,7 +443,7 @@
 
 
         function underShirtOff() {
-            document.getElementById('underShirtImg').src = "images/underarmourtshirtback.";
+            document.getElementById('underShirtImg').src = "images/underarmourtshirtback.jpg";
             document.getElementById('underShirtOff').style.display = "none";
             document.getElementById('underShirtOn').style.display = "inline";
         }
