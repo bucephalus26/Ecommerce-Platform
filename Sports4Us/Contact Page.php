@@ -7,15 +7,15 @@
          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="Stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
             crossorigin="anonymous" />
-         <link rel = "Stylesheet" href="Stylesheets.css">
+         <link rel = "Stylesheet" href="stylesheet.css">
 
       </head>
 
-      <body style ="padding-top: 50px">
-
-            <nav class="navbar fixed-top px-sm-5 navbar-expand-sm navbar-dark" style="background-color: black">
+      <body style=" padding-top: 20px">
+        <!--text colour background colour-->
+        <nav class="navbar fixed-top px-sm-5 navbar-expand-sm navbar-dark" style="background-color: black">
             <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top"
-                    src="images/logo.png " alt="Logo" width="50" height="50" /></a>
+                    src="images/navbar-logo.png" alt="Logo" width="50" height="50" /></a>
             <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,19 +25,27 @@
                     <li class="nav-item active">
                         <a href="index.php" class="nav-link"> Home </a>
                     </li>
-                    
+                    <!-- linking to home page section on nav bar -->
+                    <li class="nav-item active">
+                        <a href="men.php" class="nav-link "> Men </a>
+                    </li>
+                    <!-- linking to men page section on nav bar -->
+                    <li class="nav-item active">
+                        <a href="women.php" class="nav-link"> Women </a>
+                    </li>
+                    <!-- linking to women page section on nav bar -->
+                    <li class="nav-item active">
+                        <a href="equipment.php" class="nav-link"> Equipment </a>
+                    </li>
+                    <!-- linking to equipment page section on nav bar -->
                     <li class="nav-item active">
                         <a href="login.php" class="nav-link"> Login </a>
                     </li>
+                    <!-- linking to login page section on nav bar -->
                     <li class="nav-item active">
                         <a href="signup.php" class="nav-link "> Signup </a>
                     </li>
-                    <li class="nav-item active">
-                        <a href="Contact Page.php" class="nav-link active"> Contact Us </a>
-                    </li>
-                    <li class="nav-item active">
-                    <a href="About Us.php" class="nav-link"> About Us </a>
-                </li>
+                    <!-- linking to signup page section on nav bar -->
                 </ul>
             </div>
             <form class="d-flex">
@@ -45,9 +53,14 @@
                 <button type="submit" class="btn btn-outline-light">Search</button>
             </form>
             <li class="nav-item active">
-                <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx3"
+                <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
                         src="images/user.png" alt="Logo" width="35" height="35"
-                        style="padding-left: 2px; padding: right 20px;" /></a>
+                        style="padding-left: 5px; padding: right 20px;" /></a>
+            </li>
+            <li class="nav-item active">
+                <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
+                        src="images/cart.png" alt="Cart" width="35" height="35"
+                        style="padding-left: 5px; padding: right 20px;" /></a>
             </li>
         </nav>
 <body> 
@@ -110,88 +123,105 @@
     </section>
 </body>
 
-<footer class="text-center text-lg-start text-muted " style="margin-top: 0px; background-color: black;">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        <!-- Left -->
-        <div class="me-5 d-none d-lg-block">
-            <span>Get connected with us on social networks:</span>
-        </div>
-        <!-- Left -->
-
-        <!-- Right -->
-        <div></div>
-        <div>
-            <a href="https://en-gb.facebook.com/astonuniversity/" class="me-4 text-reset">
-                <i class="fa fa-facebook-f"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fa fa-twitter"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fa fa-google"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fa fa-instagram"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fa fa-linkedin"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fa fa-github"></i>
-            </a>
-        </div>
-        <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-
-    <!-- Section: Links  -->
-    <section class="">
-        <div class="container text-center text-md-start mt-5">
-            <!-- Grid row -->
-            <div class="row mt-3">
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        <p>useful links</p>
-                    </h6>
-                    <p>
-                        <a href="#!" class="text-reset">Home</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Products</a>
-                    </p>
-                    <p>
-                        <a href="login.php" class="text-reset">Account</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Contact Us</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">About Us</a>
-                    </p>
+ <!-- Footer -->
+ <footer class="text-center text-lg-start text-muted " style="margin-top: 0px; background-color: black;">
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                    <span>Get connected with us on social networks:</span>
                 </div>
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <!-- Content -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        <a href="#" class="fas fa-gem me-3 text-reset">Subscribe Newsletter</a>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="subscribe btm-brdr">
-                                <form>
-                                    <input type="email" placeholder="Email" />
-                                    <button type="button" class="fill-btn">Subscribe</button>
-                                </form>
-                    </h6>
+                <!-- Left -->
+                <!-- Right -->
+                <div>
+                    <a href="https://en-gb.facebook.com/astonuniversity/" class="me-4 text-reset">
+                        <i class="fa fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fa fa-google"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fa fa-github"></i>
+                    </a>
                 </div>
-
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                <p>useful links</p>
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">Home</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Products</a>
+                            </p>
+                            <p>
+                                <a href="login.php" class="text-reset">Account</a>
+                            </p>
+                            <p>
+                                <a href="Contact Page.php" class="text-reset">Contact Us</a>
+                            </p>
+                            <p>
+                                <a href="About Us.php" class="text-reset">About Us</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                <a href="#" class="fas fa-gem me-3 text-reset">Subscribe Newsletter</a>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                                    <div class="subscribe btm-brdr">
+                                        <form>
+                                            <input type="email" placeholder="Email" />
+                                            <button type="button" class="fill-btn">Subscribe</button>
+                                        </form>
+                            </h6>
+                        </div>
+                    </div>
+            </section>
+            <!-- Copyright -->
+            <div class="text-center p-4">
+                © 2022 Copyright:
+                <a class="text-reset fw-bold" href="https://mdbootstrap.com/">sports4us.com</a>
             </div>
-    </section>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </body>
+        </html>   
+        
+        <style>
+            
+nav,
+button {
+    font-family: Basic Commercial, sans-serif;
+    text-transform: uppercase;
 
-    <!-- Copyright -->
-    <div class="text-center p-4">
-        © 2022 Copyright:
-        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">sports4us.com</a>
-    </div>
-    <!-- Copyright -->
-       </footer>
-</html>
+}
+footer input {
+    margin-top: 25px;
+    padding: 5px 53px; 
+    text-align: left;
+}
+footer button {
+    background-color: grey;
+    margin-top: 25px;
+}
+</style>
