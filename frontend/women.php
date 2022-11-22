@@ -108,26 +108,24 @@ body {
 
 
     <div class="product">
+               <!-- Java script written to display random quotations displaying sale info on page -->
+
+    <script type="text/javascript">
+  rndmSales = function () {
+    var quotes = new Array();
+    quotes[0] = "NHS discount available";
+    quotes[1] = "Black Friday Sale available";
+    quotes[2] = "Refunds and exchanges available within 28 days of purchase"
+    quotes[3] = "Student discount available";
+    var rand = Math.floor(Math.random()*quotes.length);
+    document.write(quotes[rand]);
+  }
+  rndmSales();
+  </script>
         <div>
-                  <script type="text/javascript">
-    RandomSales = function() {
-        var quotes = new Array();
-        quotes[0] = "NHS discount available";
-        quotes[1] = "Black Friday Sale available";
-        quotes[2] = "Refunds and exchanges available within 28 days of purchase"
-        quotes[3] = "Student discount available";
-        var rand = Math.floor(Math.random() * quotes.length);
-        document.write(quotes[rand]);
-    }
-    RandomSales();
-    </script>
-            <br>
-            <br>
-            <br>
-            
-        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-            <img src="images/w1shirt.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail">
-        <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
+        <button onclick="w1shirtOn()" id="w1shirtOn" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
+            <img src="images/w1shirt.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail" id="w1shirtimg">
+        <button class="arrow" onclick="w1shirtOff()" id="w1shirtOff"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
         <label>Size :</label>
         <input type="radio" name="size" value="size"><strong>XS</strong>
         <input type="radio" name="size" value="size"><strong>S </strong>       
@@ -157,9 +155,9 @@ body {
                    <!-- addimg images,descriptions and css for images -->
         </div>
         <div>
-        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-            <img src="images/w2shirt.jpg"style="width:150px; height: 200px;"  alt="shirt 2" class="thumbnail">
-        <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
+        <button onclick="w2shirtOn()" id="w2shirtOn" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
+            <img src="images/w2shirt.jpg"style="width:150px; height: 200px;"  alt="shirt 2" class="thumbnail" id="w2shirtimg">
+        <button class="arrow" onclick="w2shirtOff()" id="w2shirtOff"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
         <label>Size :</label>
         <input type="radio" name="size" value="size"><strong>XS</strong>
         <input type="radio" name="size" value="size"><strong>S </strong>       
@@ -172,10 +170,10 @@ body {
         <input type="radio" name="color" value="color"><strong>Blue </strong>       
         <input type="radio" name="color" value="color"><strong>Red</strong>
 
-           <div class="counter">
-    <button class="cart_btn" onclick="counterDec()">-</button>
-    <h5 id="counter">0</h5>
-    <button class="cart_btn" onclick="counterInc()">+</button >
+        <div class="counter">
+    <button class="cart_btn" onclick="counterDec1()">-</button>
+    <h5 id="counter1">0</h5>
+    <button class="cart_btn" onclick="counterInc1()">+</button >
     <button class="cart">Add to cart</button>
     </div>
             <h4>Description</h4>
@@ -190,9 +188,9 @@ body {
            <!-- addimg images,descriptions and css for images -->
         </div>
         <div>
-        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-            <img src="images/w3shirt.jpg"style="width: 200px; height: 200px;"  alt="shirt 2" class="thumbnail">
-        <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
+        <button onclick="w3shirtOn()" id="w3shirtOn" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
+            <img src="images/w3shirt.jpg"style="width: 200px; height: 200px;"  alt="shirt 2" class="thumbnail" id="w3shirtimg">
+        <button class="arrow" onclick="w3shirtOff()" id="w3shirtOff"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
 
         </div>
         <div>
@@ -209,9 +207,9 @@ body {
         <input type="radio" name="color" value="color"><strong>Red</strong>
 
            <div class="counter">
-    <button class="cart_btn" onclick="counterDec()">-</button>
-    <h5 id="counter">0</h5>
-    <button class="cart_btn" onclick="counterInc()">+</button >
+    <button class="cart_btn" onclick="counterDec2()">-</button>
+    <h5 id="counter2">0</h5>
+    <button class="cart_btn" onclick="counterInc2()">+</button>
     <button class="cart">Add to cart</button>
     </div>
             <h4>Description</h4>
@@ -380,46 +378,46 @@ body {
             <script>
                 // variableForCounter
                   var value= document.getElementById('counter').innerText;
-                  var value= document.getElementById('counter1').innerText;
-                  var value= document.getElementById('counter2').innerText;
+                  var value1= document.getElementById('counter1').innerText;
+                  var value2= document.getElementById('counter2').innerText;
 
 
 
                 
-                function top3Off(){
-                  document.getElementById('top3Img').src="images/top3back.webp";
-                  document.getElementById('top3Off').style.display="none";
-                  document.getElementById('top3On').style.display="inline";
+                function w1shirtOff(){
+                  document.getElementById('w1shirtimg').src="images/w1shirtback.webp";
+                  document.getElementById('w1shirtOff').style.display="none";
+                  document.getElementById('w1shirtOn').style.display="inline";
                  }
-                function top3On(){
-                  document.getElementById('top3Img').src="images/top3.jpg";
-                  document.getElementById('top3On').style.display="none";
-                  document.getElementById('top3Off').style.display="inline";
+                function w1shirtOn(){
+                  document.getElementById('w1shirtimg').src="images/w1shirt.jpg";
+                  document.getElementById('w1shirtOn').style.display="none";
+                  document.getElementById('w1shirtOff').style.display="inline";
                  }
                 
 
 
-                 function adidasOff(){
-                  document.getElementById('adidasShirt').src="images/tshirtadidasback.jpg";
-                  document.getElementById('adidasOff').style.display="none";
-                  document.getElementById('adidasOn').style.display="inline";
+                 function w2shirtOff(){
+                  document.getElementById('w2shirtimg').src="images/w2shirtback.jpg";
+                  document.getElementById('w2shirtOff').style.display="none";
+                  document.getElementById('w2shirtOn').style.display="inline";
                  }
-                 function adidasOn(){
-                  document.getElementById('adidasShirt').src="images/tshirtadidas.jpg";
-                  document.getElementById('adidasOn').style.display="none";
-                  document.getElementById('adidasOff').style.display="inline";
+                 function w2shirtOn(){
+                  document.getElementById('w2shirtimg').src="images/w2shirt.jpg";
+                  document.getElementById('w2shirtOn').style.display="none";
+                  document.getElementById('w2shirtOff').style.display="inline";
                  }
                
                  
-                 function underShirtOff(){
-                  document.getElementById('underShirtImg').src="images/underarmourtshirtback.webp";
-                  document.getElementById('underShirtOff').style.display="none";
-                  document.getElementById('underShirtOn').style.display="inline";
+                 function w3shirtOff(){
+                  document.getElementById('w3shirtimg').src="images/w3shirtback.jpg";
+                  document.getElementById('w3shirtOff').style.display="none";
+                  document.getElementById('w3shirtOn').style.display="inline";
                  }
-                 function underShirtOn(){
-                  document.getElementById('underShirtImg').src="images/underarmourtshirt.jpg";
-                  document.getElementById('underShirtOn').style.display="none";
-                  document.getElementById('underShirtOff').style.display="inline";
+                 function w3shirtOn(){
+                  document.getElementById('w3shirtimg').src="images/w3shirt.jpg";
+                  document.getElementById('w3shirtOn').style.display="none";
+                  document.getElementById('w3shirtOff').style.display="inline";
                  }
        
 
@@ -438,26 +436,26 @@ body {
                 }
                 // second counter
                 function counterInc1(){
-                  document.getElementById('counter1').innerText=++value;
+                  document.getElementById('counter1').innerText=++value1;
                  }
                  function counterDec1(){
                     if(value>0){
-                  document.getElementById('counter1').innerText=--value;
+                  document.getElementById('counter1').innerText=--value1;
                     }
                     else{
-                  document.getElementById('counter1').innerText=value;
+                  document.getElementById('counter1').innerText=value1;
                     }
                 }
                 // third counter
                 function counterInc2(){
-                  document.getElementById('counter2').innerText=++value;
+                  document.getElementById('counter2').innerText=++value2;
                  }
                  function counterDec2(){
                     if(value>0){
-                  document.getElementById('counter2').innerText=--value;
+                  document.getElementById('counter2').innerText=--value2;
                     }
                     else{
-                  document.getElementById('counter2').innerText=value;
+                  document.getElementById('counter2').innerText=value2;
                     }
                 }
                  
