@@ -66,7 +66,7 @@
                 <button class="dropbtn">Click for more</button>
                 <div class="dropdown-content">
                     <nav>
-                    <a href="womenss.php">T-shirts</a>
+                    <a href="women.php">T-shirts</a>
                     </nav>
                     <nav>
                     <a href="womenstrousers.php">Trousers</a>
@@ -92,8 +92,29 @@
 ">
     <div class="product">
         <div>
-            <img src="images\w1trousers.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail">
+        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"style="width:25px;height:25px"></button>
+            <img src="images/w1trousers.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail">
+            <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
   
+
+            <label>Size :</label>
+        <input type="radio" name="size" value="size"><strong>XS</strong>
+        <input type="radio" name="size" value="size"><strong>S </strong>       
+        <input type="radio" name="size" value="size"><strong>L </strong>       
+        <input type="radio" name="size" value="size"><strong>XL </strong> 
+        
+        <br><label>Colours :</label>
+        <input type="radio" name="color" value="color"><strong>Black</strong>
+        <input type="radio" name="color" value="color"><strong>White </strong>       
+        <input type="radio" name="color" value="color"><strong>Blue </strong>       
+        <input type="radio" name="color" value="color"><strong>Red</strong>
+
+           <div class="counter">
+    <button class="cart_btn" onclick="counterDec()">-</button>
+    <h5 id="counter">0</h5>
+    <button class="cart_btn" onclick="counterInc()">+</button >
+    <button class="cart">Add to cart</button>
+    </div>
             <h4>Description</h4>
             <br>
             <p>
@@ -105,7 +126,29 @@
                 Price : £28.99
         </div>
         <div>
+        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
             <img src="images/w2trousers.jpg"style="width:100px; height: 175px;"  alt="shirt 2" class="thumbnail">
+        <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
+           
+            <label>Size :</label>
+        <input type="radio" name="size" value="size"><strong>XS</strong>
+        <input type="radio" name="size" value="size"><strong>S </strong>       
+        <input type="radio" name="size" value="size"><strong>L </strong>       
+        <input type="radio" name="size" value="size"><strong>XL </strong> 
+        
+        <br><label>Colours :</label>
+        <input type="radio" name="color" value="color"><strong>Black</strong>
+        <input type="radio" name="color" value="color"><strong>White </strong>       
+        <input type="radio" name="color" value="color"><strong>Blue </strong>       
+        <input type="radio" name="color" value="color"><strong>Red</strong>
+
+           <div class="counter">
+    <button class="cart_btn" onclick="counterDec()">-</button>
+    <h5 id="counter">0</h5>
+    <button class="cart_btn" onclick="counterInc()">+</button >
+    <button class="cart">Add to cart</button>
+    </div>
+           
             <h4>Description</h4>
             <br>
             <p>
@@ -117,9 +160,32 @@
           
         </div>
         <div>
-            <img src="images\khaki.jpg"style="width:100px; height:200px;"  alt="shirt 2" class="thumbnail">
+        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
+            <img src="images/khaki.jpg"style="width:100px; height:200px;"  alt="shirt 2" class="thumbnail">
+        <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
+
         </div>
         <div>
+
+
+        <label>Size :</label>
+        <input type="radio" name="size" value="size"><strong>XS</strong>
+        <input type="radio" name="size" value="size"><strong>S </strong>       
+        <input type="radio" name="size" value="size"><strong>L </strong>       
+        <input type="radio" name="size" value="size"><strong>XL </strong> 
+        
+        <br><label>Colours :</label>
+        <input type="radio" name="color" value="color"><strong>Black</strong>
+        <input type="radio" name="color" value="color"><strong>White </strong>       
+        <input type="radio" name="color" value="color"><strong>Blue </strong>       
+        <input type="radio" name="color" value="color"><strong>Red</strong>
+
+           <div class="counter">
+    <button class="cart_btn" onclick="counterDec()">-</button>
+    <h5 id="counter">0</h5>
+    <button class="cart_btn" onclick="counterInc()">+</button >
+    <button class="cart">Add to cart</button>
+    </div>
             <h4>Description</h4>
             <br>
             <p>
@@ -193,13 +259,13 @@
                         <br>
 
                         <a href="https://www.instagram.com/ehsanhussain_">
-                            <img src="frontend/images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
+                            <img src="images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
 
                             <a href="https://en-gb.facebook.com/astonuniversity/">
-                                <img src="frontend/images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
+                                <img src="images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
 
                                 <a href="https://www.twitter.com/sports4_us">
-                                    <img src="frontend/images/twitter.png" style="width: 30px;; height: 30px;;"
+                                    <img src="images/twitter.png" style="width: 30px;; height: 30px;;"
                                         alt="twitter">
 
                     </div>
