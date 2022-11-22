@@ -8,6 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
+    <style>
+body {
+  background-image: url('images/backgroundmaybe.jpg');
+}
+</style>
     <title>Login</title>
 
 </head>
@@ -104,6 +109,22 @@
 
     <div class="product">
         <div>
+                  <script type="text/javascript">
+    RandomSales = function() {
+        var quotes = new Array();
+        quotes[0] = "NHS discount available";
+        quotes[1] = "Black Friday Sale available";
+        quotes[2] = "Refunds and exchanges available within 28 days of purchase"
+        quotes[3] = "Student discount available";
+        var rand = Math.floor(Math.random() * quotes.length);
+        document.write(quotes[rand]);
+    }
+    RandomSales();
+    </script>
+            <br>
+            <br>
+            <br>
+            
         <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
             <img src="images/w1shirt.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail">
         <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
@@ -132,7 +153,7 @@
             - only available short-term
             - matchable options
             </p>
-                Price : $5.99
+                Price : £13.99
                    <!-- addimg images,descriptions and css for images -->
         </div>
         <div>
