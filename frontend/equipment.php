@@ -8,6 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
+    <style>
+body {
+  background-image: url('images/backgroundmaybe.jpg');
+}
+</style>
     <title>Login</title>
 
 </head>
@@ -74,7 +79,7 @@
                 <button class="dropbtn">Click for more</button>
                 <div class="dropdown-content">
                     <nav>
-                    <a href="Combat.php">Commbat Accessories</a>
+                    <a href="Combat.php">Combat Accessories</a>
                     </nav>
                     <nav>
                     <a href="equipment.php">General</a>
@@ -96,6 +101,18 @@
     justify-content: center;
 ">
     <div class="product">
+    <script type="text/javascript">
+    RandomSales = function() {
+        var quotes = new Array();
+        quotes[0] = "NHS discount available";
+        quotes[1] = "Black Friday Sale available";
+        quotes[2] = "Refunds and exchanges available within 28 days of purchase"
+        quotes[3] = "Student discount available";
+        var rand = Math.floor(Math.random() * quotes.length);
+        document.write(quotes[rand]);
+    }
+    RandomSales();
+    </script>
         <div>
         <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
             <img src="images/accessory2.jpeg"style="width:150px; height:150px;"  alt="a1" class="thumbnail">
@@ -127,10 +144,14 @@
                 
             </p>
            
-                Price : £7.99.99
+                Price : £7.99
             <!-- adding prices, descriptions and css for images -->
         </div>
         <div>
+            <br>
+            <br>
+            <br>
+
         <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
             <img src="images/accessory3.jpg"style="width:150px; height:150px;"  alt="a2" class="thumbnail">
             <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
