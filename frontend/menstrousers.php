@@ -13,14 +13,8 @@ body {
   background-image: url('images/backgroundmaybe.jpg');
 }
 </style>
-
     <title>Login</title>
-    <body>
-        
-    </body>
 
-    
-</body>
 </head>
 
 
@@ -29,68 +23,55 @@ body {
 <body style="text-align: center; padding-top: 200px">
 
     <nav class="navbar fixed-top px-sm-5 navbar-expand-sm navbar-dark" style="background-color: black">
-        <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top" src="images/navbar-logo.png"
-                alt="Logo" width="50" height="50" /></a>
+        <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top"
+                src="images/navbar-logo.png" alt="Logo" width="50" height="50" /></a>
         <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-
         </button>
-        <!-- nav bar -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a href="index.php" class="nav-link"> Home </a>
                 </li>
-                <!-- linking to home page section on nav bar -->
                 <li class="nav-item active">
                     <a href="men.php" class="nav-link active"> Men </a>
                 </li>
-                <!-- linking to men page section on nav bar -->
                 <li class="nav-item active">
                     <a href="women.php" class="nav-link"> Women </a>
                 </li>
-                <!-- linking to women page section on nav bar -->
                 <li class="nav-item active">
-                    <a href="equipment.php" class="nav-link"> Equipment </a>
+                    <a href="index.php" class="nav-link"> Equipment </a>
                 </li>
-                <!-- linking to equipment page section on nav bar -->
                 <li class="nav-item active">
                     <a href="login.php" class="nav-link "> Login </a>
                 </li>
-                <!-- linking to login page section on nav bar -->
                 <li class="nav-item active">
                     <a href="signup.php" class="nav-link "> Signup </a>
                 </li>
-                <!-- linking to signup page section on nav bar -->
             </ul>
         </div>
         <form class="d-flex">
             <input type="text" class="text form-control me-1" />
             <button type="submit" class="btn btn-outline-light">Search</button>
         </form>
-        <li class="nav-item active lastItem">
-            <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3" src="images/user.png"
-                    alt="Logo" width="35" height="35" style="padding-left: 5px; padding: right 20px;" /></a>
-            <!-- css for the nav bar adding padding and logo sizes -->
+        <li class="nav-item active">
+            <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
+                    src="images/user.png" alt="Logo" width="35" height="35"
+                    style="padding-left: 5px; padding: right 20px;" /></a>
         </li>
     </nav>
-
-
-
     <div class="float-container">
 
         <div class="float-child">
             <div class="section-m1">
-                <h3>Menswear</h3>
-                <!-- adding header to menswear page -->
+                <h3>Trousers</h3>
             </div>
             <div class="dropdown">
-                <!-- creating drop down menu-->
                 <button class="dropbtn">Click for more</button>
                 <div class="dropdown-content">
                     <nav>
-                        <a href="men.php">T-Shirts</a>
+                        <a href="men.php">T-shirts</a>
                     </nav>
                     <nav>
                         <a href="menstrousers.php">Trousers</a>
@@ -101,7 +82,7 @@ body {
                 </div>
             </div>
         </div>
-        <!-- linking to various sub-pages within men -->
+
 
         <div class="image container">
             <div class="catalogue" style="
@@ -114,77 +95,51 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 ">
-
-             <!-- adding arrows to navigate through products -->
                 <div class="product">
-
-                
                     <div>
+                        <br>
+                        <br>
+                        <br>
                         
-    <!-- Java script written to display random quotations displaying sale info on page -->
-
-                    <script type="text/javascript">
-    RandomSales = function() {
-        var quotes = new Array();
-        quotes[0] = "NHS discount available";
-        quotes[1] = "Black Friday Sale available";
-        quotes[2] = "Refunds and exchanges available within 28 days of purchase"
-        quotes[3] = "Student discount available";
-        var rand = Math.floor(Math.random() * quotes.length);
-        document.write(quotes[rand]);
-    }
-    RandomSales();
-    </script>
-                        <br>
-                        <br>
-                        <br>
-
-                        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""
-                                style="width:25px;height:25px"></button>
-                        <img src="images/top3.jpg" style="width:150px; height:150px;" alt="shirt 1" class="thumbnail"
-                            id="top3Img">
-                        <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png"
-                                alt=""style="width:25px;height:25px"></button><br>
-                                       <!-- adding radio buttons for sizes -->
+                        <button onclick="menstrousers1On()" id="menstrousers1On" class="arrow"><img
+                                src="images/arrowl.png" alt="" style="width:25px;height:25px"></button>
+                        <img src="images/menstrousers1.jpg" style="width:100px; height: 200px;" alt="shirt 1"
+                            class="thumbnail" id="menstrousersimg">
+                        <button class="arrow" onclick="menstrousers1Off()" id="menstrousers1Off"><img
+                                src="images/arrowr.png" alt="" style="width:25px;height:25px"></button><br>
                         <label>Size :</label>
                         <input type="radio" name="size" value="size"><strong>XS</strong>
                         <input type="radio" name="size" value="size"><strong>S </strong>
                         <input type="radio" name="size" value="size"><strong>L </strong>
                         <input type="radio" name="size" value="size"><strong>XL </strong>
-             <!-- adding radio bttons to add colors-->
+
                         <br><label>Colours :</label>
                         <input type="radio" name="color" value="color"><strong>Black</strong>
                         <input type="radio" name="color" value="color"><strong>White </strong>
                         <input type="radio" name="color" value="color"><strong>Blue </strong>
                         <input type="radio" name="color" value="color"><strong>Red</strong>
-                                        <!-- incrementing and decrementing counter-->
+
                         <div class="counter">
                             <button class="cart_btn" onclick="counterDec()">-</button>
                             <h5 id="counter">0</h5>
                             <button class="cart_btn" onclick="counterInc()">+</button>
                             <button class="cart">Add to cart</button>
                         </div>
-
                         <h4>Description</h4>
-
-                        <p>
-                            - Soft knit fabric with engineered mesh ventilation, mapped to the places you need it most
-                            - Nearly sew-free design to eliminate chafing
-                            - 4-way stretch material moves better in every direction
-                            - Material wicks sweat & dries really fast
-                        </p>
-                        <h6>Price : £28.99</h6>
-                        <br><br><br><br>
-
-                    </div>
-                    <!-- allowing other image  -->
-                    <div>
-                        <button onclick="adidasOn()" id="adidasOn" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-                        <img src="images/tshirtadidas.jpg" id="adidasShirt" style="width:150px; height:150px;" alt="shirt 2"
-                            class="thumbnail">
-                        <button class="arrow" onclick="adidasOff()" id="adidasOff"><img src="images/arrowr.png"
-                                alt=""style="width:25px;height:25px"></button>
                         <br>
+                        <p>
+                            Bottoms feature an elasticated waist with a drawstring fastening for a secure and
+                            comfortable fit that is ideal for training
+                        </p>
+                        Price : £19.99
+                    </div>
+                    <div>
+                        <button onclick="adidasOn()" id="adidasOn" class="arrow"><img src="images/arrowl.png" alt=""
+                                style="width:25px;height:25px"></button>
+                        <img src="images/menstrousers2.jpg" style="width:150px; height:200px;" alt="shirt 2"
+                            class="thumbnail">
+                        <button class="arrow" onclick="adidasOff()" id="adidasOff"><img src="images/arrowr.png" alt=""
+                                style="width:25px;height:25px"></button><br>
                         <label>Size :</label>
                         <input type="radio" name="size" value="size"><strong>XS</strong>
                         <input type="radio" name="size" value="size"><strong>S </strong>
@@ -203,29 +158,25 @@ body {
                             <button class="cart_btn" onclick="counterInc1()">+</button>
                             <button class="cart">Add to cart</button>
                         </div>
-
                         <h4>Description</h4>
-
+                        <br>
                         <p>
-                            - Super-soft
-                            - cotton-blend fabric provides all-day comfort
-                            - Ribbed collar
+                            Decorated with solid colouring throughout, the Woven Pants feature an elasticated waist and
+                            trims for maximum comfort plus an internal draw-cord for an added personalised fit.
                         </p>
 
-                        Price : £19.99
-                        <br><br><br><br>
-                    </div>
-                    <!-- adding products , importing images, adding description and styling the images -->
-                    <div>
-                        <button id="underShirtOn" onclick="underShirtOn()" class="arrow"><img src="images/arrowl.png"
-                                alt=""style="width:25px;height:25px"></button>
-                        <img src="images/underarmourtshirt.jpg" style="width:150px; height:150px;" id="underShirtImg"
-                            alt="shirt 2" class="thumbnail">
-                        <button id="underShirtOff" onclick="underShirtOff()" class="arrow"><img src="images/arrowr.png"
-                                alt=""style="width:25px;height:25px"></button>
-                    </div>
-                    <div>
+                        Price : £15.99
 
+                    </div>
+                    <div>
+                        <button onclick="adidasOn()" id="adidasOn" class="arrow"><img src="images/arrowl.png" alt=""
+                                style="width:25px;height:25px"></button>
+                        <img src="images/menstrousers3.jpg" style="width: 300px; height:200px;" alt="shirt 2"
+                            class="thumbnail">
+                        <button class="arrow" onclick="adidasOff()" id="adidasOff"><img src="images/arrowr.png" alt=""
+                                style="width:25px;height:25px"></button>
+                    </div><br>
+                    <div>
                         <label>Size :</label>
                         <input type="radio" name="size" value="size"><strong>XS</strong>
                         <input type="radio" name="size" value="size"><strong>S </strong>
@@ -244,17 +195,16 @@ body {
                             <button class="cart_btn" onclick="counterInc2()">+</button>
                             <button class="cart">Add to cart</button>
                         </div>
-
                         <h4>Description</h4>
+                        <br>
                         <p>
-                            - Soft, ultra-lightweight fabric delivers superior breathability & incredible comfort
-                            - Material wicks sweat & dries really fast
-                            - Dropped, shaped hem for enhanced coverage
+                            Made from soft, stretchy fabric, the Flex Trousers help you move freely before, during and
+                            after your routine. A tapered design reduces distractions and lets you focus on your
+                            workout.
                         </p>
                         <div>
                             Price : £25.99
                         </div>
-                        <!-- adding products , importing images, adding description and styling the images -->
                     </div>
                 </div>
 
@@ -319,14 +269,12 @@ body {
 
                     <a href="https://www.instagram.com/ehsanhussain_">
                         <img src="images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
-                        <!-- linking to instagram -->
 
                         <a href="https://en-gb.facebook.com/astonuniversity/">
                             <img src="images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
-                            <!-- linking to facebook -->
+
                             <a href="https://www.twitter.com/sports4_us">
                                 <img src="images/twitter.png" style="width: 30px;; height: 30px;;" alt="twitter">
-                                <!-- linking to twitter -->
 
                 </div>
                 <!-- Left -->
@@ -415,16 +363,16 @@ body {
 
 
 
-        function top3Off() {
-            document.getElementById('top3Img').src = "images/top3back.jpg";
-            document.getElementById('top3Off').style.display = "none";
-            document.getElementById('top3On').style.display = "inline";
+        function menstrousersOff() {
+            document.getElementById('menstrousersImg').src = "images/menstrousersback.webp";
+            document.getElementById('menstrousersOff').style.display = "none";
+            document.getElementById('menstrousersOn').style.display = "inline";
         }
 
-        function top3On() {
-            document.getElementById('top3Img').src = "images/top3.jpg";
-            document.getElementById('top3On').style.display = "none";
-            document.getElementById('top3Off').style.display = "inline";
+        function menstrousersOn() {
+            document.getElementById('menstrousersImg').src = "imagesmenstrousers.jpg";
+            document.getElementById('menstrousersOn').style.display = "none";
+            document.getElementById('menstrousersOff').style.display = "inline";
         }
 
 

@@ -8,6 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
+    <style>
+body {
+  background-image: url('images/backgroundmaybe.jpg');
+}
+</style>
     <title>Login</title>
 
 </head>
@@ -104,8 +109,43 @@
 
     <div class="product">
         <div>
-            <img src="images\w1shirt.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail">
+                  <script type="text/javascript">
+    RandomSales = function() {
+        var quotes = new Array();
+        quotes[0] = "NHS discount available";
+        quotes[1] = "Black Friday Sale available";
+        quotes[2] = "Refunds and exchanges available within 28 days of purchase"
+        quotes[3] = "Student discount available";
+        var rand = Math.floor(Math.random() * quotes.length);
+        document.write(quotes[rand]);
+    }
+    RandomSales();
+    </script>
+            <br>
+            <br>
+            <br>
             
+        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
+            <img src="images/w1shirt.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail">
+        <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
+        <label>Size :</label>
+        <input type="radio" name="size" value="size"><strong>XS</strong>
+        <input type="radio" name="size" value="size"><strong>S </strong>       
+        <input type="radio" name="size" value="size"><strong>L </strong>       
+        <input type="radio" name="size" value="size"><strong>XL </strong> 
+        
+        <br><label>Colours :</label>
+        <input type="radio" name="color" value="color"><strong>Black</strong>
+        <input type="radio" name="color" value="color"><strong>White </strong>       
+        <input type="radio" name="color" value="color"><strong>Blue </strong>       
+        <input type="radio" name="color" value="color"><strong>Red</strong>
+
+           <div class="counter">
+    <button class="cart_btn" onclick="counterDec()">-</button>
+    <h5 id="counter">0</h5>
+    <button class="cart_btn" onclick="counterInc()">+</button >
+    <button class="cart">Add to cart</button>
+    </div>
             <h4>Description</h4>
             <br>
             <p>
@@ -113,11 +153,31 @@
             - only available short-term
             - matchable options
             </p>
-                Price : $5.99
+                Price : £13.99
                    <!-- addimg images,descriptions and css for images -->
         </div>
         <div>
-            <img src="images\w2shirt.jpg"style="width:150px; height: 200px;"  alt="shirt 2" class="thumbnail">
+        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
+            <img src="images/w2shirt.jpg"style="width:150px; height: 200px;"  alt="shirt 2" class="thumbnail">
+        <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
+        <label>Size :</label>
+        <input type="radio" name="size" value="size"><strong>XS</strong>
+        <input type="radio" name="size" value="size"><strong>S </strong>       
+        <input type="radio" name="size" value="size"><strong>L </strong>       
+        <input type="radio" name="size" value="size"><strong>XL </strong> 
+        
+        <br><label>Colours :</label>
+        <input type="radio" name="color" value="color"><strong>Black</strong>
+        <input type="radio" name="color" value="color"><strong>White </strong>       
+        <input type="radio" name="color" value="color"><strong>Blue </strong>       
+        <input type="radio" name="color" value="color"><strong>Red</strong>
+
+           <div class="counter">
+    <button class="cart_btn" onclick="counterDec()">-</button>
+    <h5 id="counter">0</h5>
+    <button class="cart_btn" onclick="counterInc()">+</button >
+    <button class="cart">Add to cart</button>
+    </div>
             <h4>Description</h4>
             <br>
             <p>
@@ -130,9 +190,30 @@
            <!-- addimg images,descriptions and css for images -->
         </div>
         <div>
-            <img src="images\w3shirt.jpg"style="width: 200px; height: 200px;"  alt="shirt 2" class="thumbnail">
+        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
+            <img src="images/w3shirt.jpg"style="width: 200px; height: 200px;"  alt="shirt 2" class="thumbnail">
+        <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
+
         </div>
         <div>
+        <label>Size :</label>
+        <input type="radio" name="size" value="size"><strong>XS</strong>
+        <input type="radio" name="size" value="size"><strong>S </strong>       
+        <input type="radio" name="size" value="size"><strong>L </strong>       
+        <input type="radio" name="size" value="size"><strong>XL </strong> 
+        
+        <br><label>Colours :</label>
+        <input type="radio" name="color" value="color"><strong>Black</strong>
+        <input type="radio" name="color" value="color"><strong>White </strong>       
+        <input type="radio" name="color" value="color"><strong>Blue </strong>       
+        <input type="radio" name="color" value="color"><strong>Red</strong>
+
+           <div class="counter">
+    <button class="cart_btn" onclick="counterDec()">-</button>
+    <h5 id="counter">0</h5>
+    <button class="cart_btn" onclick="counterInc()">+</button >
+    <button class="cart">Add to cart</button>
+    </div>
             <h4>Description</h4>
             <br>
             <p>
@@ -207,13 +288,13 @@
                         <br>
 
                         <a href="https://www.instagram.com/ehsanhussain_">
-                            <img src="frontend/images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
+                            <img src="images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
                                   <!-- linking to social media icons -->
                             <a href="https://en-gb.facebook.com/astonuniversity/">
-                                <img src="frontend/images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
+                                <img src="images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
                                  <!-- linking to social media icons -->
                                 <a href="https://www.twitter.com/sports4_us">
-                                    <img src="frontend/images/twitter.png" style="width: 30px;; height: 30px;;"
+                                    <img src="images/twitter.png" style="width: 30px;; height: 30px;;"
                                         alt="twitter">
 
                                          <!-- linking to social media icons -->
@@ -296,6 +377,91 @@
                 </div>
                 <!-- Copyright -->
             </footer>
+            <script>
+                // variableForCounter
+                  var value= document.getElementById('counter').innerText;
+                  var value= document.getElementById('counter1').innerText;
+                  var value= document.getElementById('counter2').innerText;
+
+
+
+                
+                function top3Off(){
+                  document.getElementById('top3Img').src="images/top3back.webp";
+                  document.getElementById('top3Off').style.display="none";
+                  document.getElementById('top3On').style.display="inline";
+                 }
+                function top3On(){
+                  document.getElementById('top3Img').src="images/top3.jpg";
+                  document.getElementById('top3On').style.display="none";
+                  document.getElementById('top3Off').style.display="inline";
+                 }
+                
+
+
+                 function adidasOff(){
+                  document.getElementById('adidasShirt').src="images/tshirtadidasback.jpg";
+                  document.getElementById('adidasOff').style.display="none";
+                  document.getElementById('adidasOn').style.display="inline";
+                 }
+                 function adidasOn(){
+                  document.getElementById('adidasShirt').src="images/tshirtadidas.jpg";
+                  document.getElementById('adidasOn').style.display="none";
+                  document.getElementById('adidasOff').style.display="inline";
+                 }
+               
+                 
+                 function underShirtOff(){
+                  document.getElementById('underShirtImg').src="images/underarmourtshirtback.webp";
+                  document.getElementById('underShirtOff').style.display="none";
+                  document.getElementById('underShirtOn').style.display="inline";
+                 }
+                 function underShirtOn(){
+                  document.getElementById('underShirtImg').src="images/underarmourtshirt.jpg";
+                  document.getElementById('underShirtOn').style.display="none";
+                  document.getElementById('underShirtOff').style.display="inline";
+                 }
+       
+
+
+
+                 function counterInc(){
+                  document.getElementById('counter').innerText=++value;
+                 }
+                 function counterDec(){
+                    if(value>0){
+                  document.getElementById('counter').innerText=--value;
+                    }
+                    else{
+                  document.getElementById('counter').innerText=value;
+                    }
+                }
+                // second counter
+                function counterInc1(){
+                  document.getElementById('counter1').innerText=++value;
+                 }
+                 function counterDec1(){
+                    if(value>0){
+                  document.getElementById('counter1').innerText=--value;
+                    }
+                    else{
+                  document.getElementById('counter1').innerText=value;
+                    }
+                }
+                // third counter
+                function counterInc2(){
+                  document.getElementById('counter2').innerText=++value;
+                 }
+                 function counterDec2(){
+                    if(value>0){
+                  document.getElementById('counter2').innerText=--value;
+                    }
+                    else{
+                  document.getElementById('counter2').innerText=value;
+                    }
+                }
+                 
+            </script>
 </body>
 
 </html>

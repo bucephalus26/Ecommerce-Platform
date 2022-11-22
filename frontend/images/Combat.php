@@ -8,11 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-    <style>
-body {
-  background-image: url('images/backgroundmaybe.jpg');
-}
-</style>
     <title>Login</title>
 
 </head>
@@ -38,10 +33,10 @@ body {
                     <a href="men.php" class="nav-link "> Men </a>
                 </li>
                 <li class="nav-item active">
-                    <a href="women.php" class="nav-link active "> Women </a>
+                    <a href="women.php" class="nav-link "> Women </a>
                 </li>
                 <li class="nav-item active">
-                    <a href="index.php" class="nav-link"> Equipment </a>
+                    <a href="equipment.php" class="nav-link active"> Equipment </a>
                 </li>
                 <li class="nav-item active">
                     <a href="login.php" class="nav-link "> Login </a>
@@ -65,19 +60,16 @@ body {
 
         <div class="float-child">
             <div class="section-m1">
-                <h3>Womens Footwear</h3>
+                <h3>Equipment</h3>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Click for more</button>
                 <div class="dropdown-content">
                     <nav>
-                    <a href="women.php">T-shirts</a>
+                    <a href="Combat.php">Commbat Accessories</a>
                     </nav>
                     <nav>
-                    <a href="womenstrousers.php">Trousers</a>
-                    </nav>
-                    <nav>
-                    <a href="womensshoes.php">Footwear</a>
+                    <a href="equipment.php">General</a>
                     </nav>
                 </div>
             </div>
@@ -97,107 +89,43 @@ body {
 ">
     <div class="product">
         <div>
-        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-            <img src="images/pinkwomenshoes.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail">
-            <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
-  
-
-           <br> <label>Size :</label>
-        <input type="radio" name="size" value="size"><strong>XS</strong>
-        <input type="radio" name="size" value="size"><strong>S </strong>       
-        <input type="radio" name="size" value="size"><strong>L </strong>       
-        <input type="radio" name="size" value="size"><strong>XL </strong> 
-        
-        <br><label>Colours :</label>
-        <input type="radio" name="color" value="color"><strong>Black</strong>
-        <input type="radio" name="color" value="color"><strong>White </strong>       
-        <input type="radio" name="color" value="color"><strong>Blue </strong>       
-        <input type="radio" name="color" value="color"><strong>Red</strong>
-
-           <div class="counter">
-    <button class="cart_btn" onclick="counterDec()">-</button>
-    <h5 id="counter">0</h5>
-    <button class="cart_btn" onclick="counterInc()">+</button >
+            <img src="gumshield.jpg"style="width:150px; height:150px;"  alt="a1" class="thumbnail">
+            <div class="counter">
+    <button class="cart_btn" onclick="counterDec1()">-</button>
+    <h5 id="counter1">0</h5>
+    <button class="cart_btn" onclick="counterInc1()">+</button >
     <button class="cart">Add to cart</button>
     </div>
             <h4>Description</h4>
             <br>
             <p>
-            - athletic
-            - heavy-soled
-            - well-fitting
-            </p>
-                Price : £28.99
-        </div>
-        <div>
-        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-            <img src="images/greenasics.jpg"style="width: 150px; height: 150px;"  alt="shirt 2" class="thumbnail">
-        <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
-           
-           <br> <label>Size :</label>
-        <input type="radio" name="size" value="size"><strong>XS</strong>
-        <input type="radio" name="size" value="size"><strong>S </strong>       
-        <input type="radio" name="size" value="size"><strong>L </strong>       
-        <input type="radio" name="size" value="size"><strong>XL </strong> 
-        
-        <br><label>Colours :</label>
-        <input type="radio" name="color" value="color"><strong>Black</strong>
-        <input type="radio" name="color" value="color"><strong>White </strong>       
-        <input type="radio" name="color" value="color"><strong>Blue </strong>       
-        <input type="radio" name="color" value="color"><strong>Red</strong>
-
-           <div class="counter">
-    <button class="cart_btn" onclick="counterDec()">-</button>
-    <h5 id="counter">0</h5>
-    <button class="cart_btn" onclick="counterInc()">+</button >
-    <button class="cart">Add to cart</button>
-    </div>
-            <h4>Description</h4>
-            <br>
-            <p>
-            - lightweight
-            - odour-free
-            - soft insole
+               - leather 
+               - odour-free 
+               - gripable
             </p>
            
-                Price : £39.99
+                Price : 19.99
           
         </div>
         <div>
-        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-            <img src="images/newbalance.jpg"style="width:150px; height: 150px;"  alt="shirt 2" class="thumbnail">
-            <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
+            <img src="mma.jpg"style="width:150px; height:150px;"  alt="a2" class="thumbnail">
         </div>
         <div>
-
-
-        <br><label>Size :</label>
-        <input type="radio" name="size" value="size"><strong>XS</strong>
-        <input type="radio" name="size" value="size"><strong>S </strong>       
-        <input type="radio" name="size" value="size"><strong>L </strong>       
-        <input type="radio" name="size" value="size"><strong>XL </strong> 
-        
-        <br><label>Colours :</label>
-        <input type="radio" name="color" value="color"><strong>Black</strong>
-        <input type="radio" name="color" value="color"><strong>White </strong>       
-        <input type="radio" name="color" value="color"><strong>Blue </strong>       
-        <input type="radio" name="color" value="color"><strong>Red</strong>
-
-           <div class="counter">
-    <button class="cart_btn" onclick="counterDec()">-</button>
-    <h5 id="counter">0</h5>
-    <button class="cart_btn" onclick="counterInc()">+</button >
+        <div class="counter">
+    <button class="cart_btn" onclick="counterDec1()">-</button>
+    <h5 id="counter1">0</h5>
+    <button class="cart_btn" onclick="counterInc1()">+</button >
     <button class="cart">Add to cart</button>
     </div>
             <h4>Description</h4>
             <br>
             <p>
-            - lightweight
-            - breathable
-            - soft-cushioned
+          - easy-moulding
+          - rubber
+          - tight-fitting 
             </p>
             <div>
-                Price : £25.99
+                Price : $5.99
             </div>
         </div>
     </div>
@@ -262,13 +190,13 @@ body {
                         <br>
 
                         <a href="https://www.instagram.com/ehsanhussain_">
-                            <img src="images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
+                            <img src="frontend/images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
 
                             <a href="https://en-gb.facebook.com/astonuniversity/">
-                                <img src="images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
+                                <img src="frontend/images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
 
                                 <a href="https://www.twitter.com/sports4_us">
-                                    <img src="images/twitter.png" style="width: 30px;; height: 30px;;"
+                                    <img src="frontend/images/twitter.png" style="width: 30px;; height: 30px;;"
                                         alt="twitter">
 
                     </div>
@@ -359,12 +287,12 @@ body {
 
                 
                 function top3Off(){
-                  document.getElementById('top3Img').src="images/top3back.webp";
+                  document.getElementById('top3Img').src="top3back.webp";
                   document.getElementById('top3Off').style.display="none";
                   document.getElementById('top3On').style.display="inline";
                  }
                 function top3On(){
-                  document.getElementById('top3Img').src="images/top3.jpg";
+                  document.getElementById('top3Img').src="top3.jpg";
                   document.getElementById('top3On').style.display="none";
                   document.getElementById('top3Off').style.display="inline";
                  }
@@ -372,24 +300,24 @@ body {
 
 
                  function adidasOff(){
-                  document.getElementById('adidasShirt').src="images/tshirtadidasback.jpg";
+                  document.getElementById('adidasShirt').src="tshirtadidasback.jpg";
                   document.getElementById('adidasOff').style.display="none";
                   document.getElementById('adidasOn').style.display="inline";
                  }
                  function adidasOn(){
-                  document.getElementById('adidasShirt').src="images/tshirtadidas.jpg";
+                  document.getElementById('adidasShirt').src="tshirtadidas.jpg";
                   document.getElementById('adidasOn').style.display="none";
                   document.getElementById('adidasOff').style.display="inline";
                  }
                
                  
                  function underShirtOff(){
-                  document.getElementById('underShirtImg').src="images/underarmourtshirtback.webp";
+                  document.getElementById('underShirtImg').src="underarmourtshirtback.webp";
                   document.getElementById('underShirtOff').style.display="none";
                   document.getElementById('underShirtOn').style.display="inline";
                  }
                  function underShirtOn(){
-                  document.getElementById('underShirtImg').src="images/underarmourtshirt.jpg";
+                  document.getElementById('underShirtImg').src="underarmourtshirt.jpg";
                   document.getElementById('underShirtOn').style.display="none";
                   document.getElementById('underShirtOff').style.display="inline";
                  }
@@ -434,6 +362,7 @@ body {
                 }
                  
             </script>
+</body>
 </body>
 
 </html>

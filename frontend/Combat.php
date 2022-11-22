@@ -8,6 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
+    <style>
+body {
+  background-image: url('images/backgroundmaybe.jpg');
+}
+</style>
     <title>Login</title>
 
 </head>
@@ -89,7 +94,13 @@
 ">
     <div class="product">
         <div>
-            <img src="images/mma.jpg"style="width:150px; height:150px;"  alt="a1" class="thumbnail">
+            <img src="images/gumshield.jpg"style="width:150px; height:150px;"  alt="a1" class="thumbnail">
+            <div class="counter">
+    <button class="cart_btn" onclick="counterDec1()">-</button>
+    <h5 id="counter1">0</h5>
+    <button class="cart_btn" onclick="counterInc1()">+</button >
+    <button class="cart">Add to cart</button>
+    </div>
             <h4>Description</h4>
             <br>
             <p>
@@ -98,13 +109,19 @@
                - gripable
             </p>
            
-                Price : 19.99
+                Price : £19.99
           
         </div>
         <div>
-            <img src="images\gumshield.jpg"style="width:150px; height:150px;"  alt="a2" class="thumbnail">
+            <img src="images/mma.jpg"style="width:150px; height:150px;"  alt="a2" class="thumbnail">
         </div>
         <div>
+        <div class="counter">
+    <button class="cart_btn" onclick="counterDec1()">-</button>
+    <h5 id="counter1">0</h5>
+    <button class="cart_btn" onclick="counterInc1()">+</button >
+    <button class="cart">Add to cart</button>
+    </div>
             <h4>Description</h4>
             <br>
             <p>
@@ -113,7 +130,7 @@
           - tight-fitting 
             </p>
             <div>
-                Price : $5.99
+                Price : £5.79
             </div>
         </div>
     </div>
@@ -178,13 +195,13 @@
                         <br>
 
                         <a href="https://www.instagram.com/ehsanhussain_">
-                            <img src="frontend/images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
+                            <img src="images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
 
                             <a href="https://en-gb.facebook.com/astonuniversity/">
-                                <img src="frontend/images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
+                                <img src="images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
 
                                 <a href="https://www.twitter.com/sports4_us">
-                                    <img src="frontend/images/twitter.png" style="width: 30px;; height: 30px;;"
+                                    <img src="images/twitter.png" style="width: 30px;; height: 30px;;"
                                         alt="twitter">
 
                     </div>
@@ -265,6 +282,92 @@
                 </div>
                 <!-- Copyright -->
             </footer>
+            <script>
+                // variableForCounter
+                  var value= document.getElementById('counter').innerText;
+                  var value= document.getElementById('counter1').innerText;
+                  var value= document.getElementById('counter2').innerText;
+
+
+
+                
+                function top3Off(){
+                  document.getElementById('top3Img').src="images/top3back.webp";
+                  document.getElementById('top3Off').style.display="none";
+                  document.getElementById('top3On').style.display="inline";
+                 }
+                function top3On(){
+                  document.getElementById('top3Img').src="images/top3.jpg";
+                  document.getElementById('top3On').style.display="none";
+                  document.getElementById('top3Off').style.display="inline";
+                 }
+                
+
+
+                 function adidasOff(){
+                  document.getElementById('adidasShirt').src="images/tshirtadidasback.jpg";
+                  document.getElementById('adidasOff').style.display="none";
+                  document.getElementById('adidasOn').style.display="inline";
+                 }
+                 function adidasOn(){
+                  document.getElementById('adidasShirt').src="images/tshirtadidas.jpg";
+                  document.getElementById('adidasOn').style.display="none";
+                  document.getElementById('adidasOff').style.display="inline";
+                 }
+               
+                 
+                 function underShirtOff(){
+                  document.getElementById('underShirtImg').src="images/underarmourtshirtback.webp";
+                  document.getElementById('underShirtOff').style.display="none";
+                  document.getElementById('underShirtOn').style.display="inline";
+                 }
+                 function underShirtOn(){
+                  document.getElementById('underShirtImg').src="images/underarmourtshirt.jpg";
+                  document.getElementById('underShirtOn').style.display="none";
+                  document.getElementById('underShirtOff').style.display="inline";
+                 }
+       
+
+
+
+                 function counterInc(){
+                  document.getElementById('counter').innerText=++value;
+                 }
+                 function counterDec(){
+                    if(value>0){
+                  document.getElementById('counter').innerText=--value;
+                    }
+                    else{
+                  document.getElementById('counter').innerText=value;
+                    }
+                }
+                // second counter
+                function counterInc1(){
+                  document.getElementById('counter1').innerText=++value;
+                 }
+                 function counterDec1(){
+                    if(value>0){
+                  document.getElementById('counter1').innerText=--value;
+                    }
+                    else{
+                  document.getElementById('counter1').innerText=value;
+                    }
+                }
+                // third counter
+                function counterInc2(){
+                  document.getElementById('counter2').innerText=++value;
+                 }
+                 function counterDec2(){
+                    if(value>0){
+                  document.getElementById('counter2').innerText=--value;
+                    }
+                    else{
+                  document.getElementById('counter2').innerText=value;
+                    }
+                }
+                 
+            </script>
+</body>
 </body>
 
 </html>
