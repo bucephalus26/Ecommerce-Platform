@@ -26,6 +26,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//********* HOME PAGE ROUTES ********* 
+Route::get(url: '/',[HomeController::class, 'index'])->name( name: 'home');
+Route::get(url: '/about',[HomeController::class, 'about'])->name( name: 'about');
+Route::get(url: '/references',[HomeController::class, 'references'])->name( name: 'references');
+Route::get(url: '/contact',[HomeController::class, 'contact'])->name( name: 'contact');
+Route::view(url:'/loginuser', view'home.login');
+Route::view(url:'/registeruser', view'home.register');
+Route::get(url:'/logoutuser',[Homecontroller::class, 'logout'])->name(name:'logoutuser');
+Route::post(url:'/loginadmin',[Homecontroller::class, 'loginadmin'])->name(name:'loginadmin');
+
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/product/{id}', [HomeController::class, 'product'])->name( name:'product');
 
@@ -63,7 +74,14 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/destroy/{pid}/{id}','destroy')->name('destroy');
 
     });
+    // ******* Admin Message Routes *******
+    Route::prefix('/message')->name('image.')->controller(controller: MessageController::class)->group(function () {
+        Route::get('/','index')->name('index');
+        Route::get('/show/{id}', 'show')->name('show');
+        Route::post('/update/{id}', action: 'update')->name(name:'update');
+        Route::get('/destroy/{id}','destroy')->name('destroy');
 
+    });
 
 });
 

@@ -15,5 +15,14 @@ class Category extends Model
     public function products(){
         return $this->hasMany(Product::class);
     }
+    //one to many inverse
+    public function parent()
+    {
+        return $this->belongsTo( related: Catergory::class, foreignKey: 'parent_id');
+    }
+    //One to many
+    public function children(){
+        return $this->hasMany(related: Category::class, foreignKey: 'parent_id');
+    }
 
 }
