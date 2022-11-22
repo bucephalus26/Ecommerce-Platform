@@ -60,15 +60,14 @@
                         style="padding-left: 5px; padding: right 20px;" /></a>
             </li>
             <li class="nav-item active">
-                <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
-                        src="images/cart.png" alt="Cart" width="35" height="35"
-                        style="padding-left: 5px; padding: right 20px;" /></a>
+                <a href="" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3" src="images/cart.png"
+                        alt="Cart" width="35" height="35" style="padding-left: 5px; padding: right 20px;" /></a>
             </li>
         </nav>
 
         <!-- From here the code for the sign-up form starts -->
         <div class="mt-5 text-center">
-            <form style="max-width: 250px; margin: auto">
+            <form class="form" style="max-width: 250px; margin: auto">
                 <h1 class="h3 mb=3">LOGIN</h1>
                 <label for="email" class="sr-only pb-3 pt-3"></label>
                 <input type="email" class="form-control" id="email" placeholder="Email" required autofocus />
@@ -82,7 +81,7 @@
                 </div>
                 <div class="mt-3">
 
-                    <button>
+                    <button class="loginBtn">
                         Login
                     </button>
                     <p class="pt-3 me-2">Don't have an account?</p>
@@ -188,6 +187,12 @@
 
 </html>
 <style>
+.form {
+    background-color: white;
+    padding: 20px 15px;
+    box-shadow: 0px 10px 25px rgba(92, 99, 105, .2);
+}
+
 form,
 input {
     font-family: Basic Commercial, sans-serif;
@@ -197,7 +202,6 @@ input {
     transition: color .2s ease-in-out;
     letter-spacing: .2em;
     text-transform: uppercase;
-
 
 }
 
@@ -224,6 +228,28 @@ footer input {
 footer button {
     background-color: grey;
     margin-top: 25px;
+}
+
+.loginBtn {
+    display: block;
+    margin-left: auto;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+    background-color: black;
+    border: black;
+    color: white;
+    padding: 10px 75px;
+    font-size: 20px;
+}
+
+.loginBtn:hover {
+    background-color: grey;
+    transform: translateY(-2px);
 }
 
 </style>
