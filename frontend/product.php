@@ -184,7 +184,7 @@
                         <br>
 
                         <a href="https://www.instagram.com/ehsanhussain_">
-                            <img src="insta.png" style="width: 30px;; height: 30px;;" alt="IG">
+                            <img src="frontend/images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
 
                             <a href="https://en-gb.facebook.com/astonuniversity/">
                                 <img src="frontend/images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">

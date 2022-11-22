@@ -18,7 +18,7 @@
 <body>
 
     <div class="nav-bar">
-        <a class="active" href="#home">Sports4Us</a>
+        <a class="active" href="#home"><img src="logo.jpg"style="width: 60px;; height: 60px;" alt="logo"> </a>
         <a href="#Mens">Mens</a>
         <a href="#Womens">Womens</a>
         <a href="#equipment">Equipment</a>
@@ -26,27 +26,22 @@
         <a href="#Basket">Basket</a>
         <a href="#Login">Login</a>
       </div>
-
-
-<div class  = "content">
-  </div>
-  <div class = "container"></div>
-  <div class = "ContactForm">
-      <form>
-      <div class="InputBox">
-          <input type = "text" name =""  required = "required">
-          <span> Search</span>
+      <div class  = "content">
       </div>
+      <div class = "container"></div>
+      <div class = "ContactForm">
+          <form>
+          <div class="InputBox">
+              <input type = "text" name =""  required = "required">
+              <span> Search</span>
+          </div>
+          </div>
+          <div class = "InputBox">
+              <input type = "submit" name="" value = "Search">
+          </div>
+          </form>
       </div>
-      <div class = "InputBox">
-          <input type = "submit" name="" value = "Send">
-      </div>
-      </form>
-  </div>
-</div>
-
-
-      
+    </div>
 <div class="float-container">
   
   <div class="float-child">
@@ -63,9 +58,9 @@
 
 
     <div class="image container">
-      <img src="images/Tshirt1.avif" style="width:150px; height:150px;" alt="shirt1">
-      <img src="images/tshirt2.jpeg" style="width:150px; height:150px;" alt="shirt2">
-      <img src="images/tshirt3.jpg" style="width:150px; height:150px;" alt="shirt3">
+      <img src="frontend/images/top3.jpg" style="width:150px; height:150px;" alt="shirt1">
+      <img src="frontend/images/tshirtadidas.jpg" style="width:150px; height:150px;" alt="shirt2">
+      <img src="frontend/images/underarmourtshirt.jpg" style="width:150px; height:150px;" alt="shirt3">
   </div>
 
 
@@ -83,9 +78,9 @@
   </div>
 
   <div class="image container">
-    <img src="images/shoe1.webp" style="width:150px; height:150px;" alt="shoes1">
+    <img src="frontend/images/shoesnew.jpg" style="width:150px; height:150px;" alt="shoes1">
     <img src="images/shoe2.png" style="width:150px; height:100px;" alt="shoes2">
-    <img src="images/shoe3.avif" style="width:150px; height:150px;" alt="shoes3">
+    <img src="frontend/images/shoesorrange.jpg" style="width:150px; height:150px;" alt="shoes3">
     </div>
 
 
@@ -106,10 +101,24 @@
     <img src="images/accessory1.webp" style="width:150px; height:150px;" alt="accessory1">
     <img src="images/accessory2.jpeg" style="width:150px; height:150px;" alt="accessory2">
     <img src="images/accessory3.jpg" style="width:150px; height:150px;" alt="accessory3">
-  </div>
-</div>
 
+
+  </div>
+  
+  <footer>
+   
+   <br>
+   <br>
+   
+    <a href="https://www.instagram.com/ehsanhussain_">
+    <img src="frontend/images/insta.png"style="width: 30px;; height: 30px;;" alt="IG">
+   
+    <a href="https://www.facebook.com/sports4_us">
+    <img src="frontend/images/fb.png"style="width: 30px;; height: 30px;;" alt="fb">
+
+    <a href="https://www.twitter.com/sports4_us">
+    <img src="frontend/images/twitter.png" style="width: 30px;; height: 30px;;"alt="twitter">
+
+  </footer>
 </body>
 </html>
-
-
