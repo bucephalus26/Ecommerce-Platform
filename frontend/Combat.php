@@ -8,6 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
+    <style>
+body {
+  background-image: url('images/backgroundmaybe.jpg');
+}
+</style>
     <title>Login</title>
 
 </head>
@@ -104,7 +109,7 @@
                - gripable
             </p>
            
-                Price : 19.99
+                Price : £19.99
           
         </div>
         <div>
@@ -125,7 +130,7 @@
           - tight-fitting 
             </p>
             <div>
-                Price : $5.99
+                Price : £5.79
             </div>
         </div>
     </div>
