@@ -97,9 +97,9 @@ body {
 ">
     <div class="product">
         <div>
-        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-            <img src="images/pinkwomenshoes.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail">
-            <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
+        <button onclick="pinkwomenshoesOn()" id="pinkwomenshoesOn" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
+            <img src="images/pinkwomenshoes.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail" id="pinkwomenshoesimg">
+            <button class="arrow" onclick="pinkwomenshoesOff()" id="pinkwomenshoesOff"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
   
 
            <br> <label>Size :</label>
@@ -130,9 +130,9 @@ body {
                 Price : £28.99
         </div>
         <div>
-        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-            <img src="images/greenasics.jpg"style="width: 150px; height: 150px;"  alt="shirt 2" class="thumbnail">
-        <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
+        <button onclick="greenasicsOn()" id="greenasicsOn" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
+            <img src="images/greenasics.jpg"style="width: 150px; height: 150px;"  alt="shirt 2" class="thumbnail" id="greenasicsimg">
+        <button class="arrow" onclick="greenasicsOff()" id="greenasicsOff"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
            
            <br> <label>Size :</label>
         <input type="radio" name="size" value="size"><strong>XS</strong>
@@ -147,9 +147,9 @@ body {
         <input type="radio" name="color" value="color"><strong>Red</strong>
 
            <div class="counter">
-    <button class="cart_btn" onclick="counterDec()">-</button>
-    <h5 id="counter">0</h5>
-    <button class="cart_btn" onclick="counterInc()">+</button >
+    <button class="cart_btn" onclick="counterDec1()">-</button>
+    <h5 id="counter1">0</h5>
+    <button class="cart_btn" onclick="counterInc1()">+</button >
     <button class="cart">Add to cart</button>
     </div>
             <h4>Description</h4>
@@ -164,9 +164,9 @@ body {
           
         </div>
         <div>
-        <button onclick="top3On()" id="top3On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-            <img src="images/newbalance.jpg"style="width:150px; height: 150px;"  alt="shirt 2" class="thumbnail">
-            <button class="arrow" onclick="top3Off()" id="top3Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
+        <button onclick="newbalanceOn()" id="newbalanceOn" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
+            <img src="images/newbalance.jpg"style="width:150px; height: 150px;"  alt="shirt 2" class="thumbnail" id="newbalanceimg">
+            <button class="arrow" onclick="newbalanceOff()" id="newbalanceOff"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
         </div>
         <div>
 
@@ -184,9 +184,9 @@ body {
         <input type="radio" name="color" value="color"><strong>Red</strong>
 
            <div class="counter">
-    <button class="cart_btn" onclick="counterDec()">-</button>
-    <h5 id="counter">0</h5>
-    <button class="cart_btn" onclick="counterInc()">+</button >
+    <button class="cart_btn" onclick="counterDec2()">-</button>
+    <h5 id="counter2">0</h5>
+    <button class="cart_btn" onclick="counterInc2()">+</button >
     <button class="cart">Add to cart</button>
     </div>
             <h4>Description</h4>
@@ -358,40 +358,40 @@ body {
 
 
                 
-                function top3Off(){
-                  document.getElementById('top3Img').src="images/top3back.webp";
-                  document.getElementById('top3Off').style.display="none";
-                  document.getElementById('top3On').style.display="inline";
+                function pinkwomenshoesOff(){
+                  document.getElementById('pinkwomenshoesimg').src="images/pinkwomenshoesback.webp";
+                  document.getElementById('pinkwomenshoesOff').style.display="none";
+                  document.getElementById('pinkwomenshoesOn').style.display="inline";
                  }
-                function top3On(){
-                  document.getElementById('top3Img').src="images/top3.jpg";
-                  document.getElementById('top3On').style.display="none";
-                  document.getElementById('top3Off').style.display="inline";
+                function pinkwomenshoesOn(){
+                  document.getElementById('pinkwomenshoesimg').src="images/pinkwomenshoes.jpg";
+                  document.getElementById('pinkwomenshoesOn').style.display="none";
+                  document.getElementById('pinkwomenshoesOff').style.display="inline";
                  }
                 
 
 
-                 function adidasOff(){
-                  document.getElementById('adidasShirt').src="images/tshirtadidasback.jpg";
-                  document.getElementById('adidasOff').style.display="none";
-                  document.getElementById('adidasOn').style.display="inline";
+                 function greenasicsOff(){
+                  document.getElementById('greenasicsimg').src="images/greenasicsback.webp";
+                  document.getElementById('greenasicsOff').style.display="none";
+                  document.getElementById('greenasicsOn').style.display="inline";
                  }
-                 function adidasOn(){
-                  document.getElementById('adidasShirt').src="images/tshirtadidas.jpg";
-                  document.getElementById('adidasOn').style.display="none";
-                  document.getElementById('adidasOff').style.display="inline";
+                 function greenasicsOn(){
+                  document.getElementById('greenasicsimg').src="images/greenasics.jpg";
+                  document.getElementById('greenasicsOn').style.display="none";
+                  document.getElementById('greenasicsOff').style.display="inline";
                  }
                
                  
-                 function underShirtOff(){
-                  document.getElementById('underShirtImg').src="images/underarmourtshirtback.webp";
-                  document.getElementById('underShirtOff').style.display="none";
-                  document.getElementById('underShirtOn').style.display="inline";
+                 function newbalanceOff(){
+                  document.getElementById('newbalanceimg').src="images/newbalanceback.jpg";
+                  document.getElementById('newbalanceOff').style.display="none";
+                  document.getElementById('newbalanceOn').style.display="inline";
                  }
-                 function underShirtOn(){
-                  document.getElementById('underShirtImg').src="images/underarmourtshirt.jpg";
-                  document.getElementById('underShirtOn').style.display="none";
-                  document.getElementById('underShirtOff').style.display="inline";
+                 function newbalanceOn(){
+                  document.getElementById('newbalanceimg').src="images/newbalance.jpg";
+                  document.getElementById('newbalanceOn').style.display="none";
+                  document.getElementById('newbalanceOff').style.display="inline";
                  }
        
 
