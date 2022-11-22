@@ -58,14 +58,13 @@
                         style="padding-left: 5px; padding: right 20px;" /></a>
             </li>
             <li class="nav-item active">
-                <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
-                        src="images/cart.png" alt="Cart" width="35" height="35"
-                        style="padding-left: 5px; padding: right 20px;" /></a>
+                <a href="" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3" src="images/cart.png"
+                        alt="Cart" width="35" height="35" style="padding-left: 5px; padding: right 20px;" /></a>
             </li>
         </nav>
 
         <div class="mt-5 text-center">
-            <form style="max-width: 250px; margin: auto">
+            <form class="form" action="" style="max-width: 250px; margin: auto">
                 <h1 class="h3 mb=3">JOIN NOW</h1>
                 <label for="fname"></label>
                 <input type="text" class="form-control" id="fname" placeholder="First name" required autofocus>
@@ -76,7 +75,7 @@
                 <label for="password"></label>
                 <input type="password" placeholder="Password" id="password" class="form-control" required />
                 <div class="mt-3">
-                    <button>
+                    <button class="signupBtn">
                         Signup
                     </button>
                     <p class="pt-3 me-2">Already have an account?</p>
@@ -140,7 +139,7 @@
                                 <a href="login.php" class="text-reset">Account</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Constact Us</a>
+                                <a href="#!" class="text-reset">Contact Us</a>
                             </p>
                             <p>
                                 <a href="#!" class="text-reset">About Us</a>
@@ -183,8 +182,12 @@ input {
     transition: color .2s ease-in-out;
     letter-spacing: .2em;
     text-transform: uppercase;
+}
 
-
+.form {
+    background-color: white;
+    padding: 20px 15px;
+    box-shadow: 0px 10px 25px rgba(92, 99, 105, .2);
 }
 
 form button {
@@ -210,6 +213,28 @@ footer input {
 footer button {
     background-color: grey;
     margin-top: 25px;
+}
+
+.signupBtn {
+    display: block;
+    margin-left: auto;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+    background-color: black;
+    border: black;
+    color: white;
+    padding: 10px 75px;
+    font-size: 20px;
+}
+
+.signupBtn:hover {
+    background-color: grey;
+    transform: translateY(-2px);
 }
 
 </style>
