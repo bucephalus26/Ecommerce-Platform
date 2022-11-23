@@ -44,11 +44,11 @@
                     </li>
                     <!-- linking to equipment page section on nav bar -->
                     <li class="nav-item active">
-                        <a href="login.php" class="loginL nav-link "> Login </a>
+                        <a href="login.php" class="loginL nav-link active"> Login </a>
                     </li>
                     <!-- linking to login page section on nav bar -->
                     <li class="nav-item active">
-                        <a href="signup.php" class="signupL nav-link active"> Signup </a>
+                        <a href="signup.php" class="signupL nav-link"> Signup </a>
                     </li>
                     <!-- linking to signup page section on nav bar -->
                 </ul>
