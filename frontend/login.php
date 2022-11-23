@@ -9,7 +9,6 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
             crossorigin="anonymous" />
-        <link rel="stylesheet" href="styles.css">
         <title>Login</title>
     </head>
 
@@ -90,48 +89,26 @@
                 <input type="hidden" name="submitted" value="TRUE" />
             </form>
         </div>
+
         <footer class="text-center text-lg-start text-muted " style="margin-top: 150px; background-color: black;">
             <!-- Section: Social media -->
             <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-                <!-- Left -->
                 <div class="me-5 d-none d-lg-block">
                     <span>Get connected with us on social networks:</span>
                     <br>
                     <br>
 
-                    <a href="https://www.instagram.com/ehsanhussain_">
-                        <img src="frontend/images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
+                    <a href="https://www.instagram.com/sports4us/">
+                        <img src="images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
 
                         <a href="https://en-gb.facebook.com/astonuniversity/">
-                            <img src="frontend/images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
+                            <img src="images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
 
                             <a href="https://www.twitter.com/sports4_us">
-                                <img src="frontend/images/twitter.png" style="width: 30px;; height: 30px;;"
-                                    alt="twitter">
+                                <img src="images/twitter.png" style="width: 30px;; height: 30px;;" alt="twitter">
 
                 </div>
-                <!-- Left -->
-
-                <!-- Right -->
-                <div></div>
-                <div>
-                    <a href="https://en-gb.facebook.com/astonuniversity/" class="me-4 text-reset">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-
-                </div>
-                <!-- Right -->
             </section>
-            <!-- Section: Social media -->
 
             <!-- Section: Links  -->
             <section class="">
@@ -144,21 +121,22 @@
                                 <p>useful links</p>
                             </h6>
                             <p>
-                                <a href="#!" class="text-reset">Home</a>
+                                <a href="index.php" class="text-reset">Home</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Products</a>
+                                <a href="men.php" class="text-reset">Products</a>
                             </p>
                             <p>
                                 <a href="login.php" class="text-reset">Account</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Constact Us</a>
+                                <a href="Contact Page.html" class="text-reset">Contact Us</a>
                             </p>
                             <p>
                                 <a href="#!" class="text-reset">About Us</a>
                             </p>
                         </div>
+                        <!-- Newsletter -->
                         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                             <!-- Content -->
                             <h6 class="text-uppercase fw-bold mb-4">

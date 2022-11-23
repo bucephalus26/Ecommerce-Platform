@@ -4,11 +4,10 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+        <link rel="stylesheet" href="https://stackpath.bootstrapdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
             crossorigin="anonymous" />
-        <link rel="stylesheet" href="style.css">
         <title>Signup</title>
     </head>
 
@@ -88,37 +87,21 @@
         <footer class="text-center text-lg-start text-muted " style="margin-top: 150px; background-color: black;">
             <!-- Section: Social media -->
             <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-                <!-- Left -->
                 <div class="me-5 d-none d-lg-block">
                     <span>Get connected with us on social networks:</span>
-                </div>
-                <!-- Left -->
+                    <br>
+                    <br>
 
-                <!-- Right -->
-                <div>
-                    <a href="https://en-gb.facebook.com/astonuniversity/" class="me-4 text-reset">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-github"></i>
-                    </a>
+                    <a href="https://www.instagram.com/sports4us/">
+                        <img src="images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
+
+                        <a href="https://en-gb.facebook.com/astonuniversity/">
+                            <img src="images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
+
+                            <a href="https://www.twitter.com/sports4_us">
+                                <img src="images/twitter.png" style="width: 30px;; height: 30px;;" alt="twitter">
                 </div>
-                <!-- Right -->
             </section>
-            <!-- Section: Social media -->
-
             <!-- Section: Links  -->
             <section class="">
                 <div class="container text-center text-md-start mt-5">
@@ -130,16 +113,16 @@
                                 <p>useful links</p>
                             </h6>
                             <p>
-                                <a href="#!" class="text-reset">Home</a>
+                                <a href="index.php" class="text-reset">Home</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Products</a>
+                                <a href="men.php" class="text-reset">Products</a>
                             </p>
                             <p>
                                 <a href="login.php" class="text-reset">Account</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Contact Us</a>
+                                <a href="Contact Page.html" class="text-reset">Contact Us</a>
                             </p>
                             <p>
                                 <a href="#!" class="text-reset">About Us</a>
@@ -157,21 +140,19 @@
                                         </form>
                             </h6>
                         </div>
-
+                        <!-- Newsletter -->
                     </div>
             </section>
-
-            <!-- Copyright -->
             <div class="text-center p-4">
                 © 2022 Copyright:
                 <a class="text-reset fw-bold" href="https://mdbootstrap.com/">sports4us.com</a>
             </div>
             <!-- Copyright -->
         </footer>
-        <!-- Footer -->
     </body>
 
 </html>
+<!-- CSS Style -->
 <style>
 form,
 input {
@@ -235,6 +216,10 @@ footer button {
 .signupBtn:hover {
     background-color: grey;
     transform: translateY(-2px);
+}
+
+footer span {
+    color: white;
 }
 
 </style>
