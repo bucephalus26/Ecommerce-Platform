@@ -31,26 +31,28 @@ Route::get(url: '/',[HomeController::class, 'index'])->name( name: 'home');
 Route::get(url: '/about',[HomeController::class, 'about'])->name( name: 'about');
 Route::get(url: '/references',[HomeController::class, 'references'])->name( name: 'references');
 Route::get(url: '/contact',[HomeController::class, 'contact'])->name( name: 'contact');
-Route::view(url:'/loginuser', view'home.login');
+Route::view(url:'/loginuser', view'home.login')->name('loginuser');
 Route::view(url:'/registeruser', view'home.register');
 Route::get(url:'/logoutuser',[Homecontroller::class, 'logout'])->name(name:'logoutuser');
-Route::post(url:'/loginadmin',[Homecontroller::class, 'loginadmin'])->name(name:'loginadmin');
-
+Route::view(url:'/loginadmin', 'admin.login')->name('loginadmin');
+Route::post('/loginadmincheck',[HomeController::class,'loginadmincheck'])->name('loginadmincheck');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/product/{id}', [HomeController::class, 'product'])->name( name:'product');
 
 // Route Group - route prefix, name prefix, controller prefix
 // ******* Admin Panel Routes *******
+Route::middleware('admin')->prefix('admin')->name('admin.')->group(function()){
+    Route::get('/',[AdminHomeController::class,'index'])->name('index');
 Route::prefix('/user')->name('user.')->controller(AdminUserController::class)->group(function() {
+    Route::get('/', [AdminHomeController::class,'index'])->name('index');
     Route::get('/', [AdminHomeController::class, 'index'])->name('index');
     Route::get('/edit/{id}', 'show')->name('edit');
     Route::get('/show/{id}', 'show')->name('show');
     Route::post('/update/{id}', 'update')->name('update');
     Route::get('/destroy/{id}', 'destroy')->name('destroy');
     Route::post('/addrole/{id}', 'addrole')->name('addrole');
-    Route::get('/destroyrole/{uid}/{rid}', 'destroyrole')->name('destroyrole');
-
+    Route::get('/destroyrole/{uid}/{rid}', 'destroyrole')->name('destroyrole'); } 
     // ******* Admin Category Routes *******
     Route::prefix('/category')->name('category.')->controller(AdminCategoryController::class)->group(function () {
     Route::get('/', 'index')->name('index');
