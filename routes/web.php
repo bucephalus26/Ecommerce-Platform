@@ -45,7 +45,8 @@ Route::middleware('auth')->group(function() {
     // ******* User Panel Routes *******
     Route::prefix('userpanel')->name('userpanel.')->controller(UserController::class)->group(function (){
         Route::get('/','index')->name('index');
-        Route::get('/comments', 'reviews')->name('comments')
+        Route::get('/reviews', 'reviews')->name('reviews')
+        Route::get('/reviewstory/{id}', 'destroy')->name('destroy');
     });
 
     // Route Group - route prefix, name prefix, controller prefix
@@ -62,15 +63,15 @@ Route::prefix('/user')->name('user.')->controller(AdminUserController::class)->g
     Route::post('/addrole/{id}', 'addrole')->name('addrole');
     Route::get('/destroyrole/{uid}/{rid}', 'destroyrole')->name('destroyrole'); } 
     
-    // ******* Admin Category Routes *******
-    Route::prefix('/category')->name('category.')->controller(AdminCategoryController::class)->group(function () {
-    Route::get('/', 'index')->name('index');
-    Route::get('/create', 'create')->name('create');
-    Route::post('/store', 'store')->name('store');
-    Route::get('/edit/{id}', 'edit')->name('edit');
-    Route::post('/update/{id}', 'update')->name('update');
-    Route::get('/destroy/{id}', 'destroy')->name('destroy');
-    Route::get('/show/{id}', 'show')->name('show');
+    // ******* ShopCart Routes *******
+    Route::prefix('/shopcart')->name('shopcart.')->controller(ShopCartController::class)->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::post('/store', 'store')->name('store');
+        Route::get('/add/{id}', 'add')->name('add');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/destroy/{id}', 'destroy')->name('destroy');
+        Route::get('/show/{id}', 'show')->name('show');
     });
 
      // ******* Admin Product Routes *******

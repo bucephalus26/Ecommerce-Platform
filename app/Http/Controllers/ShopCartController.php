@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ShopCart;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ShopCartController extends Controller
 {
@@ -28,11 +29,13 @@ class ShopCartController extends Controller
         if ($data)
         {
             $data->quantity = $data->quantity + $request->input('quantity');
-        }
+        } else
+        {
         $data = new ShopCart();
-        $data->product_id = $request->input( key: 'id');
+        $data->product_id = $id
         $data->user_id = Auth::id();
         $data->quantity = $request->input('quantity');
+        }
         $data->save();
 
         return redirect()->back()->with('info', 'Products added to ShoppingCart');
@@ -49,5 +52,22 @@ class ShopCartController extends Controller
         $data->quantity=$request->input('quantity');
         $data->save();
         return redirect()->back()->with('success','Product Update to ShopCart');
+    }
+    public function add($id)
+    {
+        $data = ShopCart::where('product_id',$id)->where('user_id', Auth::id())->first(); //Check product for user
+        if ($data)
+        {
+            $data->quantity = $data->quantity + 1;
+        } else
+        {
+        $data = new ShopCart();
+        $data->product_id = $id;
+        $data->user_id = Auth::id();
+        $data->quantity = 1;
+        }
+        $data->save();
+
+        return redirect()->back()->with('info', 'Products added to ShoppingCart');
     }
 }
