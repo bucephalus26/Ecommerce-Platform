@@ -41,7 +41,7 @@ body {
                     <a href="women.php" class="nav-link active "> Women </a>
                 </li>
                 <li class="nav-item active">
-                    <a href="index.php" class="nav-link"> Equipment </a>
+                    <a href="equipment.php" class="nav-link"> Equipment </a>
                 </li>
                 <li class="nav-item active">
                     <a href="login.php" class="nav-link "> Login </a>
