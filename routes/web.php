@@ -42,9 +42,10 @@ Route::get('/product/{id}', [HomeController::class, 'product'])->name( name:'pro
 
 // ******* User Auth Control *******
 Route::middleware('auth')->group(function() {
-    // ******* User Auth Control *******
+    // ******* User Panel Routes *******
     Route::prefix('userpanel')->name('userpanel.')->controller(UserController::class)->group(function (){
-        Route::get('/',[\App\Http\Controllers\UserController::class,'index'])->name('index');
+        Route::get('/','index')->name('index');
+        Route::get('/comments', 'reviews')->name('comments')
     });
 
     // Route Group - route prefix, name prefix, controller prefix
