@@ -53,6 +53,7 @@ class ShopCartController extends Controller
         $data->save();
         return redirect()->back()->with('success','Product Update to ShopCart');
     }
+    //Adds a product to basket
     public function add($id)
     {
         $data = ShopCart::where('product_id',$id)->where('user_id', Auth::id())->first(); //Check product for user
