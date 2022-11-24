@@ -40,8 +40,15 @@ Route::post('/loginadmincheck',[HomeController::class,'loginadmincheck'])->name(
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/product/{id}', [HomeController::class, 'product'])->name( name:'product');
 
-// Route Group - route prefix, name prefix, controller prefix
-// ******* Admin Panel Routes *******
+// ******* User Auth Control *******
+Route::middleware('auth')->group(function() {
+    // ******* User Auth Control *******
+    Route::prefix('userpanel')->name('userpanel.')->controller(UserController::class)->group(function (){
+        Route::get('/',[\App\Http\Controllers\UserController::class,'index'])->name('index');
+    });
+
+    // Route Group - route prefix, name prefix, controller prefix
+    // ******* Admin Panel Routes *******
 Route::middleware('admin')->prefix('admin')->name('admin.')->group(function()){
     Route::get('/',[AdminHomeController::class,'index'])->name('index');
 Route::prefix('/user')->name('user.')->controller(AdminUserController::class)->group(function() {
@@ -53,6 +60,7 @@ Route::prefix('/user')->name('user.')->controller(AdminUserController::class)->g
     Route::get('/destroy/{id}', 'destroy')->name('destroy');
     Route::post('/addrole/{id}', 'addrole')->name('addrole');
     Route::get('/destroyrole/{uid}/{rid}', 'destroyrole')->name('destroyrole'); } 
+    
     // ******* Admin Category Routes *******
     Route::prefix('/category')->name('category.')->controller(AdminCategoryController::class)->group(function () {
     Route::get('/', 'index')->name('index');
@@ -89,8 +97,8 @@ Route::prefix('/user')->name('user.')->controller(AdminUserController::class)->g
         Route::post('/update/{id}', action: 'update')->name(name:'update');
         Route::get('/destroy/{id}','destroy')->name('destroy');
 
+        });
     });
-
 });
 
 
