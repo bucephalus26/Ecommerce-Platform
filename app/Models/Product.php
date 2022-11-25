@@ -16,12 +16,26 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function comment()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
     protected static function booted()
     {
         // saves attributes after edit
         static::saving(function($product) {
             $product->product_attributes = json_encode(request('product_attributes'));
         });
+    }
+    public function shopcart()
+    {
+        return $this->hasMany(ShopCart::class);
+    }
+
+    public function orderproduct()
+    {
+        return $this->hasMany(OrderProduct::class);
     }
 
     

@@ -47,6 +47,9 @@ Route::middleware('auth')->group(function() {
         Route::get('/','index')->name('index');
         Route::get('/reviews', 'reviews')->name('reviews')
         Route::get('/reviewstory/{id}', 'destroy')->name('destroy');
+        Route::get('/orders','orders')->name('orders');
+        Route::get('/orderdetail/{id}', 'orderdetail')->name('orderdetail');
+
     });
 
     // Route Group - route prefix, name prefix, controller prefix
@@ -72,6 +75,10 @@ Route::prefix('/user')->name('user.')->controller(AdminUserController::class)->g
         Route::post('/update/{id}', 'update')->name('update');
         Route::get('/destroy/{id}', 'destroy')->name('destroy');
         Route::get('/show/{id}', 'show')->name('show');
+        Route::post('/order', 'order')->name('order');
+        Route::post('/storeorder', 'storeorder')->name('storeorder');    
+        Route::post('/ordercomplete', 'ordercomplete')->name('ordercomplete');    
+       
     });
 
      // ******* Admin Product Routes *******
