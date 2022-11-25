@@ -49,6 +49,7 @@ Route::middleware('auth')->group(function() {
         Route::get('/reviewstory/{id}', 'destroy')->name('destroy');
         Route::get('/orders','orders')->name('orders');
         Route::get('/orderdetail/{id}', 'orderdetail')->name('orderdetail');
+        Route::get('/cancelproduct/,{id}','cancelproduct')->name('cancelproduct');
 
     });
 
@@ -107,8 +108,24 @@ Route::prefix('/user')->name('user.')->controller(AdminUserController::class)->g
         Route::get('/destroy/{id}','destroy')->name('destroy');
 
         });
+
+    // ******* Admin Order Routes *******
+    Route::prefix('/order')->name('order')->controller(OrderController::class)->group(function(){
+        Route::get('/{slug}','index')->name('index');
+        Route::get('/create','create')->name('create');
+        Route::post('/store','store')->name('store');
+        Route::get('/edit/{id}','edit')->name('edit');
+        Route::post('/update/{id}','update')->name('update');
+        Route::get('/destroy/{id}','destroy')->name('destroy');
+        Route::get('/show/{id}','show')->name('show');
+        Route::get('/cancelorder/{id}','cancelorder')->name('cancelorder');
+        Route::get('/cancelproduct/,{id}','cancelproduct')->name('cancelproduct');
+        Route::get('/acceptproduct/,{id}','acceptproduct')->name('acceptproduct');
+
     });
-});
+
+    }); //Admin Panel Routes group
+});  // User authentication Group
 
 
 
