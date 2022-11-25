@@ -53,10 +53,6 @@
                     <!-- linking to signup page section on nav bar -->
                 </ul>
             </div>
-            <form class="d-flex">
-                <input type="text" class="text form-control me-1" />
-                <button type="submit" class="searchBtn btn btn-outline-light">Search</button>
-            </form>
             <ul>
                 <li class="nav-item">
                     <a href="index.php" class="navbar-user mb-0 h1"><img class="d-inline-block align-top mx-3"
