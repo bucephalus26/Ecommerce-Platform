@@ -8,11 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-    <style>
-body {
-  background-image: url('images/backgroundmaybe.jpg');
-}
-</style>
     <title>Login</title>
 
 </head>
@@ -33,27 +28,21 @@ body {
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a href="index.php" class="nav-link"> Home </a>
-                      <!-- connecting nav bar to pages -->
                 </li>
                 <li class="nav-item active">
                     <a href="men.php" class="nav-link "> Men </a>
-                      <!-- connecting nav bar to pages -->
                 </li>
                 <li class="nav-item active">
                     <a href="women.php" class="nav-link "> Women </a>
-                      <!-- connecting nav bar to pages -->
                 </li>
                 <li class="nav-item active">
                     <a href="equipment.php" class="nav-link active"> Equipment </a>
-                      <!-- connecting nav bar to pages -->
                 </li>
                 <li class="nav-item active">
                     <a href="login.php" class="nav-link "> Login </a>
-                      <!-- connecting nav bar to pages -->
                 </li>
                 <li class="nav-item active">
                     <a href="signup.php" class="nav-link "> Signup </a>
-                       <!-- connecting nav bar to pages -->
                 </li>
             </ul>
         </div>
@@ -72,8 +61,6 @@ body {
         <div class="float-child">
             <div class="section-m1">
                 <h3>Equipment</h3>
-
-                  <!-- adding equipment header -->
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Click for more</button>
@@ -87,7 +74,7 @@ body {
                 </div>
             </div>
         </div>
-  <!-- adding dropdown menu and linking them to sub pages to display more products -->
+
 
         <div class="image container">
         <div class="catalogue" style="
@@ -101,45 +88,9 @@ body {
     justify-content: center;
 ">
     <div class="product">
-              <!-- Java script written to display random quotations displaying sale info on page -->
-
-    <script type="text/javascript">
-  rndmSales = function () {
-    var quotes = new Array();
-    quotes[0] = "NHS discount available";
-    quotes[1] = "Black Friday Sale available";
-    quotes[2] = "Refunds and exchanges available within 28 days of purchase"
-    quotes[3] = "Student discount available";
-    var rand = Math.floor(Math.random()*quotes.length);
-    document.write(quotes[rand]);
-  }
-  rndmSales();
-</script>
-        
         <div>
-        <button onclick="accessory2On()" id="accessory2On" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-            <img src="images/accessory2.jpeg"style="width:150px; height:150px;"  alt="a1" class="thumbnail" id="accessory2img">
-        <button class="arrow" onclick="accessory2Off()" id="accessory2Off"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
-            
-        <label>Size :</label>
-        <input type="radio" name="size" value="size"><strong>XS</strong>
-        <input type="radio" name="size" value="size"><strong>S </strong>       
-        <input type="radio" name="size" value="size"><strong>L </strong>       
-        <input type="radio" name="size" value="size"><strong>XL </strong> 
-        
-        <br><label>Colours :</label>
-        <input type="radio" name="color" value="color"><strong>Black</strong>
-        <input type="radio" name="color" value="color"><strong>White </strong>       
-        <input type="radio" name="color" value="color"><strong>Blue </strong>       
-        <input type="radio" name="color" value="color"><strong>Red</strong>
-
-           <div class="counter">
-    <button class="cart_btn" onclick="counterDec()">-</button>
-    <h5 id="counter">0</h5>
-    <button class="cart_btn" onclick="counterInc()">+</button >
-    <button class="cart">Add to cart</button>
-    </div>
-    <h4>Description</h4>
+            <img src="images/accessory2.jpeg"style="width:150px; height:150px;"  alt="a1" class="thumbnail">
+            <h4>Description</h4>
             <br>
             <p>
                 - odour-free
@@ -147,35 +98,13 @@ body {
                 
             </p>
            
-                Price : £7.99
-            <!-- adding prices, descriptions and css for images -->
+                Price : £7.99.99
+          
         </div>
         <div>
-        <button id="accessory3On" onclick="accessory3On()" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-            <img src="images/accessory3.jpg"style="width:150px; height:150px;"  alt="a2" class="thumbnail" id="accessory3img">
-            <button id="underShirtOff" onclick="accessory3Off()" class="arrow"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button>
-<br>
+            <img src="images\accessory3.jpg"style="width:150px; height:150px;"  alt="a2" class="thumbnail">
         </div>
         <div>
-            
-        <label>Size :</label>
-        <input type="radio" name="size" value="size"><strong>XS</strong>
-        <input type="radio" name="size" value="size"><strong>S </strong>       
-        <input type="radio" name="size" value="size"><strong>L </strong>       
-        <input type="radio" name="size" value="size"><strong>XL </strong> 
-        
-        <br><label>Colours :</label>
-        <input type="radio" name="color" value="color"><strong>Black</strong>
-        <input type="radio" name="color" value="color"><strong>White </strong>       
-        <input type="radio" name="color" value="color"><strong>Blue </strong>       
-        <input type="radio" name="color" value="color"><strong>Red</strong>
-
-           <div class="counter">
-    <button class="cart_btn" onclick="counterDec1()">-</button>
-    <h5 id="counter1">0</h5>
-    <button class="cart_btn" onclick="counterInc1()">+</button >
-    <button class="cart">Add to cart</button>
-    </div>
             <h4>Description</h4>
             <br>
             <p>
@@ -185,7 +114,6 @@ body {
             </p>
             <div>
                 Price : £5.99
-                 <!-- adding prices, descriptions and css for images -->
             </div>
         </div>
     </div>
@@ -250,15 +178,15 @@ body {
                         <br>
 
                         <a href="https://www.instagram.com/ehsanhussain_">
-                            <img src="images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
-                          <!-- adding social media links-->
+                            <img src="frontend/images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
+
                             <a href="https://en-gb.facebook.com/astonuniversity/">
-                                <img src="images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
-                                    <!-- adding social media links-->
+                                <img src="frontend/images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
+
                                 <a href="https://www.twitter.com/sports4_us">
-                                    <img src="images/twitter.png" style="width: 30px;; height: 30px;;"
+                                    <img src="frontend/images/twitter.png" style="width: 30px;; height: 30px;;"
                                         alt="twitter">
-                                       <!-- adding social media links-->
+
                     </div>
                     <!-- Left -->
 
@@ -337,66 +265,6 @@ body {
                 </div>
                 <!-- Copyright -->
             </footer>
-            <script>
-                // variableForCounter
-                  var value= document.getElementById('counter').innerText;
-                  var value1= document.getElementById('counter1').innerText;
-
-
-
-                
-                function accessory2Off(){
-                  document.getElementById('accessory2img').src="images/accessory2back.jpg";
-                  document.getElementById('accessory2Off').style.display="none";
-                  document.getElementById('accessory2On').style.display="inline";
-                 }
-                function accessory2On(){
-                  document.getElementById('accessory2img').src="images/accessory2.jpeg";
-                  document.getElementById('accessory2On').style.display="none";
-                  document.getElementById('accessory2Off').style.display="inline";
-                 }
-                
-
-
-                 function accessory3Off(){
-                  document.getElementById('accessory3img').src="images/accessory3back.jpg";
-                  document.getElementById('accessory3Off').style.display="none";
-                  document.getElementById('accessory3On').style.display="inline";
-                 }
-                 function accessory3On(){
-                  document.getElementById('accessory3img').src="images/accessory3.jpg";
-                  document.getElementById('accessory3On').style.display="none";
-                  document.getElementById('accessory3Off').style.display="inline";
-                 }
-               
-                 
-    //    counters
-                 function counterInc(){
-                  document.getElementById('counter').innerText=++value;
-                 }
-                 function counterDec(){
-                    if(value>0){
-                  document.getElementById('counter').innerText=--value;
-                    }
-                    else{
-                  document.getElementById('counter').innerText=value;
-                    }
-                }
-                // second counter
-                function counterInc1(){
-                  document.getElementById('counter1').innerText=++value1;
-                 }
-                 function counterDec1(){
-                    if(value>0){
-                  document.getElementById('counter1').innerText=--value1;
-                    }
-                    else{
-                  document.getElementById('counter1').innerText=value1;
-                    }
-                }
-                 
-            </script>
-</body>
 </body>
 
 </html>

@@ -8,11 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-    <style>
-body {
-  background-image: url('images/backgroundmaybe.jpg');
-}
-</style>
     <title>Login</title>
 
 </head>
@@ -36,23 +31,18 @@ body {
                 </li>
                 <li class="nav-item active">
                     <a href="men.php" class="nav-link "> Men </a>
-                       <!-- linking to men page in nav bar -->
                 </li>
                 <li class="nav-item active">
                     <a href="women.php" class="nav-link active"> Women </a>
-                       <!-- linking to women page in nav bar -->
                 </li>
                 <li class="nav-item active">
                     <a href="equipment.php" class="nav-link"> Equipment </a>
-                       <!-- linking to equipment page in nav bar -->
                 </li>
                 <li class="nav-item active">
                     <a href="login.php" class="nav-link "> Login </a>
-                       <!-- linking to login page in nav bar -->
                 </li>
                 <li class="nav-item active">
                     <a href="signup.php" class="nav-link "> Signup </a>
-                       <!-- linking to signup page in nav bar -->
                 </li>
             </ul>
         </div>
@@ -64,32 +54,24 @@ body {
             <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
                     src="images/user.png" alt="Logo" width="35" height="35"
                     style="padding-left: 5px; padding: right 20px;" /></a>
-                       <!-- adding css to logo and nav bar -->
         </li>
     </nav>
     <div class="float-container">
 
         <div class="float-child">
             <div class="section-m1">
-                <h3>Womenswear</h3>
-                   <!-- adding women header -->
+                <h3>Menswear</h3>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Click for more</button>
                 <div class="dropdown-content">
-                    <nav>
-                    <a href="women.php">Tops</a>
-                    </nav>
-                    <nav>
-                    <a href="womenstrousers.php">Trousers</a>
-                    </nav>
-                    <nav>
-                    <a href="womensshoes.php">Footwear</a>
-                    </nav>
+                    <a href="#">Tops</a>
+                    <a href="#">Trousers</a>
+                    <a href="#">Footwear</a>
                 </div>
             </div>
         </div>
-   <!-- linking to subpages within women page -->
+
 
         <div class="image container">
         <div class="catalogue" style="
@@ -100,128 +82,44 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;"
-    
-
->
-
-
-
+    justify-content: center;
+">
     <div class="product">
-               <!-- Java script written to display random quotations displaying sale info on page -->
-
-    <script type="text/javascript">
-  rndmSales = function () {
-    var quotes = new Array();
-    quotes[0] = "NHS discount available";
-    quotes[1] = "Black Friday Sale available";
-    quotes[2] = "Refunds and exchanges available within 28 days of purchase"
-    quotes[3] = "Student discount available";
-    var rand = Math.floor(Math.random()*quotes.length);
-    document.write(quotes[rand]);
-  }
-  rndmSales();
-  </script>
         <div>
-        <button onclick="w1shirtOn()" id="w1shirtOn" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-            <img src="images/w1shirt.jpg"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail" id="w1shirtimg">
-        <button class="arrow" onclick="w1shirtOff()" id="w1shirtOff"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
-        <label>Size :</label>
-        <input type="radio" name="size" value="size"><strong>XS</strong>
-        <input type="radio" name="size" value="size"><strong>S </strong>       
-        <input type="radio" name="size" value="size"><strong>L </strong>       
-        <input type="radio" name="size" value="size"><strong>XL </strong> 
-        
-        <br><label>Colours :</label>
-        <input type="radio" name="color" value="color"><strong>Black</strong>
-        <input type="radio" name="color" value="color"><strong>White </strong>       
-        <input type="radio" name="color" value="color"><strong>Blue </strong>       
-        <input type="radio" name="color" value="color"><strong>Red</strong>
-
-           <div class="counter">
-    <button class="cart_btn" onclick="counterDec()">-</button>
-    <h5 id="counter">0</h5>
-    <button class="cart_btn" onclick="counterInc()">+</button >
-    <button class="cart">Add to cart</button>
-    </div>
+            <img src="frontend/images/w1shirt.png"style="width:150px; height:150px;"  alt="shirt 1" class="thumbnail">
+  
             <h4>Description</h4>
             <br>
             <p>
-            - exclusive
-            - only available short-term
-            - matchable options
+                This is one of the most sold books on the planet.
+                Pick up your copy now
             </p>
-                Price : £13.99
-                   <!-- addimg images,descriptions and css for images -->
+                Price : $5.99
         </div>
         <div>
-        <button onclick="w2shirtOn()" id="w2shirtOn" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-            <img src="images/w2shirt.jpg"style="width:150px; height: 200px;"  alt="shirt 2" class="thumbnail" id="w2shirtimg">
-        <button class="arrow" onclick="w2shirtOff()" id="w2shirtOff"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
-        <label>Size :</label>
-        <input type="radio" name="size" value="size"><strong>XS</strong>
-        <input type="radio" name="size" value="size"><strong>S </strong>       
-        <input type="radio" name="size" value="size"><strong>L </strong>       
-        <input type="radio" name="size" value="size"><strong>XL </strong> 
-        
-        <br><label>Colours :</label>
-        <input type="radio" name="color" value="color"><strong>Black</strong>
-        <input type="radio" name="color" value="color"><strong>White </strong>       
-        <input type="radio" name="color" value="color"><strong>Blue </strong>       
-        <input type="radio" name="color" value="color"><strong>Red</strong>
-
-        <div class="counter">
-    <button class="cart_btn" onclick="counterDec1()">-</button>
-    <h5 id="counter1">0</h5>
-    <button class="cart_btn" onclick="counterInc1()">+</button >
-    <button class="cart">Add to cart</button>
-    </div>
+            <img src="frontend/images/tshirtadidas.jpg"style="width:150px; height:150px;"  alt="shirt 2" class="thumbnail">
             <h4>Description</h4>
             <br>
             <p>
-              - breathable
-              - lightweight
-              - sweat-absorbant
+                This is one of the most sold books on the planet.
+                Pick up your copy now
             </p>
            
-                Price : £18.99
-           <!-- addimg images,descriptions and css for images -->
+                Price : $5.99
+          
         </div>
         <div>
-        <button onclick="w3shirtOn()" id="w3shirtOn" class="arrow"><img src="images/arrowl.png" alt=""style="width:25px;height:25px"></button>
-            <img src="images/w3shirt.jpg"style="width: 200px; height: 200px;"  alt="shirt 2" class="thumbnail" id="w3shirtimg">
-        <button class="arrow" onclick="w3shirtOff()" id="w3shirtOff"><img src="images/arrowr.png" alt=""style="width:25px;height:25px"></button><br>
-
+            <img src="frontend/images/underarmourtshirt.jpg"style="width:150px; height:150px;"  alt="shirt 2" class="thumbnail">
         </div>
         <div>
-        <label>Size :</label>
-        <input type="radio" name="size" value="size"><strong>XS</strong>
-        <input type="radio" name="size" value="size"><strong>S </strong>       
-        <input type="radio" name="size" value="size"><strong>L </strong>       
-        <input type="radio" name="size" value="size"><strong>XL </strong> 
-        
-        <br><label>Colours :</label>
-        <input type="radio" name="color" value="color"><strong>Black</strong>
-        <input type="radio" name="color" value="color"><strong>White </strong>       
-        <input type="radio" name="color" value="color"><strong>Blue </strong>       
-        <input type="radio" name="color" value="color"><strong>Red</strong>
-
-           <div class="counter">
-    <button class="cart_btn" onclick="counterDec2()">-</button>
-    <h5 id="counter2">0</h5>
-    <button class="cart_btn" onclick="counterInc2()">+</button>
-    <button class="cart">Add to cart</button>
-    </div>
             <h4>Description</h4>
             <br>
             <p>
-             - comfortable
-             - lightweight
-             - matchable options
+                This is one of the most sold books on the planet.
+                Pick up your copy now
             </p>
             <div>
-                Price : £11.99
-                 <!-- addimg images,descriptions and css for images -->
+                Price : $5.99
             </div>
         </div>
     </div>
@@ -286,16 +184,14 @@ body {
                         <br>
 
                         <a href="https://www.instagram.com/ehsanhussain_">
-                            <img src="images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
-                                  <!-- linking to social media icons -->
-                            <a href="https://en-gb.facebook.com/astonuniversity/">
-                                <img src="images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
-                                 <!-- linking to social media icons -->
-                                <a href="https://www.twitter.com/sports4_us">
-                                    <img src="images/twitter.png" style="width: 30px;; height: 30px;;"
-                                        alt="twitter">
+                            <img src="frontend/images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
 
-                                         <!-- linking to social media icons -->
+                            <a href="https://en-gb.facebook.com/astonuniversity/">
+                                <img src="frontend/images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
+
+                                <a href="https://www.twitter.com/sports4_us">
+                                    <img src="frontend/images/twitter.png" style="width: 30px;; height: 30px;;"
+                                        alt="twitter">
 
                     </div>
                     <!-- Left -->
@@ -375,91 +271,6 @@ body {
                 </div>
                 <!-- Copyright -->
             </footer>
-            <script>
-                // variableForCounter
-                  var value= document.getElementById('counter').innerText;
-                  var value1= document.getElementById('counter1').innerText;
-                  var value2= document.getElementById('counter2').innerText;
-
-
-
-                
-                function w1shirtOff(){
-                  document.getElementById('w1shirtimg').src="images/w1shirtback.webp";
-                  document.getElementById('w1shirtOff').style.display="none";
-                  document.getElementById('w1shirtOn').style.display="inline";
-                 }
-                function w1shirtOn(){
-                  document.getElementById('w1shirtimg').src="images/w1shirt.jpg";
-                  document.getElementById('w1shirtOn').style.display="none";
-                  document.getElementById('w1shirtOff').style.display="inline";
-                 }
-                
-
-
-                 function w2shirtOff(){
-                  document.getElementById('w2shirtimg').src="images/w2shirtback.jpg";
-                  document.getElementById('w2shirtOff').style.display="none";
-                  document.getElementById('w2shirtOn').style.display="inline";
-                 }
-                 function w2shirtOn(){
-                  document.getElementById('w2shirtimg').src="images/w2shirt.jpg";
-                  document.getElementById('w2shirtOn').style.display="none";
-                  document.getElementById('w2shirtOff').style.display="inline";
-                 }
-               
-                 
-                 function w3shirtOff(){
-                  document.getElementById('w3shirtimg').src="images/w3shirtback.jpg";
-                  document.getElementById('w3shirtOff').style.display="none";
-                  document.getElementById('w3shirtOn').style.display="inline";
-                 }
-                 function w3shirtOn(){
-                  document.getElementById('w3shirtimg').src="images/w3shirt.jpg";
-                  document.getElementById('w3shirtOn').style.display="none";
-                  document.getElementById('w3shirtOff').style.display="inline";
-                 }
-       
-
-
-
-                 function counterInc(){
-                  document.getElementById('counter').innerText=++value;
-                 }
-                 function counterDec(){
-                    if(value>0){
-                  document.getElementById('counter').innerText=--value;
-                    }
-                    else{
-                  document.getElementById('counter').innerText=value;
-                    }
-                }
-                // second counter
-                function counterInc1(){
-                  document.getElementById('counter1').innerText=++value1;
-                 }
-                 function counterDec1(){
-                    if(value>0){
-                  document.getElementById('counter1').innerText=--value1;
-                    }
-                    else{
-                  document.getElementById('counter1').innerText=value1;
-                    }
-                }
-                // third counter
-                function counterInc2(){
-                  document.getElementById('counter2').innerText=++value2;
-                 }
-                 function counterDec2(){
-                    if(value>0){
-                  document.getElementById('counter2').innerText=--value2;
-                    }
-                    else{
-                  document.getElementById('counter2').innerText=value2;
-                    }
-                }
-                 
-            </script>
 </body>
 
 </html>

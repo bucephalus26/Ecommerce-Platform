@@ -7,36 +7,75 @@
 
 @section('content')
 
-    <!-- Products Start -->
-    <div class="container-fluid pt-5">
-        <div class="text-center mb-4">
-            <h2 class="section-title px-5"><span class="px-2">Trendy Products</span></h2>
+    <br>
+
+
+    <h1>Sports4Us</h1>
+
+    <br>
+
+    <p>Explore this season's latest trends with the collection from Sports4Us.<br> <br>
+    Whether you're looking to elevate your gym workouts with our t-shirts, thermal tops and joggers, 
+    or to dress casually, our range of clothing is decked out with the latest wardrobe essentials. <br><br>
+    Discover your personal aesthetic with our gymwear like our  that meld both fashion and function. 
+    From men's trainers to tops, find a style that suits your aesthetic. 
+    </p>
+            
+    <body style="text-align: center; padding-top: 80px">
+
+
+
+    <div class="textonhomepage">
+    <br>
+        <div id='image1'> <div class="bottom-left"> <h1>Shop for Equipment</h1></div> 
+        <div class="bottom-left-two"><button class="button"><a href="equipment.php">Shop Now</a></button></div>
+        
         </div>
 
-        <!-- Products Start -->
-        <div class="row px-xl-5 pb-3">
-            <!-- Each product is displayed -->
-            @foreach($productlist1 as $rs)
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="{{Storage::url($rs->image)}}">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">{{$rs->title}}</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>{{'£'.$rs->price}}</h6><h6 class="text-muted ml-2"><del>{{'£'.$rs->price * 1.10}}</del></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="{{route('product', ['id'=>$rs->id])}}" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            @endforeach
+    <br><br><br>
+
+
+    <div class="image2">
+        <div>
+            <img src="{{asset('assets')}}/img/mens.jpeg" style="width:700px; height: 700px;">
         </div>
     </div>
-    <!-- Products End -->
+
+    <br><br>
+    <br>
+    <br><br>
+    <br><br><br>
+    <br>
+
+
+    <div class="bottom-right"> <h1>Shop for Men</h1></div> 
+        <p> e this season's latest trends with the collection from Sports4Us.<br> <br>
+    Whether you're looking to elevate your gym workouts with our t-shirts, thermal tops and joggers, 
+    or to dress casually, our </p>
+        <div class="bottom-left-two"><button class="buttontwo"><a href="men.php">Shop Now</a></button></div>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <div class="image3">
+        <div>
+            <img src="{{asset('assets')}}/img/womens.jpg " style="width:700px; height: 700px;">
+        </div>
+    </div>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <div class="bottom-right"> <h1>Shop for Women</h1></div> 
+        <p> e this season's latest trends with the collection from Sports4Us.<br> <br>
+    Whether you're looking to elevate your gym workouts with our t-shirts, thermal tops and joggers, 
+    or to dress casually, our </p>
+    <div class="bottom-left-two"><button class="buttontwo"><a href="women.php">Shop Now</a></button></div>
+        
+
+
+    <br><br><br><br><br><br>
 
 @endsection
