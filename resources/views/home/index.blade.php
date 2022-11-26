@@ -6,11 +6,12 @@
      <!-- Categories Start -->
      <div class="container-fluid pt-5">
         <div class="row px-xl-5 pb-3">
+            @foreach($productlist1 as $rs)
             <div class="col-lg-4 col-md-6 pb-1">
                 <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                     <p class="text-right">15 Products</p>
                     <a href="" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="{{asset('assets')}}/img/cat-1.jpg" alt="">
+                        <img class="img-fluid" src="{{Storage::url($rs->image)}}/img/cat-1.jpg" alt="">
                     </a>
                     <h5 class="font-weight-semi-bold m-0">Men's dresses</h5>
                 </div>
@@ -94,20 +95,22 @@
 
 
     <!-- Products Start -->
+
     <div class="container-fluid pt-5">
         <div class="text-center mb-4">
             <h2 class="section-title px-5"><span class="px-2">Trandy Products</span></h2>
         </div>
         <div class="row px-xl-5 pb-3">
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+            @foreach($productlist1 as $rs)
                 <div class="card product-item border-0 mb-4">
                     <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="{{asset('assets')}}/img/product-1.jpg" alt="">
+                        <img class="img-fluid w-100" src="{{Storage::url($rs->image)}}", "style= height: 360px, width:270px">
                     </div>
                     <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
+                        <h6 class="text-truncate mb-3">{{$rs->title}}</h6>
                         <div class="d-flex justify-content-center">
-                            <h6>$123.00</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                            <h6>${{$rs->price}}{{$rs->price * 1.10}}</h6><h6 class="text-muted ml-2"><del>$123.00</del></h6>
                         </div>
                     </div>
                     <div class="card-footer d-flex justify-content-between bg-light border">
@@ -115,6 +118,7 @@
                         <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
                     </div>
                 </div>
+            @endforeach
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="card product-item border-0 mb-4">
