@@ -15,7 +15,7 @@ class CheckAdmin
             return redirect(route('loginadmin'))->with('error','You do not have permission');
         }
         return $next($request);
- ]   }
+    }
 }
 
 ?>

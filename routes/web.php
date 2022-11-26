@@ -37,11 +37,26 @@ Route::get(url:'/logoutuser',[Homecontroller::class, 'logout'])->name(name:'logo
 Route::view(url:'/loginadmin', 'admin.login')->name('loginadmin');
 Route::post('/loginadmincheck',[HomeController::class,'loginadmincheck'])->name('loginadmincheck');
 
+// Call Controller Function
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/product/{id}', [HomeController::class, 'product'])->name( name:'product');
 
-// ******* User Auth Control *******
-Route::middleware('auth')->group(function() {
+//Route->Controller->View
+Route::get('/test', [HomeController::class, 'test'])->name('test');
+
+//Route with parameters
+Route::get('/param/{id}/{number}', [HomeController::class, 'param'])->name('param');
+
+//Route with post
+Route::post('/save', [HomeController::class, 'save'])->name('save');
+
+
+Route::get('/product/{id}', [HomeController::class, 'product'])->name('product');
+
+
+Route::middleware(['auth:sanctum','verified'])->get('/dashboard',function() {
+    return view('dashboard');
+})->name('dashboard');
+
     // ******* User Panel Routes *******
     Route::prefix('userpanel')->name('userpanel.')->controller(UserController::class)->group(function (){
         Route::get('/','index')->name('index');

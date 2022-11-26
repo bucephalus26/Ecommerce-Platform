@@ -54,7 +54,7 @@ class HomeController extends Controller
         $data = new Message();
         $data->name = $request->input( key: 'name');
         $data->email = $request->input( key: 'email');
-        $data->phone = $request->input( key: 'phone');
+        $data->phone = $request->input(  key: 'phone');
         $data->subject = $request->input( key: 'subject');
         $data->message = $request->input( key: 'message');
         $data->ip=request()->ip();
