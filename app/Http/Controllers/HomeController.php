@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-    //
+    // index page
     public function index()
     {
         $page='home';
@@ -20,6 +20,26 @@ class HomeController extends Controller
             'page'=>$page,
             'productlist1'=>$productlist1,
             'setting'=>$setting
+            
+        ]);
+    }
+
+    // about page
+    public function about()
+    {
+        $setting= Setting::first();
+        return view('home.about',[
+            'setting'=>$setting,
+            
+        ]);
+    }
+
+    // contact page
+    public function contact()
+    {
+        $setting= Setting::first();
+        return view('home.contact',[
+            'setting'=>$setting,
             
         ]);
     }

@@ -30,7 +30,8 @@ Route::get('/', function () {
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/product/{id}', [HomeController::class, 'product'])->name( name:'product');
 Route::get('/categoryproducts/{id}/{slug}', [HomeController::class, 'categoryproducts'])->name( name:'categoryproducts');
-
+Route::get('/contact', [HomeController::class, 'contact'])->name( name:'contact');
+Route::get('/about', [HomeController::class, 'about'])->name( name:'about');
 
 // Route Group - route prefix, name prefix, controller prefix
 // ******* Admin Panel Routes *******

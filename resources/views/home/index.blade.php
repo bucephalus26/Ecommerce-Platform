@@ -49,7 +49,7 @@
 
 
     <div class="bottom-right"> <h1>Shop for Men</h1></div> 
-        <p> e this season's latest trends with the collection from Sports4Us.<br> <br>
+        <p> Explore this season's latest trends with the collection from Sports4Us.<br> <br>
     Whether you're looking to elevate your gym workouts with our t-shirts, thermal tops and joggers, 
     or to dress casually, our </p>
         <div class="bottom-left-two"><button class="buttontwo"><a href="men.php">Shop Now</a></button></div>

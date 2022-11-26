@@ -98,7 +98,7 @@
         </section>
 
          <!-- Footer -->
-         <footer class="text-center text-lg-start text-muted " style="margin-top: 50px; background-color: black;">
+          <footer class="text-center text-lg-start text-muted " style="margin-top: 0px; background-color: black;">
             <!-- Section: Social media -->
             <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
                 <!-- Left -->
@@ -177,6 +177,7 @@
             </div>
             <!-- Copyright -->
         </footer>
+        <!-- Footer -->
         <!-- Footer -->
     </body>
         </html>   

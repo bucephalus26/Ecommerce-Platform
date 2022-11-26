@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
-/*.section-m1 {
-  background-color: #fb8612;
-}*/
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
 div.img {
     position: absolute;
@@ -148,9 +153,6 @@ p1 {
     background-size: cover;
 }
 
-
-
-
 .nav-bar {
     background-color: rgb(247, 245, 245);
     overflow: hidden;
@@ -183,7 +185,6 @@ p1 {
 
 
 .img
-
 
 
 #filter {
@@ -331,105 +332,243 @@ p1 {
 }
 /* sub nav content ends */
 
+/* footer and nav  css starts */
+nav,
+button {
+    font-family: Basic Commercial, sans-serif;
+    text-transform: uppercase;
 
-.Contact {
+}
+footer input {
+    margin-top: 25px;
+    padding: 5px 53px;
+    text-align: left;
+}
+footer button {
+    background-color: grey;
+    margin-top: 25px;
+}
+/* footer  css  ends */
+
+/* Contact  page css  starts */
+.Contact
+{
     position: relative;
-    min-height: 100vh;
-    padding: 50px 100px;
+    min-height: 80vh;
+    padding: 100px 150px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url(background.jpg);
-    background-size: cover;
+
+}
+.Contact .content
+{
+    max-width: 800px;
+    text-align: center;
+}
+.Contact .content h2
+{
+    font-size: 36px;
+    font-weight: 500;
+    color: black;
 }
 
-    .Contact .content {
-        max-width: 800px;
-        text-align: center;
-    }
+.Contact .content p
+{
+    font-weight: 300;
+    color: black;
+}
 
-        .Contact .content h2 {
-            font-size: 36px;
-            font-weight: 500;
-            color: rgb(255, 255, 255);
-        }
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
 
-        .Contact .content p {
-            font-weight: 300;
-            color: rgb(0, 0, 0);
-        }
+.container .contactInfo 
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contactInfo .box .icon
+{
+    min-width: 60px;
+    height: 60px;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 25px;
+}
+.container .contactInfo .box .text
+{
+    display: flex;
+    margin-left: 20px;
+    font-size: 15px;
+    color: black;
+    flex-direction: column;
+    font-weight: 100;
 
-.ContactForm {
+}
+.container .contactInfo .box .text h3
+{
+    font-size: 22px;
+    margin-left: -3px;
+    font-weight: 500;
+    color: black;
+}
+.ContactForm
+{
     width: 40%;
     padding: 40px;
-    background: rgb(255, 255, 255);
+    background: white;
+}
+.ContactForm h2
+{
+    font-size: 28px;
+    color: black;
+    font-weight: 500;
 }
 
-    .ContactForm h2 {
-        font-size: 30px;
-        color: black;
-        font-weight: 500;
-    }
+.ContactForm .InputBox
+{
+    position: relative;
+    width:  100%;
+    margin-top: 10px;
+}
 
-    .ContactForm .InputBox {
-        position: relative;
-        width: 100%;
-        margin-top: 10px;
-    }
+.ContactForm .InputBox input,
+.ContactForm .InputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 14px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.ContactForm .InputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 15px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.ContactForm .InputBox input:focus ~ span,
+.ContactForm .InputBox input:valid ~ span,
+.ContactForm .InputBox textarea:focus ~ span,
+.ContactForm .InputBox textarea:valid ~ span
 
-        .ContactForm .InputBox input,
-        .ContactForm .InputBox textarea {
-            width: 100%;
-            padding: 5px 0;
-            font-size: 16px;
-            margin: 10px 0;
-            border: none;
-            border-bottom: 2px solid #333;
-            outline: none;
-            resize: none;
-        }
-
-        .ContactForm .InputBox span {
-            position: absolute;
-            left: 0;
-            padding: 5px 0;
-            font-size: 16px;
-            margin: 10px 0;
-            pointer-events: none;
-            transition: 0.5s;
-            color: #666;
-        }
-
-        .ContactForm .InputBox input:focus ~ span,
-        .ContactForm .InputBox input:valid ~ span,
-        .ContactForm .InputBox textarea:focus ~ span,
-        .ContactForm .InputBox textarea:valid ~ span {
-            color: black;
-            font-size: 12px;
-            transform: translateY(-20px);
-        }
-
-        .ContactForm .InputBox input[type ="submit"] {
-            width: 50%;
-            background: black;
-            color: rgb(0, 0, 0);
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-        }
-
-@media (max-width: 991px) {
-    .Contact {
+{
+    color: black;
+    font-size: 10px;
+    transform: translateY(-20px);
+}
+.ContactForm .InputBox input[type ="submit"]
+{
+    width: 100px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 15px;
+}
+@media (max-width: 991px)
+{
+    .Contact{
         padding: 50px;
     }
-
-    .container {
+    .container{
         flex-direction: column;
     }
+    .container .contactInfo{
+        margin-bottom: 40px;
+    }
+    .container .contactInfo, .ContactForm{
+        width: 100;
+    }
 
-        .container .contactInfo, .ContactForm {
-            width: 50px;
-        }
 }
+/* Contact  page css  ends */
 
+/* About  page css  starts */
+.About{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    color: whitesmoke;
+    }
+
+    .rows{
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+      }
+      
+    h1{
+    font-size: 36px;
+    font-weight: 600;
+    color: black;
+    }
+
+    .about-col{
+      flex-basis: 31%;
+      background: grey;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      padding: 20px 12px;
+      box-sizing: border-box;
+      transition: 0.5s;
+    }
+
+    h3{
+      font-weight: 600;
+        margin: 10px 0;
+    }
+    
+    .about-col :hover{
+    box-shadow: 0 0 20px 0px black ;
+    }
+    
+    @media (max-width:700px) {
+      .row{
+        flex-direction: column;
+      }
+    }
+
+    .location{
+        width: 100%;
+        margin: auto;
+        padding-top: 20px 0;
+        }
+        
+        .location iframe{
+        
+          width: 100%;
+        }
+/* About  page css  ends */
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

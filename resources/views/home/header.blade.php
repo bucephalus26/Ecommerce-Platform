@@ -1,4 +1,5 @@
  <!-- Topbar/Navbar Start -->
+
  <nav class="navbar fixed-top px-sm-5 navbar-expand-sm navbar-dark" style="background-color: black">
         <a href="{{route('home')}}" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top"
                 src="{{asset('assets')}}/img/navbar-logo.png" alt="Logo" width="50" height="50" /></a>
@@ -32,7 +33,7 @@
                 </div>
                 @endforeach
 
-                
+                <!-- Login/Register option -->
                 <li class="nav-item active">
                     <a href="login.php" class="nav-link "> Login </a>
                 </li>
@@ -41,11 +42,17 @@
                 </li>
             </ul>
         </div>
-        <!-- Login/Register option -->
+        
+        <!-- Profile/Basket option -->
         <li class="nav-item active">
             <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
                     src="{{asset('assets')}}/img/user.png" alt="Logo" width="35" height="35"
                     style="padding-left: 5px; padding: right 20px;" /></a>
+        </li>
+        <li class="nav-item active">
+                <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
+                        src="{{asset('assets')}}/img/cart.png" alt="Cart" width="35" height="35"
+                        style="padding-left: 5px; padding: right 20px;" /></a>
         </li>
     </nav>
     <!-- Topbar/Navbar End -->

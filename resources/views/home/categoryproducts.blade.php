@@ -19,7 +19,7 @@
          <!-- Product card start -->
         <div class="row px-xl-4">
             <div>
-                <div class="row pb-3">
+                <div class="row">
                     @foreach($products as $rs)
                     <div class="col-lg-3 pb-1">
                         <div class="card product-item border-0 mb-4">
