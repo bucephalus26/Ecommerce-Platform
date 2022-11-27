@@ -40,30 +40,36 @@
                 </div>
             </div>
         </div>
+        <!-- Contact Form Start -->
         <div class = "ContactForm">
-            <form> <h2> Send Message</h2>
-            <div class="InputBox">
-                <input type = "text" name =""  required = "required">
-                <span> Full Name</span>
-            </div>
-            <div class="InputBox">
-                <input type = "text" name =""  required = "required">
-                <span>Email</span>
-            </div>
-            <div class="InputBox">
-                <input type = "text" name =""  required = "required">
-                <span> Phone</span>
-            </div>
-            <div class="InputBox">
-                <textarea required = "required"></textarea>
-                <span> Type Your Message....</span>
-            </div>
-            <div class = "InputBox">
-                <input type = "submit" name="" value = "Send">
-            </div>
+            <!-- Message appears when form submitted-->
+            <h6>{{Session::get('messagesent')}}</h6> <!-- Session variable -->
+            <form id = "" action="{{route("contactform")}}" method="post">
+                @csrf
+                <h2> Send Message</h2>
+                <div class="InputBox">
+                    <input type = "text" name ="name"  required = "required">
+                    <span> Full Name</span>
+                </div>
+                <div class="InputBox">
+                    <input type = "text" name ="email"  required = "required">
+                    <span>Email</span>
+                </div>
+                <div class="InputBox">
+                    <input type = "text" name ="phone"  required = "required">
+                    <span> Phone</span>
+                </div>
+                <div class="InputBox">
+                    <textarea required = "required" name ="message"></textarea>
+                    <span> Type Your Message....</span>
+                </div>
+                <div class = "InputBox">
+                    <input type = "submit" name="" value = "Send">
+                </div>
             </form>
         </div>
-    </div>
+        <!-- Contact Form End -->
+       
     </section>
 
 

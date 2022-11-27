@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Setting;
 use App\Models\Category;
+use App\Models\Message;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -43,6 +44,20 @@ class HomeController extends Controller
             
         ]);
     }
+
+     // contact form
+     public function contactform(Request $request)
+     {
+         $data = new Message();
+         $data->name = $request->input('name');
+         $data->email = $request->input('email');
+         $data->phone = $request->input('phone');
+         $data->message = $request->input('message');
+         $data->save();
+
+         // return to contact us page with a notification confirming message sent.
+         return redirect()->route('contact')->with('messagesent', 'We have received your message and will respond shortly!'); 
+     }
 
 
     public function product($id)

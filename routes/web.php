@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
 use App\Http\Controllers\AdminPanel\AdminProductController as AdminProductController;
 use App\Http\Controllers\AdminPanel\ImageController as ImageController;
+use App\Http\Controllers\AdminPanel\MessageController as MessageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,6 +33,9 @@ Route::get('/product/{id}', [HomeController::class, 'product'])->name( name:'pro
 Route::get('/categoryproducts/{id}/{slug}', [HomeController::class, 'categoryproducts'])->name( name:'categoryproducts');
 Route::get('/contact', [HomeController::class, 'contact'])->name( name:'contact');
 Route::get('/about', [HomeController::class, 'about'])->name( name:'about');
+Route::post('/contactform', [HomeController::class, 'contactform'])->name( name:'contactform'); // submit contact form.
+
+
 
 // Route Group - route prefix, name prefix, controller prefix
 // ******* Admin Panel Routes *******
@@ -71,7 +75,13 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/destroy/{pid}/{id}','destroy')->name('destroy');
     });
 
-
+    // ******* Admin Message Routes *******
+    Route::prefix('/message')->name('message.')->controller(MessageController::class)->group(function () {
+        Route::get('/','index')->name('index');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/destroy/{id}','destroy')->name('destroy');
+        Route::get('/show/{id}', 'show')->name('show');
+    });
 });
 
 
