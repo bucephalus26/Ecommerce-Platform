@@ -4,6 +4,9 @@
 
 @section('content')
 <style>
+    html{
+        height:30vh;
+    }
     .carouselslide{
         position:relative;
         height:900px;
@@ -110,7 +113,15 @@
         font-family: Futura;
 
     }
-    
+    .mb-3{
+        position:relative;
+        top:10px;
+        left:100px;
+    }
+    .mb-31{
+        position:relative;
+        left:100px;
+    }
 </style>
 <html>
     <div class="carouselslide">
@@ -153,8 +164,20 @@
         <div>10</div>
         <div>10.5</div>
     </div>
+    <footer>
+        <div class="row px-xl-5">
+            <div class="col">
+                <div class="nav nav-tabs justify-content-center border-secondary mb-4">
+                        <a class="nav-item nav-link active" data-toggle="tab" href="#tab-pane-1">Description</a>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tab-pane-1">
+                        <h4 class="mb-3">Product Details</h4>
+                        <p class="mb-31">{!!$data->detail!!}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </html>
-
-
-
 @endsection
