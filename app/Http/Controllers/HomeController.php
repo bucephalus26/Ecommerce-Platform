@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\Setting;
 use App\Models\Category;
 use App\Models\Message;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -88,6 +89,14 @@ class HomeController extends Controller
     {
         // main categories have parent_id of 0
         return Category::where('parent_id', '=', 0)->with('children')->get();
+    }
+
+    public function logout(Request $request){
+
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/'); // redirect to index page
     }
 
    

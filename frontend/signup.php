@@ -69,7 +69,7 @@
 
         <!-- From here the regisration form starts -->
         <div class="mt-5 text-center">
-            <form class="form" action="" style="max-width: 250px; margin: auto">
+            <form class="form" action="" >
                 <h1 class="h3 mb=3">JOIN NOW</h1>
                 <label for="fname"></label>
                 <input type="text" class="form-control" id="fname" placeholder="First name" required autofocus>

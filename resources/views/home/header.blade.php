@@ -33,16 +33,28 @@
                 </div>
                 @endforeach
 
+                <!-- If authentication exists, display logout option -->
+                @auth()
+                    <li class="nav-item active">
+                        <a href="/userlogout" class="nav-link " > Logout </a>
+                    </li>
+                @endauth
+
+                <!-- login and signup options displayed for those not logged in -->
+                @guest
                 <!-- Login/Register option -->
                 <li class="nav-item active">
-                    <a href="login.php" class="nav-link "> Login </a>
+                    <a href="/userlogin" class="nav-link " > Login </a>
                 </li>
                 <li class="nav-item active">
-                    <a href="signup.php" class="nav-link "> Signup </a>
+                    <a href="/userregister" class="nav-link "> Signup </a>
                 </li>
+                @endguest
             </ul>
         </div>
         
+        <!-- If authentication exists, display basket, profile options -->
+        @auth()
         <!-- Profile/Basket option -->
         <li class="nav-item active">
             <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
@@ -50,10 +62,11 @@
                     style="padding-left: 5px; padding: right 20px;" /></a>
         </li>
         <li class="nav-item active">
-                <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
+                <a href="/login" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
                         src="{{asset('assets')}}/img/cart.png" alt="Cart" width="35" height="35"
                         style="padding-left: 5px; padding: right 20px;" /></a>
         </li>
+        @endauth
     </nav>
     <!-- Topbar/Navbar End -->
 
