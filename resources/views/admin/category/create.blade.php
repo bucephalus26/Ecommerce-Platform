@@ -38,7 +38,7 @@
                   <div class="form-group">
                     <label>Parent Category</label>
 
-                    <select class="form-control select2" name="parent_id" style="...">
+                    <select class="form-control select2" name="parent_id">
                     <!-- 0 for Main category -->
                       <option value="0" selected="selected">Main Category</option>
                       <!-- Select other categories using getParentsTree function-->
