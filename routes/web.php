@@ -34,9 +34,17 @@ Route::get('/categoryproducts/{id}/{slug}', [HomeController::class, 'categorypro
 Route::get('/contact', [HomeController::class, 'contact'])->name( name:'contact');
 Route::get('/about', [HomeController::class, 'about'])->name( name:'about');
 Route::post('/contactform', [HomeController::class, 'contactform'])->name( name:'contactform'); // submit contact form.
+
+// user login, logout and register routes
 Route::view('/userlogin', 'home.login');
 Route::view('/userregister', 'home.register');
 Route::get('/userlogout', [HomeController::class, 'logout'])->name( name:'userlogout');
+
+// Admin login routes
+Route::view('/adminlogin', 'admin.login')->name('adminlogin'); // page for login
+    // posts data to function
+Route::post('/adminlogincheck', [HomeController::class,'adminlogincheck'])->name('adminlogincheck');
+
 
 
 // Route Group - route prefix, name prefix, controller prefix

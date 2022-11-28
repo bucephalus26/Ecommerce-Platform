@@ -99,6 +99,23 @@ class HomeController extends Controller
         return redirect('/'); // redirect to index page
     }
 
+    // manual authentication
+    public function adminlogincheck(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+ 
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+ 
+            return redirect()->intended('/admin'); // redirect to admin dashboard
+        }
+ 
+        // error if details do not match
+        return redirect()->route('adminlogin')->with('error', 'Incorrect credentials!'); 
+    }
    
 
 }
