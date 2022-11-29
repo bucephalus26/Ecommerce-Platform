@@ -57,7 +57,7 @@
         @auth()
         <!-- Profile/Basket option -->
         <li class="nav-item active">
-            <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
+            <a href="{{route('userhome.index')}}" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
                     src="{{asset('assets')}}/img/user.png" alt="Logo" width="35" height="35"
                     style="padding-left: 5px; padding: right 20px;" /></a>
         </li>
