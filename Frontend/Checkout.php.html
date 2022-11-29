@@ -11,10 +11,12 @@
 </head>
 <body style="text-align: center; padding-top: 100px">
     <nav class="navbar fixed-top px-sm-5 navbar-expand-sm navbar-dark" style="background-color: black">
-        <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top"
-                src="images/navbar-logo.png" alt="Logo" width="50" height="50" /></a>
+        <a href="index.php" class="navbar-brand mb-0 h1">
+            <img class="d-inline-block align-top"
+                 src="images/navbar-logo.png" alt="Logo" width="50" height="50" />
+        </a>
         <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -44,249 +46,255 @@
             <button type="submit" class="btn btn-outline-light">Search</button>
         </form>
         <li class="nav-item active">
-            <a href="index.php" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
-                    src="images/user.png" alt="Logo" width="35" height="35"
-                    style="padding-left: 5px; padding: right 20px;" /></a>
+            <a href="index.php" class="navbar-brand mb-0 h1">
+                <img class="d-inline-block align-top mx-3"
+                     src="images/user.png" alt="Logo" width="35" height="35"
+                     style="padding-left: 5px; padding: right 20px;" />
+            </a>
         </li>
     </nav>
     
-<style>
-   
-    * {
-        box-sizing: border-box;
-    }
-    
-    .row {
-        display: -ms-flexbox; /* IE10 */
-        display: flex;
-        -ms-flex-wrap: wrap; /* IE10 */
-        flex-wrap: wrap;
-        margin: 0 16px;
-    }
-    
-    .col-25 {
-        -ms-flex: 25%; /* IE10 */
-        flex: 25%;
-    }
-    
-    .col-50 {
-        -ms-flex: 50%; /* IE10 */
-        flex: 50%;
-    }
-    
-    .col-75 {
-        -ms-flex: 75%; /* IE10 */
-        flex: 75%;
-    }
-    
-    .col-25,
-    .col-50,
-    .col-75 {
-        padding: 0 16px;
-    }
+    <!--styling for buttons and general layout of the site-->
+    <style>
 
-    .containerCK {
-        background-color: #f2f2f2;
-        padding: 5px 20px 15px 20px;
-        width: 50%;
-        margin-left: 25%;
-        border: 1px solid lightgrey;
-        border-radius: 3px;
-    } 
-    
+        * {
+            box-sizing: border-box;
+        }
 
-    label {
-        margin-bottom: 10px;
-        display: block;
-    }
-    
-    .icon-container {
-        margin-bottom: 20px;
-        padding: 7px 0;
-        font-size: 24px;
-    }
-    
-    .btnCK {
-        background-color: #04AA6D;
-        color: white;
-        padding: 12px;
-        margin: 10px 0;
-        border: none;
-        width: 100%;
-        border-radius: 3px;
-        cursor: pointer;
-        font-size: 17px;
-    }
-    
-    .btnCK:hover {
-        background-color: #45a049;
-    }
-    
-    a {
-        color: black;
-        float: left;
-        margin-left: 20%;
-    }
-    
-    hr {
-        border: 1px solid lightgrey;
-    }
-
-    span.price {
-        float: right;
-        margin-right: 20%;
-        color: black;
-    }
-    
-    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-    @media (max-width: 1000px) {
         .row {
-        flex-direction: column-reverse;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin: 0 16px;
         }
+
         .col-25 {
-        margin-bottom: 20px;
+            -ms-flex: 25%;
+            flex: 25%;
         }
-    }
-</style>
 
-<body>
-<br>
+        .col-50 {
+            -ms-flex: 50%;
+            flex: 50%;
+        }
 
-    <div class="row">
-      <div class="col-75">
-        <div class="containerCK">
-          <form action="/action_page.php">
-          
-            <div class="row">
-                <div class="col-50">
-                    <h3>Cart</h3>
-                    <br>
+        .col-75 {
+            -ms-flex: 75%;
+            flex: 75%;
+        }
 
-                    <img src="images/accessory2.jpeg" style="width:150px; height:150px;" alt="a1" class="thumbnail">
-                    <p><a href="#">Product 1</a> <span class="price">£15</span></p>
-                    <br>
-                    <br>
+        .col-25,
+        .col-50,
+        .col-75 {
+            padding: 0 16px;
+        }
 
-                    <img src="images/accessory2.jpeg" style="width:150px; height:150px;" alt="a1" class="thumbnail">
-                    <p><a href="#">Product 2</a> <span class="price">£5</span></p>
-                    <br>
-                    <br>
+        .containerCK {
+            background-color: #f2f2f2;
+            padding: 5px 20px 15px 20px;
+            width: 50%;
+            margin-left: 25%;
+            border: 1px solid lightgrey;
+            border-radius: 3px;
+        }
 
-                    <img src="images/accessory2.jpeg" style="width:150px; height:150px;" alt="a1" class="thumbnail">
-                    <p><a href="#">Product 3</a> <span class="price">£8</span></p>
-                    <br>
-                    <br>
 
-                    <img src="images/accessory2.jpeg" style="width:150px; height:150px;" alt="a1" class="thumbnail">
-                    <p><a href="#">Product 4</a> <span class="price">£2</span></p>
-                    <br>
-                    <br>
+        label {
+            margin-bottom: 10px;
+            display: block;
+        }
 
-                    <hr>
-                    <p>Total <span class="price" style="color:black"><b>£30</b></span></p>
+        .icon-container {
+            margin-bottom: 20px;
+            padding: 7px 0;
+            font-size: 24px;
+        }
 
+        .btnCK {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            width: 100%;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+            .btnCK:hover {
+                background-color: #45a049;
+            }
+
+        a {
+            color: black;
+            float: left;
+            margin-left: 20%;
+        }
+
+        hr {
+            border: 1px solid lightgrey;
+        }
+
+        span.price {
+            float: right;
+            margin-right: 20%;
+            color: black;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+        @media (max-width: 1000px) {
+            .row {
+                flex-direction: column-reverse;
+            }
+
+            .col-25 {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+
+    <body>
+        <br>
+
+        <div class="row">
+            <div class="col-75">
+                <div class="containerCK">
+                    <form action="/action_page.php">
+
+
+                        <!--product details-->
+                        <div class="row">
+                            <div class="col-50">
+                                <h3>Cart</h3>
+                                <br>
+
+                                <img src="images/accessory2.jpeg" style="width:150px; height:150px;" alt="a1" class="thumbnail">
+                                <p><a href="#">Product 1</a> <span class="price">£15</span></p>
+                                <br>
+                                <br>
+
+                                <img src="images/accessory2.jpeg" style="width:150px; height:150px;" alt="a1" class="thumbnail">
+                                <p><a href="#">Product 2</a> <span class="price">£5</span></p>
+                                <br>
+                                <br>
+
+                                <img src="images/accessory2.jpeg" style="width:150px; height:150px;" alt="a1" class="thumbnail">
+                                <p><a href="#">Product 3</a> <span class="price">£8</span></p>
+                                <br>
+                                <br>
+
+                                <img src="images/accessory2.jpeg" style="width:150px; height:150px;" alt="a1" class="thumbnail">
+                                <p><a href="#">Product 4</a> <span class="price">£2</span></p>
+                                <br>
+                                <br>
+
+                                <hr>
+                                <p>Total <span class="price" style="color:black"><b>£30</b></span></p>
+
+                            </div>
+                        </div>
+
+                        <label>
+                            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                        </label>
+
+                        <input type="submit" value="Continue to checkout" class="btnCK">
+
+                    </form>
                 </div>
             </div>
-            
-              <label>
-              <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-              </label>
-           
-              <input type="submit" value="Continue to checkout" class="btnCK">
-          
-          </form>
         </div>
-      </div>
-    </div>
-    
-<footer class="text-center text-lg-start text-muted " style="margin-top: 150px; background-color: black;">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        <!-- Left -->
-        <div class="me-5 d-none d-lg-block">
-            <span>Get connected with us on social networks:</span>
-            <br>
-            <br>
-            <a href="https://www.instagram.com/ehsanhussain_">
-                <img src="frontend/images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
-                <a href="https://en-gb.facebook.com/astonuniversity/">
-                    <img src="frontend/images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
-                    <a href="https://www.twitter.com/sports4_us">
-                        <img src="frontend/images/twitter.png" style="width: 30px;; height: 30px;;"
-                            alt="twitter">
-        </div>
-        <!-- Left -->
-        <!-- Right -->
-        <div></div>
-        <div>
-            <a href="https://en-gb.facebook.com/astonuniversity/" class="me-4 text-reset">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-google"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-        <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-    <!-- Section: Links  -->
-    <section class="">
-        <div class="container text-center text-md-start mt-5">
-            <!-- Grid row -->
-            <div class="row mt-3">
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        <p>useful links</p>
-                    </h6>
-                    <p>
-                        <a href="#!" class="text-reset">Home</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Products</a>
-                    </p>
-                    <p>
-                        <a href="login.php" class="text-reset">Account</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Constact Us</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">About Us</a>
-                    </p>
+
+        <footer class="text-center text-lg-start text-muted " style="margin-top: 150px; background-color: black;">
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                    <span>Get connected with us on social networks:</span>
+                    <br>
+                    <br>
+                    <a href="https://www.instagram.com/ehsanhussain_">
+                        <img src="frontend/images/insta.png" style="width: 30px;; height: 30px;;" alt="IG">
+                        <a href="https://en-gb.facebook.com/astonuniversity/">
+                            <img src="frontend/images/fb.png" style="width: 30px;; height: 30px;;" alt="fb">
+                            <a href="https://www.twitter.com/sports4_us">
+                                <img src="frontend/images/twitter.png" style="width: 30px;; height: 30px;;"
+                                     alt="twitter">
                 </div>
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <!-- Content -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        <a href="#" class="fas fa-gem me-3 text-reset">Subscribe Newsletter</a>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                            <div class="subscribe btm-brdr">
-                                <form>
-                                    <input type="email" placeholder="Email" />
-                                    <button type="button" class="fill-btn">Subscribe</button>
-                                </form>
-                    </h6>
+                <!-- Left -->
+                <!-- Right -->
+                <div></div>
+                <div>
+                    <a href="https://en-gb.facebook.com/astonuniversity/" class="me-4 text-reset">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-github"></i>
+                    </a>
                 </div>
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                <p>useful links</p>
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">Home</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Products</a>
+                            </p>
+                            <p>
+                                <a href="login.php" class="text-reset">Account</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Constact Us</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">About Us</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                <a href="#" class="fas fa-gem me-3 text-reset">Subscribe Newsletter</a>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                                    <div class="subscribe btm-brdr">
+                                        <form>
+                                            <input type="email" placeholder="Email" />
+                                            <button type="button" class="fill-btn">Subscribe</button>
+                                        </form>
+                            </h6>
+                        </div>
+                    </div>
+            </section>
+            <!-- Copyright -->
+            <div class="text-center p-4">
+                © 2022 Copyright:
+                <a class="text-reset fw-bold" href="https://mdbootstrap.com/">sports4us.com</a>
             </div>
-    </section>
-    <!-- Copyright -->
-    <div class="text-center p-4">
-        © 2022 Copyright:
-        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">sports4us.com</a>
-    </div>
-    <!-- Copyright -->
-</footer>
-</body>
+            <!-- Copyright -->
+        </footer>
+    </body>
 </html>
