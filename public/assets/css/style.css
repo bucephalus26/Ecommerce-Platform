@@ -54,7 +54,7 @@ p1 {
 
 
 .button {
-    background-color: rgb(253, 251, 251); /* White */
+    background-color: rgb(249, 241, 241); /* White */
     border: none;
     color: rgb(0, 68, 255, 0.6);
     padding: 10px 32px;
@@ -182,10 +182,6 @@ p1 {
             background-color: #cecbd4;
             color: white;
         }
-
-
-.img
-
 
 #filter {
     display: flex;
@@ -567,6 +563,21 @@ footer button {
           width: 100%;
         }
 /* About  page css  ends */
+/* Product  page css  starts */
+.cart{
+    position:absolute;
+    bottom:128px;
+    right:488px;
+    color: white;
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 120px;
+    font-size: 20px;
+}
+
+
+/* Product  page css  starts */
+
 
 html, body {
     max-width: 100%;
