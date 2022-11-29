@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminPanel\ImageController as ImageController;
 use App\Http\Controllers\AdminPanel\MessageController as MessageController;
 use App\Http\Controllers\AdminPanel\AdminUserController as AdminUserController;
 use App\Http\Controllers\UserController as UserController;
+use App\Http\Controllers\ShoppingCartController as ShoppingCartController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,11 +53,30 @@ Route::post('/adminlogincheck', [HomeController::class,'adminlogincheck'])->name
 Route::middleware('auth')->group(function(){
 
 
-    // User Routes
+    // User Routes - home page, orders, cancel products
     Route::prefix('userhome')->name('userhome.')->controller(UserController::class)->group(function () {
         Route::get('/', 'index')->name('index');
+        Route::get('/orders','orders')->name('orders');
+        Route::get('/orderdetail/{id}', 'orderdetail')->name('orderdetail');
+        Route::get('/cancelproduct/,{id}','cancelproduct')->name('cancelproduct');
 
     });
+
+    // ******* Shopping Cart *******
+    Route::prefix('/shoppingcart')->name('shoppingcart.')->controller(ShoppingCartController::class)->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::post('/store', 'store')->name('store');
+        Route::get('/add/{id}', 'add')->name('add');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/destroy/{id}', 'destroy')->name('destroy');
+        Route::get('/show/{id}', 'show')->name('show');
+        Route::post('/order', 'order')->name('order');
+        Route::post('/storeorder', 'storeorder')->name('storeorder');    
+        Route::post('/ordercomplete', 'ordercomplete')->name('ordercomplete');    
+       
+    });
+
 
     // Admin Routes
     Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {

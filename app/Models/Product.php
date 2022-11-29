@@ -24,6 +24,12 @@ class Product extends Model
         });
     }
 
+     // shopping cart
+     public function shoppingcart()
+     {
+         return $this->hasMany(ShoppingCart::class);
+     }
+
     
 
 

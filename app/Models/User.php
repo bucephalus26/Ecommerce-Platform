@@ -59,12 +59,20 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    // shopping cart
+    public function shoppingcart()
+    {
+        return $this->hasMany(ShoppingCart::class);
+    }
+
     // many to many
     public function roles()
     {
         // users with many roles
         return $this->belongsToMany(Role::class,'role_users');
     }
+
+    
 
 
 
