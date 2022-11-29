@@ -13,6 +13,7 @@
 
 <br>
 
+    <!-- Title + general description -->
 
 <h1>Sports4Us</h1>
 
