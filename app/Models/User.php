@@ -58,4 +58,14 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    // many to many
+    public function roles()
+    {
+        // users with many roles
+        return $this->belongsToMany(Role::class,'role_users');
+    }
+
+
+
 }

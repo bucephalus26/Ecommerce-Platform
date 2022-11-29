@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryControlle
 use App\Http\Controllers\AdminPanel\AdminProductController as AdminProductController;
 use App\Http\Controllers\AdminPanel\ImageController as ImageController;
 use App\Http\Controllers\AdminPanel\MessageController as MessageController;
+use App\Http\Controllers\AdminPanel\AdminUserController as AdminUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -91,6 +92,17 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::post('/update/{id}', 'update')->name('update');
         Route::get('/destroy/{id}','destroy')->name('destroy');
         Route::get('/show/{id}', 'show')->name('show');
+    });
+
+     // ******************** ADMIN USER  ROUTES *************************
+     Route::prefix('/user')->name('user.')->controller(AdminUserController::class)->group(function () {
+        Route::get('/','index')->name('index');
+        Route::get('/edit/{id}','show')->name('edit');
+        Route::get('/show/{id}','show')->name('show');
+        Route::post('/update/{id}','update')->name('update');
+        Route::get('/destroy/{id}','destroy')->name('destroy');
+        Route::post('/addrole/{id}','addrole')->name('addrole');
+        Route::get('/deleterole/{uid}/{rid}','deleterole')->name('deleterole');
     });
 });
 
