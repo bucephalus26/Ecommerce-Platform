@@ -2,7 +2,7 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
     *{
-        border: 1px solid red; 
+        
         margin:0;
         padding:0;
         font-family: 'Ubuntu', sans-serif;
@@ -131,46 +131,31 @@
         height: 60px;
         align-items: center;
         padding: 0 10px;
-    }
-    .toggle{
-        position: relative;
-        width: 60px;
-        height: 60px;
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        font-size: 2.5em;
-        cursor: pointer;      
+        justify-content: space-between;
     }
     .search{
         position: relative;
-        left:330px;
-        bottom:50px;
+        left:460px;
+        top:10px;
         margin: 0 10px;
-    }
-    .search label{
-        position: relative;
-        width: 100%;
     }
     .search label input{
         width: 30%;
-        height:40px;
+        height:50px;
         border-radius: 40px;
-        padding: 5px 20px;
-        padding-left: 35px;
-        outline: none;
+        padding-left: 45px;
         border: 1px solid var(--black2);
     }
     .search label ion-icon{
         position: absolute;
-        top: 0;
+        top:14px;
         left: 10px;
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
     .cardbox{
         left:1150px;
         position: relative;
-        bottom:15px;
+        top:48px;
         width: 30%;
         padding: 20px;
     }
@@ -213,7 +198,7 @@
         top:300px;
         left:93.5px;
         border-collapse: collapse;
-        width: 1000px;
+        width: 750px;
     }
     th, td {
         text-align: left;
@@ -269,49 +254,16 @@
         height: 620px;
         left:1150px;
     }
-    table {
-        bottom:1000px;
-        position: relative;
-        top:300px;
-        left:93.5px;
-        border-collapse: collapse;
-        width: 700px;
-    }
-    th, td {
-        text-align: left;
-        padding: 8px;
-    }
-
-    tr:nth-child(odd){background: var(--black2);}
-
-    th {
-        background: var(--black1);
-        color: white;
-        border-radius:6px;
-    }
     .line{
         position: relative;
         bottom:30px;
         left:32.5px;
         width: 1100px;
     }
-    .addtocat{
-        position:relative;
-        left:93.5px;
-        width:170px;
-        height:50px;
-        border-radius: 7px;
-        background-color:black;
-        color:white;
-    }
-    .addtocat:hover{
-        background-color:white;
-        color:black;
-    }
     .table24{
         position:relative;
         bottom:850px;
-        left:280px;
+        left:255px;
     }
 </style>
 <html>
@@ -335,19 +287,19 @@
                     </a>
                 </li>
                 <li>
-                    <a href="~">
+                    <a href="customers.blade.php">
                         <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
                         <span class="title">Customers</span>
                     </a>
                 </li>
                 <li>
-                    <a href="~">
+                    <a href="categories.blade.php">
                         <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
                         <span class="title">Categories</span>
                     </a>
                 </li>
                 <li>
-                    <a href="~">
+                    <a href="product.blade.php">
                         <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
                         <span class="title">Products</span>
                     </a>
@@ -378,12 +330,8 @@
                 </li>
             </ul>
         </div>
-            <! ----- main ------>
-           
+            <! ----- main ------>          
         <div class="topbar">
-            <div class="toggle">
-                <ion-icon name="grid-outline"></ion-icon>
-            </div>
                 <! ----- search ------>
             <div class="search">
                 <label>
@@ -438,26 +386,42 @@
                         <th>Firstname</th>
                         <th>Lastname</th>
                         <th>Savings</th>
+                        <th>Edit</th>
+                        <th>Show</th>
+                        <th>Delete</th>
+
                     </tr>
                     <tr>
                         <td>Peter</td>
                         <td>Griffin</td>
                         <td>$100</td>
+                        <td><button class="edits">Edit</button></td>
+                        <td><button class="edits">Show</button></td>
+                        <td><button class="edits">Delete</button></td>
                     </tr>
                     <tr>
                         <td>Lois</td>
                         <td>Griffin</td>
                         <td>$150</td>
+                        <td><button class="edits">Edit</button></td>
+                        <td><button class="edits">Show</button></td>
+                        <td><button class="edits">Delete</button></td>
                     </tr>
                     <tr>
                         <td>Joe</td>
                         <td>Swanson</td>
                         <td>$300</td>
+                        <td><button class="edits">Edit</button></td>
+                        <td><button class="edits">Show</button></td>
+                        <td><button class="edits">Delete</button></td>
                     </tr>
-                    <tr>
+                    <tr>                      
                         <td>Cleveland</td>                           
                         <td>$250</td>
                         <td>Brown</td>
+                        <td><button class="edits">Edit</button></td>
+                        <td><button class="edits">Show</button></td>
+                        <td><button class="edits">Delete</button></td>
                     </tr>
                 </table>    
             </button>
