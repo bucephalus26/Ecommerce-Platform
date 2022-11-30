@@ -187,8 +187,8 @@
         <div class="cardbox">
             <div class="card">
                 <div>
-                    <div class="numbers">Add</div>
-                    <div class="cardName">Category</div>
+                    <div class="numbers">Edit</div>
+                    <div class="cardName">Item</div>
                 </div>
                 <div class="iconBx">
                     <<ion-icon name="person-add-outline"></ion-icon>                            
@@ -196,8 +196,8 @@
             </div>
             <div class="card">
                 <div>
-                    <div class="numbers">Remove</div>
-                    <div class="cardName">Category</div>
+                    <div class="numbers">Delete</div>
+                    <div class="cardName">Item</div>
                 </div>
                 <div class="iconBx">
                     <ion-icon name="checkmark-done-circle-outline"></ion-icon>
@@ -266,58 +266,123 @@
                 <table class="table24e">
                     <tr>
                         <th>Id</th>
+                        <td>Category</td>
+                        <td>Title</tdh>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Image</td>
+                        <td>Images</td>
+                        <td>Attributes</td>
+                        <td>Status</td>
+                        <td>Edit</td>
+                        <td>Show</td>
+                    </tr>
+                    <tr>
                         <th>Category</th>
+                        <td>Griffin</td>
+                        <td>$100</td>
+                        <td>Some</td>
+                        <td>Nike</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td><button class="edits">Edit</button></td>
+                        <td><button class="edits">Show</button></td>
+                    </tr>
+                    <tr>
                         <th>Title</th>
+                        <td>Griffin</td>
+                        <td>$100</td>
+                        <td>Some</td>
+                        <td>Nike</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td><button class="edits">Edit</button></td>
+                        <td><button class="edits">Show</button></td>
+                    </tr>
+                    <tr>
                         <th>Price</th>
+                        <td>Griffin</td>
+                        <td>$100</td>
+                        <td>Some</td>
+                        <td>Nike</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td><button class="edits">Edit</button></td>
+                        <td><button class="edits">Show</button></td>
+                    </tr>
+                    <tr>
                         <th>Quantity</th>
+                        <td>Griffin</td>
+                        <td>$100</td>
+                        <td>Some</td>
+                        <td>Nike</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td><button class="edits">Edit</button></td>
+                        <td><button class="edits">Show</button></td>
+                    </tr>
+                    <tr>
                         <th>Image</th>
+                        <td>Griffin</td>
+                        <td>$100</td>
+                        <td>Some</td>
+                        <td>Nike</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td><button class="edits">Edit</button></td>
+                        <td><button class="edits">Show</button></td>
+                    </tr>
+                    <tr>
                         <th>Images</th>
+                        <td>Griffin</td>
+                        <td>$100</td>
+                        <td>Some</td>
+                        <td>Nike</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td><button class="edits">Edit</button></td>
+                        <td><button class="edits">Show</button></td>
+                    </tr>
+                    <tr>
                         <th>Attributes</th>
+                        <td>Griffin</td>
+                        <td>$100</td>
+                        <td>Some</td>
+                        <td>Nike</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td><button class="edits">Edit</button></td>
+                        <td><button class="edits">Show</button></td>
+                    </tr>
+                    <tr>
                         <th>Status</th>
+                        <td>Griffin</td>
+                        <td>$100</td>
+                        <td>Some</td>
+                        <td>Nike</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td>Mole</td>
+                        <td><button class="edits">Edit</button></td>
+                        <td><button class="edits">Show</button></td>
+                    </tr>
+                    <tr>
                         <th>Edit</th>
-                        <th>Show</th>
-                    </tr>
-                    <tr>
-                        <td>Peter</td>
-                        <td>Griffin</td>
-                        <td>$100</td>
-                        <td>Some</td>
-                        <td>Nike</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td><button class="edits">Edit</button></td>
-                        <td><button class="edits">Show</button></td>
-                    </tr>
-                    <tr>
-                        <td>Peter</td>
-                        <td>Griffin</td>
-                        <td>$100</td>
-                        <td>Some</td>
-                        <td>Nike</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td><button class="edits">Edit</button></td>
-                        <td><button class="edits">Show</button></td>
-                    </tr>
-                    <tr>
-                        <td>Peter</td>
-                        <td>Griffin</td>
-                        <td>$100</td>
-                        <td>Some</td>
-                        <td>Nike</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td><button class="edits">Edit</button></td>
-                        <td><button class="edits">Show</button></td>
-                    </tr>
-                    <tr>
-                        <td>Peter</td>
                         <td>Griffin</td>
                         <td>$100</td>
                         <td>Some</td>

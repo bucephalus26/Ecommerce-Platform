@@ -2,7 +2,6 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
     *{
-        
         margin:0;
         padding:0;
         font-family: 'Ubuntu', sans-serif;
@@ -134,9 +133,53 @@
     .table24e{
         width:1100px;
     }
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        background-color: white;
+        color: black;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: var(--black2);
+        color:white;
+    }
+    .form1{
+        color:white;
+        position:relative;
+    }
+    .form{
+        position:relative;
+        left:339px;
+        top:3px;
+        width:500px;
+        border-radius: 10px;
+        background-color:black;
+        padding: 20px;
+    }
+    #fname1{
+        height:38px;
+        border-radius:5px;
+        }
     .cardbox{
+        color:white;
         position: relative;
-        left:340px;
+        bottom:730px;
+        left:940px;
         width: 100%;
         padding: 20px;
         display: grid;
@@ -146,7 +189,7 @@
     .cardbox .card{
         position: relative;
         width: 200px;
-        background: var(--white);
+        background: var(--black1);
         padding: 30px;
         border-radius: 20px;
         display: flex;
@@ -161,7 +204,7 @@
         color: var(--black);
     }
     .cardbox .card .cardName{
-        color: var(--black1);
+        color: var(--black));
         font-size: 1.1em;
         margin-top: 5px;
     }
@@ -184,26 +227,6 @@
         <title> Admin Dashboard</title>
     </head>
     <body>
-        <div class="cardbox">
-            <div class="card">
-                <div>
-                    <div class="numbers">Add</div>
-                    <div class="cardName">Category</div>
-                </div>
-                <div class="iconBx">
-                    <<ion-icon name="person-add-outline"></ion-icon>                            
-                </div>
-            </div>
-            <div class="card">
-                <div>
-                    <div class="numbers">Remove</div>
-                    <div class="cardName">Category</div>
-                </div>
-                <div class="iconBx">
-                    <ion-icon name="checkmark-done-circle-outline"></ion-icon>
-                </div>
-            </div>
-        </div>
         <div class="navigation">
             <ul>
                 <li>
@@ -231,7 +254,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="products.blade.php">
+                    <a href="product.blade.php">
                         <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
                         <span class="title">Products</span>
                     </a>
@@ -261,79 +284,80 @@
                     </a>
                 </li>
             </ul>
-        </div>  
-        <div class="table24">        
-                <table class="table24e">
-                    <tr>
-                        <th>Id</th>
-                        <th>Category</th>
-                        <th>Title</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Image</th>
-                        <th>Images</th>
-                        <th>Attributes</th>
-                        <th>Status</th>
-                        <th>Edit</th>
-                        <th>Show</th>
-                    </tr>
-                    <tr>
-                        <td>Peter</td>
-                        <td>Griffin</td>
-                        <td>$100</td>
-                        <td>Some</td>
-                        <td>Nike</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td><button class="edits">Edit</button></td>
-                        <td><button class="edits">Show</button></td>
-                    </tr>
-                    <tr>
-                        <td>Peter</td>
-                        <td>Griffin</td>
-                        <td>$100</td>
-                        <td>Some</td>
-                        <td>Nike</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td><button class="edits">Edit</button></td>
-                        <td><button class="edits">Show</button></td>
-                    </tr>
-                    <tr>
-                        <td>Peter</td>
-                        <td>Griffin</td>
-                        <td>$100</td>
-                        <td>Some</td>
-                        <td>Nike</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td><button class="edits">Edit</button></td>
-                        <td><button class="edits">Show</button></td>
-                    </tr>
-                    <tr>
-                        <td>Peter</td>
-                        <td>Griffin</td>
-                        <td>$100</td>
-                        <td>Some</td>
-                        <td>Nike</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td><button class="edits">Edit</button></td>
-                        <td><button class="edits">Show</button></td>
-                    </tr>
-                </table>    
-            </button>
         </div>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <div class="form">
+            <form class="form1" action="/action_page.php">
+                <label for="fname">Parent Category</label>
+                <select id="country" name="country">
+                <option value="australia">Mens</option>
+                <option value="canada">Women</option>
+                <option value="usa">Accessories</option>
+                </select>
+                <label for="lname">Title</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Keywords</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Description</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Price</label><br>
+                <input type="number" id="fname1" name="firstname"><br>
+                <label for="lname">Quantity</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Details</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Image</label><br>
+                <input type="file" id="fname" name="firstname"><br>
+                <label for="lname">Status</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <input type="submit" value="Update Data">
+            </form>
+        </div>  
+        <div class="cardbox">
+            <div class="card">
+                <div>
+                    <div class="numbers">Return</div>
+                    <div class="cardName">To: Accepted Orders</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="person-add-outline"></ion-icon>                            
+                </div>
+            </div>
+        </div>
+        <div class="cardbox">
+            <div class="card">
+                <div>
+                    <div class="numbers">Return</div>
+                    <div class="cardName">To: Shipping Orders</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="person-add-outline"></ion-icon>                            
+                </div>
+            </div>
+        </div>
+        <div class="cardbox">
+            <div class="card">
+                <div>
+                    <div class="numbers">Return</div>
+                    <div class="cardName">To: Orders</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="person-add-outline"></ion-icon>                            
+                </div>
+            </div>
+        </div>
+        <div class="cardbox">
+            <div class="card">
+                <div>
+                    <div class="numbers">Return</div>
+                    <div class="cardName">To: Categoriest</div>
+                </div>
+                <div class="iconBx">
+                    <ion-icon name="person-add-outline"></ion-icon>                            
+                </div>
+            </div>
+        </div>
         
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>        
     </body>
 </html>

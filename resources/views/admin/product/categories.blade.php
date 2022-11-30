@@ -254,59 +254,58 @@
             </ul>
         </div>  
         <div class="table24">        
-                <table class="table24e">
-                    <tr>
-                        <th>Id</th>
-                        <th>Category</th>
-                        <th>Title</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Image</th>
-                        <th>Images</th>
-                        <th>Attributes</th>
-                    </tr>
-                    <tr>
-                        <td>Some</td>
-                        <td>Nike</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td><button class="edits">Edit</button></td>
-                        <td><button class="delete">Delete</button></td>
-                        <td><button class="edits">Show</button></td>
-                    </tr>
-                    <tr>
-                        <td>Some</td>
-                        <td>Nike</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td><button class="edits">Edit</button></td>
-                        <td><button class="delete">Delete</button></td>
-                        <td><button class="edits">Show</button></td>
-                    </tr>
-                    <tr>
-                        <td>Nike</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td><button class="edits">Edit</button></td>
-                        <td><button class="delete">Delete</button></td>
-                        <td><button class="edits">Show</button></td>
-                    </tr>
-                    <tr>
-                        <td>Nike</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td>Mole</td>
-                        <td><button class="edits">Edit</button></td>
-                        <td><button class="delete">Delete</button></td>
-                        <td><button class="edits">Show</button></td>
-                    </tr>
-                </table>    
-            </button>
+            <table class="table24e">
+                <tr>
+                    <th>Id</th>
+                    <th>Category</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Image</th>
+                    <th>Images</th>
+                    <th>Attributes</th>
+                </tr>
+                <tr>
+                    <td>Some</td>
+                    <td>Nike</td>
+                    <td>Mole</td>
+                    <td>Mole</td>
+                    <td>Mole</td>
+                    <td><a href="editnew.blade.php"><button class="edits">Edit</button></a></td>
+                    <td><button class="delete">Delete</button></td>
+                    <td><a href="shownew.blade.php"><button class="edits">Show</button></a></td>
+                </tr>
+                <tr>
+                    <td>Some</td>
+                    <td>Nike</td>
+                    <td>Mole</td>
+                    <td>Mole</td>
+                    <td>Mole</td>
+                    <td><a href="editnew.blade.php"><button class="edits">Edit</button></a></td>
+                    <td><button class="delete">Delete</button></td>
+                    <td><a href="shownew.blade.php"><button class="edits">Show</button></a></td>
+                </tr>
+                <tr>
+                    <td>Nike</td>
+                    <td>Mole</td>
+                    <td>Mole</td>
+                    <td>Mole</td>
+                    <td>Mole</td>
+                    <td><a href="editnew.blade.php"><button class="edits">Edit</button></a></td>
+                    <td><button class="delete">Delete</button></td>
+                    <td><a href="shownew.blade.php"><button class="edits">Show</button></a></td>
+                </tr>
+                <tr>
+                    <td>Nike</td>
+                    <td>Mole</td>
+                    <td>Mole</td>
+                    <td>Mole</td>
+                    <td>Mole</td>
+                    <td><a href="editnew.blade.php"><button class="edits">Edit</button></a></td>
+                    <td><button class="delete">Delete</button></td>
+                    <td><a href="shownew.blade.php"><button class="edits">Show</button></a></td>
+                </tr>
+            </table>    
         </div>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>        
