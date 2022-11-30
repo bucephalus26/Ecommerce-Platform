@@ -47,12 +47,17 @@
 
                 <div class="d-flex align-items-center mb-4 pt-2">
                     <div class="input-group quantity mr-3" style="width: 130px;">
-                        <div class="counter">
-                            <button class="cart_btn" onclick="counterDec()">-</button>
-                            <h5 id="counter">0</h5>
-                            <button class="cart_btn" onclick="counterInc()">+</button >
-                            <button class="cart">Add to cart</button>
-                        </div>
+                        <form action="{{route('shoppingcart.store')}}" method="post">
+                                @csrf
+                            <div class="counter">
+                                <span>QTY:</span>
+                                <input class="input" name="quantity" type="number" value="1" min="1" max="{{$data->quantity}}" style= "width: 25%;">
+                                <input class="input" name="id" value="{{$data->id}}" type="hidden">
+                            </div>
+                                <button type="submit" class="cart">Add to cart</button>
+                        </form>
+
+                        <h6><br>{{Session::get('addedcart')}}</h6> <!-- Session variable: Item added to cart -->
                     </div>
                 </div>           
             </div>

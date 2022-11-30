@@ -62,7 +62,7 @@
                     style="padding-left: 5px; padding: right 20px;" /></a>
         </li>
         <li class="nav-item active">
-                <a href="/login" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
+                <a href="{{route('shoppingcart.index')}}" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
                         src="{{asset('assets')}}/img/cart.png" alt="Cart" width="35" height="35"
                         style="padding-left: 5px; padding: right 20px;" /></a>
         </li>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\ShoppingCart;
 
 class ShoppingCartController extends Controller
 {
@@ -14,6 +16,10 @@ class ShoppingCartController extends Controller
     public function index()
     {
         //
+        $data = ShoppingCart::where('user_id', Auth::id())->get();
+        return view('home.user.shoppingcart', [
+            'data'=>$data        
+        ]);
     }
 
     /**
@@ -35,6 +41,25 @@ class ShoppingCartController extends Controller
     public function store(Request $request)
     {
         //
+        $id= $request->id;
+        
+        // if item already in cart of SPECIFIC user, add quantities to same entry
+        $data = ShoppingCart::where('product_id',$id)->where('user_id', Auth::id())->first(); //Check product for user
+        if ($data)
+        {
+            $data->quantity = $data->quantity + $request->input('quantity');
+        } else
+        {
+            // new shopping cart item for each item
+        $data = new ShoppingCart();
+        $data->product_id = $id;
+        $data->user_id = Auth::id();
+        $data->quantity = $request->input('quantity');
+        }
+        $data->save();
+
+        // redirect to save product page
+        return redirect()->back()->with('addedcart', 'The item has been added to your cart.');
     }
 
     /**
@@ -68,7 +93,11 @@ class ShoppingCartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // changes quantity of item in cart
+        $data = ShoppingCart::find($id);
+        $data->quantity=$request->input('quantity');
+        $data->save();
+        return redirect()->back();
     }
 
     /**
@@ -79,6 +108,9 @@ class ShoppingCartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // removes items from carty
+        $data= ShoppingCart::find($id);
+        $data->delete();
+        return redirect()->back();
     }
 }
