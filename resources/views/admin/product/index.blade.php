@@ -43,9 +43,7 @@
               <th>Quantity</th>
               <th>Image</th>
               <th>Images</th>
-
               <th>Attributes</th>
-
               <th>Status</th>
               <th style="width: 40px">Edit</th>
               <th style="width: 40px">Delete</th>
@@ -74,7 +72,6 @@
                   onclick="return !window.open(this.href, '','top=50 left=100 width=1100,height=700')">
                 <img src="{{asset('assets')}}/admin/img/images.jpg" style="height: 40px"></a>
               </td>
-
 
               <td>{{$rs->product_attributes}}</td>
 

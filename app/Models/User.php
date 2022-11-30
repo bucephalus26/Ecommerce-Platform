@@ -59,10 +59,7 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public function reviews()
-    {
-        return $this->hasMany(Comment::class);  
-    }
+
     public function roles()
     {
         return $this->belongsToMany(Role::class,'role_users');
@@ -79,4 +76,19 @@ class User extends Authenticatable
     {
         return $this->hasMany(OrderProduct::class);
     }
+
+    // shopping cart
+    public function shoppingcart()
+    {
+        return $this->hasMany(ShoppingCart::class);
+    }
+
+    // many to many
+    public function roles()
+    {
+        // users with many roles
+        return $this->belongsToMany(Role::class,'role_users');
+    }
+
+    
 }

@@ -9,4 +9,7 @@ class RoleUser extends Model
 {
     use HasFactory;
     public $timestamps = false;
+
+}
+
 }

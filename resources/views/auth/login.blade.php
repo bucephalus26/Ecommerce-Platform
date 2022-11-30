@@ -1,38 +1,50 @@
-<x-guest-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
 
-        <x-jet-validation-errors class="mb-4" />
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-        @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ session('status') }}
-            </div>
-        @endif
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
+<!-- From here the code for the login form starts -->
+<div class="mt-5 text-center">
+            <x-slot name="logo">
+                <x-jet-authentication-card-logo />
+            </x-slot>
+            @if (session('status'))
+                <div class="mb-4 font-medium text-sm text-green-600">
+                    {{ session('status') }}
+                </div>
+            @endif
+            <form class="form" method="POST" action="{{ route('login') }}" style="max-width: 250px; margin: auto">
+                @csrf
+                <h1 class="h3 mb=3">LOGIN</h1>
 
-            <div>
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            </div>
+                <label for="email" class="sr-only pb-3 pt-3" value="{{ __('Email') }}"></label>
+                <input type="email" name="email" :value="old('email')" required autofocus class="form-control" id="email" placeholder="Email" required autofocus />
+                
+                
+                <label for="password" class="pb-3 pt-3" value="{{ __('Password') }}"></label>
+                <input type="password" placeholder="Password" id="password" class="form-control" name="password" required autocomplete="current-password" />
 
-            <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
-            </div>
+                <!-- remember me checkbox -->
+                <div class="checkbox pb-3 pt-3">
+                    <label>
+                        <input type="checkbox" id="remember_me" name="remember"/>{{ __('Remember me') }}
+                    </label>
+                </div>
 
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
@@ -43,6 +55,17 @@
                     {{ __('Log in') }}
                 </x-jet-button>
             </div>
-        </form>
-    </x-jet-authentication-card>
-</x-guest-layout>
+            </form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

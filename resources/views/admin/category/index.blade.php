@@ -60,8 +60,10 @@
                 @endif
               </td>
 
-
+              
               <td>{{$rs->status}}</td>
+
+              <!-- Buttons-->            
               <td><a href="{{route('admin.category.edit', ['id'=>$rs->id])}}" class="btn btn-block btn-info btn-sm">Edit</a></td>
               <td><a href="{{route('admin.category.destroy', ['id'=>$rs->id])}}" class="btn btn-block btn-danger btn-sm"
                     onclick="return confirm('Are you sure you want to delete?')">Delete</a></td>
@@ -72,15 +74,7 @@
         </table>
       </div>
       <!-- /.card-body -->
-      <div class="card-footer clearfix">
-        <ul class="pagination pagination-sm m-0 float-right">
-          <li class="page-item"><a class="page-link" href="#">«</a></li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">»</a></li>
-        </ul>
-      </div>
+      
     </div>
     <!-- /.card -->
   </section>

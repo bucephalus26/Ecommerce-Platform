@@ -1,66 +1,74 @@
- <!-- Topbar Start -->
- <div class="container-fluid">
-        <div class="row bg-secondary py-2 px-xl-5">
-            <div class="col-lg-6 d-none d-lg-block">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-dark" href="">FAQs</a>
-                    <span class="text-muted px-2">|</span>
-                    <a class="text-dark" href="">Help</a>
-                    <span class="text-muted px-2">|</span>
-                    <a class="text-dark" href="">Support</a>
+ <!-- Topbar/Navbar Start -->
+
+ <nav class="navbar fixed-top px-sm-5 navbar-expand-sm navbar-dark" style="background-color: black">
+        <a href="{{route('home')}}" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top"
+                src="{{asset('assets')}}/img/navbar-logo.png" alt="Logo" width="50" height="50" /></a>
+        <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar options -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="{{route('home')}}" class="nav-link active"> Home </a>
+                </li>
+
+                <!-- get main categories -->
+                <!-- this avoids having to get data from all fuctions -->
+                @php
+                    $mainCategories = \App\Http\Controllers\HomeController::maincategories()
+                @endphp
+
+                <!-- Main Parent Categories in Navbar-->
+                @foreach($mainCategories as $rs)
+                <div class="subnav">
+                    <li class="nav-item active"><a href="#" class="nav-link"> {{$rs->title}} </a>
+                     <!-- if parent category has children (sub) categories, include categorytree.blade -->
+                     @if(count($rs->children))
+                        @include('home.categorytree', ['children' => $rs->children])
+                     @endif
+                    </li>
                 </div>
-            </div>
-            <div class="col-lg-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-dark px-2" href="">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-dark px-2" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-dark px-2" href="">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-dark px-2" href="">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-dark pl-2" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
+                @endforeach
+
+                <!-- If authentication exists, display logout option -->
+                @auth()
+                    <li class="nav-item active">
+                        <a href="/userlogout" class="nav-link " > Logout </a>
+                    </li>
+                @endauth
+
+                <!-- login and signup options displayed for those not logged in -->
+                @guest
+                <!-- Login/Register option -->
+                <li class="nav-item active">
+                    <a href="/userlogin" class="nav-link " > Login </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="/userregister" class="nav-link "> Signup </a>
+                </li>
+                @endguest
+            </ul>
         </div>
-        <div class="row align-items-center py-3 px-xl-5">
-            <div class="col-lg-3 d-none d-lg-block">
-                <a href="" class="text-decoration-none">
-                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
-                </a>
-            </div>
-            <div class="col-lg-6 col-6 text-left">
-                <form action="">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for products">
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary">
-                                <i class="fa fa-search"></i>
-                            </span>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-lg-3 col-6 text-right">
-                <a href="" class="btn border">
-                    <i class="fas fa-heart text-primary"></i>
-                    <span class="badge">0</span>
-                </a>
-                <a href="" class="btn border">
-                    <i class="fas fa-shopping-cart text-primary"></i>
-                    <span class="badge">0</span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
+        
+        <!-- If authentication exists, display basket, profile options -->
+        @auth()
+        <!-- Profile/Basket option -->
+        <li class="nav-item active">
+            <a href="{{route('userhome.index')}}" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
+                    src="{{asset('assets')}}/img/user.png" alt="Logo" width="35" height="35"
+                    style="padding-left: 5px; padding: right 20px;" /></a>
+        </li>
+        <li class="nav-item active">
+                <a href="/login" class="navbar-brand mb-0 h1"><img class="d-inline-block align-top mx-3"
+                        src="{{asset('assets')}}/img/cart.png" alt="Cart" width="35" height="35"
+                        style="padding-left: 5px; padding: right 20px;" /></a>
+        </li>
+        @endauth
+    </nav>
+    <!-- Topbar/Navbar End -->
 
 
     
