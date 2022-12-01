@@ -36,27 +36,33 @@
            </a>
            <ul class="nav nav-treeview">
              <li class="nav-item">
-               <a href="../../index.html" class="nav-link">
+               <a href="{{@route('admin.order.index', ['slug' => 'New'])}}" class="nav-link">
                  <i class="far fa-circle nav-icon"></i>
                  <p>New Orders</p>
                </a>
              </li>
              <li class="nav-item">
-               <a href="../../index2.html" class="nav-link">
+               <a href="{{@route('admin.order.index', ['slug' => 'Accepted'])}}" class="nav-link">
                  <i class="far fa-circle nav-icon"></i>
                  <p>Accepted Orders</p>
                </a>
              </li>
              <li class="nav-item">
-               <a href="../../index3.html" class="nav-link">
+               <a href="{{@route('admin.order.index', ['slug' => 'Shipped'])}}" class="nav-link">
                  <i class="far fa-circle nav-icon"></i>
                  <p>Shipping Orders</p>
                </a>
              </li>
              <li class="nav-item">
-               <a href="../../index3.html" class="nav-link">
+               <a href="{{@route('admin.order.index', ['slug' => 'Completed'])}}" class="nav-link">
                  <i class="far fa-circle nav-icon"></i>
                  <p>Completed Orders</p>
+               </a>
+             </li>
+             <li class="nav-item">
+               <a href="{{@route('admin.order.index', ['slug' => 'Canceled'])}}" class="nav-link">
+                 <i class="far fa-circle nav-icon"></i>
+                 <p>Canceled Orders</p>
                </a>
              </li>
            </ul>

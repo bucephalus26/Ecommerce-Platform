@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminPanel\AdminProductController as AdminProductContro
 use App\Http\Controllers\AdminPanel\ImageController as ImageController;
 use App\Http\Controllers\AdminPanel\MessageController as MessageController;
 use App\Http\Controllers\AdminPanel\AdminUserController as AdminUserController;
+use App\Http\Controllers\AdminPanel\OrderController as OrderController;
 use App\Http\Controllers\UserController as UserController;
 use App\Http\Controllers\ShoppingCartController as ShoppingCartController;
 use Illuminate\Support\Facades\Route;
@@ -53,13 +54,13 @@ Route::post('/adminlogincheck', [HomeController::class,'adminlogincheck'])->name
 Route::middleware('auth')->group(function(){
 
 
-    // User Routes - home page, order menu, cancel orders
+    // User Routes - home page, order menu, manage orders
     Route::prefix('userhome')->name('userhome.')->controller(UserController::class)->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('/orders','orders')->name('orders');
+        Route::get('/cancelproduct/{id}','cancelproduct')->name('cancelproduct');
         Route::get('/orderdetail/{id}', 'orderdetail')->name('orderdetail');
-        Route::get('/cancelproduct/,{id}','cancelproduct')->name('cancelproduct');
-
+        Route::get('/cancelorder/{id}','cancelorder')->name('cancelorder');
     });
 
     // ******* Shopping Cart *******
@@ -73,10 +74,8 @@ Route::middleware('auth')->group(function(){
 
         // Create order routes
         Route::post('/order', 'order')->name('order');
-        Route::post('/createorder', 'createorder')->name('createorder');      
-       
+        Route::post('/createorder', 'createorder')->name('createorder');  
     });
-
 
     // Admin Routes
     Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
@@ -132,6 +131,20 @@ Route::middleware('auth')->group(function(){
             Route::get('/destroy/{id}','destroy')->name('destroy');
             Route::post('/addrole/{id}','addrole')->name('addrole');
             Route::get('/deleterole/{uid}/{rid}','dgiteleterole')->name('deleterole');
+        });
+
+        // ******* Admin Order Routes *******
+        Route::prefix('/order')->name('order.')->controller(OrderController::class)->group(function(){
+            Route::get('/{slug}','index')->name('index');
+            Route::get('/create','create')->name('create');
+            Route::post('/store','store')->name('store');
+            Route::get('/edit/{id}','edit')->name('edit');
+            Route::post('/update/{id}','update')->name('update');
+            Route::get('/destroy/{id}','destroy')->name('destroy');
+            Route::get('/show/{id}','show')->name('show');
+            Route::get('/cancelorder/{id}','cancelorder')->name('cancelorder');
+            Route::get('/cancelproduct/,{id}','cancelproduct')->name('cancelproduct');
+            Route::get('/acceptproduct/,{id}','acceptproduct')->name('acceptproduct');
         });
     });
 });

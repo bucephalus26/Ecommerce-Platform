@@ -72,7 +72,18 @@ class User extends Authenticatable
         return $this->belongsToMany(Role::class,'role_users');
     }
 
-    
+    //  many
+    public function order()
+    {
+        // user has many orders
+        return $this->hasMany(Order::class);
+    }
+
+    public function productorder()
+    {
+        // user has many orders
+        return $this->hasMany(ProductOrder::class);
+    }
 
 
 

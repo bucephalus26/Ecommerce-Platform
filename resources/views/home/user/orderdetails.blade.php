@@ -29,6 +29,7 @@
                             <th scope="col">Price</th>
                             <th scope="col">Quantity</th>
                             <th scope="col">Total Cost</th>
+                            <th scope="col">Status</th>
                             <th scope="col">Cancel</th>
                             </tr>
                         </thead>
@@ -42,7 +43,12 @@
                                 <td>£{{$rs->product->price}}</td>
                                 <td>{{$rs->quantity}}</td>
                                 <td>£{{$rs->amount}}</td>
-                                <td><a href="#" class="btn btn-danger">Cancel Order</a></td>
+                                <td>{{$rs->status}}</td>
+                                <td>
+                                    @if($rs->status=="New") <!-- if already accepted, cannot cancel -->
+                                    <a href="{{route('userhome.cancelproduct', ['id'=>$rs->id])}}" class="btn btn-danger">Cancel Product</a>
+                                    @endif
+                                </td>
                                 </tr>
                                 @endforeach
                             </tbody>

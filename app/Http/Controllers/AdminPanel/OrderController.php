@@ -1,23 +1,26 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\AdminPanel;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\ProductOrder;
-use Illuminate\Support\Facades\Auth;
 
-class UserController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($slug)
     {
-        return view('home.user.index');   
-
+        //
+        $data=Order::where('status', $slug)->get();
+        return view('admin.order.index', [
+             'data'=>$data
+        ]);
     }
 
     /**
@@ -49,8 +52,14 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $data=Order::find($id);
+        $datalist=ProductOrder::where('order_id',$id)->get();
+        return view('admin.order.show', [
+            'data'=>$data,
+            'datalist'=>$datalist
+       ]);
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -72,7 +81,12 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data= Order::find($id);
+        $data->status = $request->status;
+        $data->note = $request->note;
+        $data->save();
+
+        return redirect()->route('admin.order.show', ['id'=>$id]);
     }
 
     /**
@@ -86,38 +100,7 @@ class UserController extends Controller
         //
     }
 
-    // ORDERS 
-    public function orders()
-    {
-        $data= Order::where('user_id','=', Auth::id())->get();
-        return view('home.user.orders', [
-            'data'=>$data,
-        ]);
-    }
-
-    // data sent to page that shows details of an order
-    public function orderdetail($id)
-    {
-        $order= Order::find($id);
-        $orderproducts= ProductOrder::where('order_id','=',$id)->get();
-        
-        return view('home.user.orderdetails', [
-            'order'=>$order,
-            'orderproducts'=>$orderproducts,
-        ]);
-        
-    }
-    
-    // function allowing user to cancel product within order
-    public function cancelproduct($id)
-    {
-        $data= ProductOrder::find($id);
-        $data->status = 'Canceled';
-        $data->save(); 
-        return redirect()->back();
-    }
-
-    // function allowing user to cancel order
+    // cancel order
     public function cancelorder($id)
     {
         $data= Order::find($id);
@@ -126,6 +109,21 @@ class UserController extends Controller
         return redirect()->back();
     }
 
+    // cancel product within order
+    public function cancelproduct($id)
+    {
+        $data= ProductOrder::find($id);
+        $data->status = 'Canceled';
+        $data->save(); 
+        return redirect()->back();
+    }
 
-
+    // accept product
+    public function acceptproduct($id)
+    {
+        $data= ProductOrder::find($id);
+        $data->status = 'Accepted';
+        $data->save(); 
+        return redirect()->back();
+    }
 }
