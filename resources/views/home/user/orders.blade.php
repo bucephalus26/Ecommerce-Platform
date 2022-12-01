@@ -19,7 +19,7 @@
 
 <div class="row">
     <div class="col-75">
-        <div class="containerCK" style="width: 700px;">
+        <div class="containerCK">
                 <!-- Order Details-->
                 <div class="mt-5 text-center">
                     <h1>My Orders</h1>

@@ -130,7 +130,7 @@ Route::middleware('auth')->group(function(){
             Route::post('/update/{id}','update')->name('update');
             Route::get('/destroy/{id}','destroy')->name('destroy');
             Route::post('/addrole/{id}','addrole')->name('addrole');
-            Route::get('/deleterole/{uid}/{rid}','dgiteleterole')->name('deleterole');
+            Route::get('/deleterole/{uid}/{rid}','deleterole')->name('deleterole');
         });
 
         // ******* Admin Order Routes *******
