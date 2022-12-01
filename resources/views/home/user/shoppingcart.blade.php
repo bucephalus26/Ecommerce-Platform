@@ -22,7 +22,6 @@
 <div class="row">
     <div class="col-75">
         <div class="containerCK">
-            <form action="/action_page.php">
                 <!-- Cart Details-->
                 <div class="mt-5 text-center">
                     <div class="col-50">
@@ -36,14 +35,12 @@
                         <form action="{{route('shoppingcart.update',['id' => $rs->id])}}" method="post">
                             @csrf
 
-
                             <img src="{{Storage::url($rs->product->image)}}" style="width:150px; height:150px;" class="thumbnail">
                             <p>
                                 <a href="#">{{$rs->product->title}}</a><br>
                                 <span class="price">Price: £{{$rs->product->price}}</span>
 
                                 <!-- Quantity - allows user to change quantity of item -->
-                                
                                 <span class="price">Quantity: 
                                     <!-- onchange submits data -->
                                     <input  name="quantity" type="number" value="{{$rs->quantity}}" min="1" max="{{$rs->product->quantity}}" onchange="this.form.submit()">
@@ -66,15 +63,19 @@
                         <p>Total: <span class="price" style="color:black"><b>£{{$totalprice}}</b></span></p>
                         </div>
                         </div>
-                        <input type="submit" value="Continue to checkout" class="btnCK" >
-                        
+                        <form action="{{route("shoppingcart.createorder")}}" method="post">
+                            @csrf
+                            <input name="total" value="{{$totalprice}}" type="hidden">
+                            <input type="submit" value="Continue to checkout" class="btnCK" >
+                        </form>
+                        <h6><br>{{Session::get('success')}}</h6> <!-- Session variable: order successful -->
                     </div>
                 </div>
-            </form>
         </div>
     </div>
 </div>
 
+<br>
 <br>
 <br>
 <br>

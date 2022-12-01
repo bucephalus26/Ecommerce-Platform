@@ -53,7 +53,7 @@ Route::post('/adminlogincheck', [HomeController::class,'adminlogincheck'])->name
 Route::middleware('auth')->group(function(){
 
 
-    // User Routes - home page, orders, cancel products
+    // User Routes - home page, order menu, cancel orders
     Route::prefix('userhome')->name('userhome.')->controller(UserController::class)->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('/orders','orders')->name('orders');
@@ -70,9 +70,10 @@ Route::middleware('auth')->group(function(){
         Route::post('/update/{id}', 'update')->name('update');
         Route::get('/destroy/{id}', 'destroy')->name('destroy');
         Route::get('/show/{id}', 'show')->name('show');
+
+        // Create order routes
         Route::post('/order', 'order')->name('order');
-        Route::post('/storeorder', 'storeorder')->name('storeorder');    
-        Route::post('/ordercomplete', 'ordercomplete')->name('ordercomplete');    
+        Route::post('/createorder', 'createorder')->name('createorder');      
        
     });
 

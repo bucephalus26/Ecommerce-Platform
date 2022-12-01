@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Order;
+use App\Models\ProductOrder;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -82,4 +85,37 @@ class UserController extends Controller
     {
         //
     }
+
+    // ORDERS 
+    public function orders()
+    {
+        $data= Order::where('user_id','=', Auth::id())->get();
+        return view('home.user.orders', [
+            'data'=>$data,
+        ]);
+    }
+
+    // data sent to page that shows details of an order
+    public function orderdetail($id)
+    {
+        $order= Order::find($id);
+        $orderproducts= ProductOrder::where('order_id','=',$id)->get();
+        
+        return view('home.user.orderdetails', [
+            'order'=>$order,
+            'orderproducts'=>$orderproducts,
+        ]);
+        
+    }
+
+    public function cancelproduct($id)
+    {
+        $data= ProductOrder::find($id);
+        $data->status = 'cancelled';
+        $data->save(); 
+        return redirect()->back();
+    }
+
+
+
 }

@@ -30,6 +30,11 @@ class Product extends Model
          return $this->hasMany(ShoppingCart::class);
      }
 
+     public function orderproduct()
+     {
+         return $this->hasMany(ProductOrder::class);
+     }
+
     
 
 

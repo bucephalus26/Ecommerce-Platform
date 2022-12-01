@@ -40,10 +40,7 @@
                                 <a href="{{route('home')}}" class="text-reset">Home</a>
                             </p>
                             <br>
-                            <p>
-                                <a href="" class="text-reset">Account</a>
-                            </p>
-                            <br>
+                    
                             <p>
                                 <a href="{{route('contact')}}" class="text-reset">Contact Us</a>
                             </p>
@@ -84,46 +81,4 @@
 
     <!-- Main Javascript file -->
     <script src="{{asset('assets')}}/js/main.js"></script>
-
-    <!--  ***** COUNTER ***** -->
-<script>
-    var value= document.getElementById('counter').innerText;
-    var value= document.getElementById('counter1').innerText;
-
-    function counterInc(){
-    document.getElementById('counter').innerText=++value;
-    }
-    function counterDec(){
-        if(value>0){
-    document.getElementById('counter').innerText=--value;
-        }
-        else{
-    document.getElementById('counter').innerText=value;
-        }
-    }
-    // second counter
-    function counterInc1(){
-    document.getElementById('counter1').innerText=++value;
-    }
-    function counterDec1(){
-        if(value>0){
-    document.getElementById('counter1').innerText=--value;
-        }
-        else{
-    document.getElementById('counter1').innerText=value;
-        }
-    }
-    // third counter
-    function counterInc2(){
-    document.getElementById('counter2').innerText=++value;
-    }
-    function counterDec2(){
-        if(value>0){
-    document.getElementById('counter2').innerText=--value;
-        }
-        else{
-    document.getElementById('counter2').innerText=value;
-        }
-    }
-</script>
 
