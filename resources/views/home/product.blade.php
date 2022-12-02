@@ -7,7 +7,7 @@
     html{
         height:30vh;
     }
-    .carouselslide{
+    .carousel-innerborder{
         position:relative;
         height:675px;
         width:750px;
@@ -46,9 +46,9 @@
         bottom:589px;
     }
     .cart{
-        position:absolute;
-        bottom:128px;
-        right:99px;
+        position:relative;
+        bottom:386px;
+        left:1060px;
         color: white;
         background-color: black;
         padding-left: 20px;
@@ -81,7 +81,7 @@
     .grid-container {
         position:relative;
         left:1024px;
-        bottom: 630px;
+        bottom: 680px;
         display: grid;
         width:320px;
         grid-template-columns: auto auto auto auto auto;
@@ -108,7 +108,7 @@
     .sizeinstock{
         position:relative;
         left:1023px;
-        bottom: 624px;
+        bottom: 674px;
         font-family: Futura;
 
     }
@@ -129,19 +129,34 @@
         position:relative;
         top:20px;
     }
+    .input{
+        position:relative;
+        width:50px;
+        border: 4px solid black;
+        line-height:46px;
+        left:1011px;
+        bottom:300px;
+        text-align:center;
+    }
 </style>
 <html>
-    <div class="carouselslide">
-        <div class="carousel-inner border">
-            <img class="w-100 h-100" src="{{Storage::url($data->image)}}" alt="Image">
-            @foreach($images as $rs)
-            <img class="w-100 h-100" src="{{Storage::url($rs->image)}}" alt="Image">
-            @endforeach
+    <div class="col-lg-5 pb-5">
+        <div id="product-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-innerborder">
+                <div class="carousel-item active">
+                    <img  class="w-100 h-100" src="{{Storage::url($data->image)}}" alt="Image">
+                </div>
+                @foreach($images as $rs)
+                <div style="width:592px; height:592px;" class="carousel-item">
+                    <img style="width:592px; height:592px;" class="w-100 h-100" src="{{Storage::url($rs->image)}}" alt="Image">
+                </div>
+                @endforeach
+            </div>
             <a class="carousel-control-prev" href="#product-carousel" data-slide="prev">
-            <i class="fa fa-2x fa-angle-left text-dark"></i>
+                <i class="fa fa-2x fa-angle-left text-dark"></i>
             </a>
             <a class="carousel-control-next" href="#product-carousel" data-slide="next">
-            <i class="fa fa-2x fa-angle-right text-dark"></i>
+                <i class="fa fa-2x fa-angle-right text-dark"></i>
             </a>
         </div>
     </div>
@@ -152,9 +167,7 @@
         <h5 class="bargain"> Reduced to clear </h5>
     </div>
     <div class="line-1"></div>
-    <button class="btn1" onclick="counterDec()">-</button>
-    <div class="countforp"> 0  </div>
-    <button class="cart_btn" onclick="counterInc()">+</button >
+    <input class="input" name="quantity" type="number" value="1" min="1" max="5">
     <h5 class="quantity" >Quantity</h5>
     <button class="cart"><h6 style="display: inline-block;padding:12.9px 40px 10px 0px;">Add to cart</h6></button>                   
     <h5 class="sizeinstock" >Choose size in stock</h5>

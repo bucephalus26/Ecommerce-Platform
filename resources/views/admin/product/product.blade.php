@@ -191,7 +191,7 @@
                     <div class="cardName">Category</div>
                 </div>
                 <div class="iconBx">
-                    <<ion-icon name="person-add-outline"></ion-icon>                            
+                    <ion-icon name="person-add-outline"></ion-icon>                            
                 </div>
             </div>
             <div class="card">
