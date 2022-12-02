@@ -3,7 +3,7 @@
 @section('title', 'My Orders')
 
 @section('content')
-
+<!-- The ORDERS page - A TABLE OF ALL ORDERS -->
 <br>
 <br>
 <br>

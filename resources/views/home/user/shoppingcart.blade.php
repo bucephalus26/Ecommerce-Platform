@@ -4,6 +4,8 @@
 
 @section('content')
 
+<!-- The SHOPPING CART page -->
+
 <br>
 <br>
 <br>

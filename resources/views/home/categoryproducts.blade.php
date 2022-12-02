@@ -4,6 +4,8 @@
 
 @section('content')
 
+<!-- This file is for the products list page -->
+
         <!-- Header start -->
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
             <h1 class="font-weight-semi-bold text-uppercase mb-3">Products</h1>

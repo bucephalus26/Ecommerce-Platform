@@ -4,10 +4,10 @@
 
 @section('content')
 
-       
+       <!-- The USER HOME page -->
 <section class=" About Us">
         <h1 >User Home Page</h1>
-        
+        <!-- A Navbar with links to profile, orders, checkout -->
         <div class="row" style="display: block;">
             <div class="about-col">
             <ul style="list-style: none; padding-left:0;">
@@ -17,6 +17,7 @@
             </ul>
         </div>
         <div class="row">
+            <!-- Using jetstream profile page with some UI alterations -->
             @include('profile.show')
         </div>
     </section>

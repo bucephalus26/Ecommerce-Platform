@@ -7,6 +7,7 @@
 
 @section('content')
 
+<!-- The CONTACT US page -->
 
     <section class = "Contact">
         <div class  = "content">

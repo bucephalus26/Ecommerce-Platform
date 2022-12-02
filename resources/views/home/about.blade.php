@@ -7,6 +7,7 @@
 
 @section('content')
 
+<!-- The ABOUT US page -->
     
 <section class=" About Us">
         <h1 id="About Us" >About Us</h1>

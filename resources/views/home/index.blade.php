@@ -6,6 +6,7 @@
 @section('logo', Storage::url($setting->logo))
 
 @section('content')
+<!-- The MAIN HOME page -->
 
     <br>
 
