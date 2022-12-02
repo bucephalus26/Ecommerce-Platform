@@ -45,4 +45,12 @@ class AdminUserController extends Controller
         $user->roles()->detach($rid); //Here, many to many relation delete related data
         return redirect(route('admin.user.show',['id'=>$uid]));
     } 
+
+    public function destroy($id)
+    {
+        // deletes message
+        $user = User::find($id);
+        $user->delete();
+        return redirect(route('admin.user.index')); // return to admin index page
+    }
 }
