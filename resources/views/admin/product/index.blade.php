@@ -4,36 +4,20 @@
 
 @section('content')
 
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-  <!-- Content Header (Page header) -->
-  <section class="content-header">
-    <div class="container-fluid">
-      <div class="row mb-2">
-        <div class="col-sm-6">
-          <a href="{{route('admin.product.create')}}" class="btn btn-block bg-gradient-info" style="width: 200px" >Add Product</a>
-        </div>
-        <div class="col-sm-6">
-          <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Home</a></li>
-            <li class="breadcrumb-item active">Product List</li>
-          </ol>
-        </div>
-      </div>
-    </div><!-- /.container-fluid -->
-  </section>
 
-  <!-- Main content -->
-  <section class="content">
+<div class="cardbox" style="height: 1000px; padding-left: 50px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <h1>Product List</h1>
 
-    <!-- Default box -->
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title">Product List</h3>
-      </div>
-      <!-- /.card-header -->
-      <div class="card-body">
-        <table class="table table-bordered">
+        <br>
+        <div>
+          <a href="{{route('admin.product.create')}}" id="lines" class="btn btn-dark">Add Product</a>
+        </div>
+        <br>
+
+        <table>
           <thead>
             <tr>
               <th style="width: 10px">Id</th>
@@ -43,7 +27,6 @@
               <th>Quantity</th>
               <th>Image</th>
               <th>Images</th>
-              <th>Attributes</th>
               <th>Status</th>
               <th style="width: 40px">Edit</th>
               <th style="width: 40px">Delete</th>
@@ -59,8 +42,8 @@
               <td>{{$rs->title}}</td>
               <td>{{$rs->price}}</td>
               <td>{{$rs->quantity}}</td>
-               <!-- if there is image, load it-->
-               <td>
+              <!-- if there is image, load it-->
+              <td>
                 @if ($rs->image)
                 <img src="{{Storage::url($rs->image)}}" style="height: 40px">
                 @endif
@@ -68,39 +51,21 @@
 
               <!-- Link to images page-->
               <!-- pid key used to get product image page-->
-              <td><a href="{{route('admin.image.index', ['pid'=>$rs->id])}}"
-                  onclick="return !window.open(this.href, '','top=50 left=100 width=1100,height=700')">
-                <img src="{{asset('assets')}}/admin/img/images.jpg" style="height: 40px"></a>
+              <td><a href="{{route('admin.image.index', ['pid'=>$rs->id])}}" onclick="return !window.open(this.href, '','top=50 left=100 width=1100,height=700')">
+                  <img src="{{asset('assets')}}/admin/img/images.jpg" style="height: 40px"></a>
               </td>
-
-              <td>{{$rs->product_attributes}}</td>
 
               <td>{{$rs->status}}</td>
               <!-- Buttons -->
-              <td><a href="{{route('admin.product.edit', ['id'=>$rs->id])}}" class="btn btn-block btn-info btn-sm">Edit</a></td>
-              <td><a href="{{route('admin.product.destroy', ['id'=>$rs->id])}}" class="btn btn-block btn-danger btn-sm"
-                    onclick="return confirm('Are you sure you want to delete?')">Delete</a></td>
-              <td><a href="{{route('admin.product.show', ['id'=>$rs->id])}}" class="btn btn-block btn-success btn-sm">Show</a></td>
+              <td><a href="{{route('admin.product.edit', ['id'=>$rs->id])}}" id="lines" class="btn btn-info">Edit</a></td>
+              <td><a href="{{route('admin.product.destroy', ['id'=>$rs->id])}}" id="lines" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')">Delete</a></td>
+              <td><a href="{{route('admin.product.show', ['id'=>$rs->id])}}" id="lines" class="btn btn-success">Show</a></td>
             </tr>
             @endforeach
           </tbody>
         </table>
       </div>
-      <!-- /.card-body -->
-      <div class="card-footer clearfix">
-        <ul class="pagination pagination-sm m-0 float-right">
-          <li class="page-item"><a class="page-link" href="#">«</a></li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">»</a></li>
-        </ul>
-      </div>
     </div>
-    <!-- /.card -->
-  </section>
-  <!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
+  </div>
 
 @endsection

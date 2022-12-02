@@ -1,4 +1,4 @@
-@extends('layouts.adminbase')
+@extends('layouts.adminwindow')
 
 @section('title', 'Show Category: '.$data->title)
 
@@ -11,10 +11,10 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-3">
-            <a href="{{route('admin.category.edit', ['id'=>$data->id])}}" class="btn btn-block bg-gradient-info" style="width: 200px" >Edit</a>
+            <a href="{{route('admin.category.edit', ['id'=>$data->id])}}" class="btn btn-block btn-info" style="width: 200px" >Edit</a>
           </div>
           <div class="col-sm-3">
-            <a href="{{route('admin.category.destroy', ['id'=>$data->id])}}" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-block bg-gradient-danger" style="width: 200px" >Delete</a>
+            <a href="{{route('admin.category.destroy', ['id'=>$data->id])}}" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-block btn-danger" style="width: 200px" >Delete</a>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">

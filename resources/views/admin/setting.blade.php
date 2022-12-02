@@ -1,144 +1,66 @@
 @extends('layouts.adminbase')
 
 @section('title', 'Settings')
-@section('head')
-    <!-- include summernote css/js -->
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
-@endsection
+@section('content')
 
-@section('content')    
+<div class="cardbox" style="height: 1000px; padding-left: 50px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h1>Settings</h1>
+                <br>
 
- <!-- Content Wrapper. Contains page content -->
- <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Settings</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Home</a></li>
-              <li class="breadcrumb-item active">Settings</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
+                <!-- Main content - Form that takes information for Website Settings -->
+                <div class="form">
+                    <form class="form1" role="form" action="{{route('admin.setting.update')}}" method="post" enctype="multipart/form-data">
+                        @csrf
 
-  <!-- Main content -->
-  <form role="form" action="{{route('admin.setting.update')}}" method="post"  enctype="multipart/form-data">
-            <section class="content">
-                @csrf
-                <div class="row">
-                    <div class="card card-primary card-tabs col-12" >
-                        <div class="card-header p-0 pt-1">
-                            <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="custom-tabs-one-general-tab" data-toggle="pill" href="#custom-tabs-one-general" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true">General</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="custom-tabs-one-about-tab" data-toggle="pill" href="#custom-tabs-one-about" role="tab" aria-controls="custom-tabs-one-about" aria-selected="false">About Us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="custom-tabs-one-contact-tab" data-toggle="pill" href="#custom-tabs-one-contact" role="tab" aria-controls="custom-tabs-one-contact" aria-selected="false">Contact Page</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-body">
-                            <div class="tab-content" id="custom-tabs-one-tabContent">
-                                <div class="tab-pane fade show active" id="custom-tabs-one-general" role="tabpanel" aria-labelledby="custom-tabs-one-general-tab">
-                                    <input type="hidden" id="id" name="id"  value="{{$data->id}}" class="form-control">
-                                    <div class="form-group">
-                                        <label >Title</label>
-                                        <input type="text" id="title" name="title"  value="{{$data->title}}" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label >Keywords</label>
-                                        <input type="text" name="keywords" value="{{$data->keywords}}" class="form-control"   >
-                                    </div>
-                                    <div class="form-group">
-                                        <label >Description</label>
-                                        <input type="text" name="description"  value="{{$data->description}}" class="form-control"   >
-                                    </div>
-                                    <div class="form-group">
-                                        <label >Company</label>
-                                        <input type="text" name="company" value="{{$data->company}}" class="form-control"   >
-                                    </div>
-                                    <div class="form-group">
-                                        <label >Address</label>
-                                        <input type="text" name="address" class="form-control"  value="{{$data->address}}"  >
-                                    </div>
-                                    <div class="form-group">
-                                        <label >Phone</label>
-                                        <input type="text" name="phone" value="{{$data->phone}}" class="form-control"   >
-                                    </div>
-                                    <div class="form-group">
-                                        <label >Email</label>
-                                        <input type="text" name="email"  value="{{$data->email}}" class="form-control"   >
-                                    </div>
+                        <input type="hidden" id="id" name="id" value="{{$data->id}}" class="form-control">
+                        <label>Title</label>
+                        <input type="text" id="title" name="title" value="{{$data->title}}" class="form-control">
 
-                                    <div class="form-group">
-                                        <label>Status</label>
-                                        <select class="form-control select2" name="status" style="width: 100%;">
-                                            <option selected="selected">{{$data->status}}</option>
-                                            <option>True</option>
-                                            <option>False</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputFile">Logo</label>
-                                        <div class="input-group">
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" name="logo">
-                                                <label class="custom-file-label" for="exampleInputFile">Choose Logo</label>
-                                            </div>
+                        <label>Keywords</label>
+                        <input type="text" name="keywords" value="{{$data->keywords}}" class="form-control">
 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="custom-tabs-one-about" role="tabpanel" aria-labelledby="custom-tabs-one-about-tab">
-                                    <div class="form-group">
-                                        <label >About Us</label>
-                                        <textarea id="aboutus" name="aboutus" >{{$data->aboutus}}</textarea>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="custom-tabs-one-contact" role="tabpanel" aria-labelledby="custom-tabs-one-contact-tab">
-                                    <div class="form-group">
-                                        <label >Contact</label>
-                                        <textarea id="contact" name="contact" >{{$data->contact}}</textarea>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">Update Setting</button>
-                                </div>
+                        <label>Description</label>
+                        <input type="text" name="description" value="{{$data->description}}" class="form-control">
+
+                        <label>Company</label>
+                        <input type="text" name="company" value="{{$data->company}}" class="form-control">
+
+                        <label>Address</label>
+                        <input type="text" name="address" class="form-control" value="{{$data->address}}">
+
+                        <label>Phone</label>
+                        <input type="text" name="phone" value="{{$data->phone}}" class="form-control">
+
+                        <label>Email</label>
+                        <input type="text" name="email" value="{{$data->email}}" class="form-control">
+
+                        <label>Status</label>
+                        <select class="form-control select2" name="status" style="width: 100%;">
+                            <option selected="selected">{{$data->status}}</option>
+                            <option>True</option>
+                            <option>False</option>
+                        </select>
+
+                        <label for="exampleInputFile">Logo</label>
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="logo">
+                                <label class="custom-file-label" for="exampleInputFile">Choose Logo</label>
+                                </dßiv>
                             </div>
+                            <br>
 
-                        </div>
-
-                        <!-- /.card -->
-                    </div>
-
+                            <!-- Submit button -->
+                            <button type="submit" id="lines" class="btn btn-info">Update Settings</button>
+                    </form>
+                    <!-- End of form -->
                 </div>
-
-
-            </section>
-            <!-- /.content -->
-        </form>
-        <!-- /.content -->
+            </div>
+        </div>
+    </div>
 </div>
-<!-- /.content-wrapper -->
-
-@endsection
-@section('foot')
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $('#aboutus').summernote();
-            $('#contact').summernote();
-        });
-    </script>
 @endsection
