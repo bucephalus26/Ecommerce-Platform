@@ -1,21 +1,22 @@
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script>
+            // Menu toggle
+                let toggle = document.querySelector('.toggle');
+                let navigation = document.querySelector('.navigation');
+                let main = document.querySelector('.main');
 
-<footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-    </div>
-    <strong>Sports4Us</strong>
-  </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-
-<!-- jQuery -->
-<script src ="{{asset('assets')}}/admin/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="{{asset('assets')}}/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- JS -->
-<script src="{{asset('assets')}}/admin/js/adminJs.js"></script>
+                toggle.onclick = function(){
+                    navigation.classList.toggle('active');
+                    main.classList.toggle('active');
+                }
+            // adding hover class over selected category
+            let list = document.querySelectorAll('.navigation li');
+            function activeLink(){
+                list.forEach((item) =>
+                item.classList.remove('hovered'));
+                this.classList.add('hovered');
+                }
+                list.forEach((item) =>
+                item.addEventListener('mouseover', activeLink));
+        </script>
