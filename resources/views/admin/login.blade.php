@@ -27,8 +27,8 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <h6>{{Session::get('error')}}</h6> <!-- Session variable -->
     <form action="{{route('adminlogincheck')}}" method="post">
+    <h4 style="text-align: center;">{{Session::get('error')}}</h6> <!-- Session variable -->
         @csrf
         <h3>Login Here</h3>
 
